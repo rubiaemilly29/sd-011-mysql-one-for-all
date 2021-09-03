@@ -115,7 +115,6 @@ VALUES
   ('Roger', 45, 1);
     
   SELECT * FROM users;
-   
   INSERT INTO followers(user_id, artist_id)
   VALUES
     (1, 1),
