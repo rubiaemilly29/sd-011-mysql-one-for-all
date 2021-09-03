@@ -11,6 +11,6 @@
   "tabela_que_contem_artista": "Performers",
   "coluna_album": "album_title",
   "tabela_que_contem_album": "Albuns",
-  "coluna_cancoes": "song_title",
+  "coluna_cancoes": "song_id",
   "tabela_que_contem_cancoes": "Songs"
 }
