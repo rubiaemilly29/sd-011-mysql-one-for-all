@@ -45,7 +45,7 @@ CREATE TABLE seguindo_artistas(
   FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
 ) engine = InnoDB;
 
-CREATE TABLE historico_reproducoes(
+CREATE TABLE historico_de_reproducoes(
   usuario_id INT NOT NULL,
   musica_id INT NOT NULL,
   CONSTRAINT PRIMARY KEY (usuario_id, musica_id),
