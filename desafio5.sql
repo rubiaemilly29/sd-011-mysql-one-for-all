@@ -1,3 +1,4 @@
+CREATE VIEW top_2_hits_do_momento AS
 SELECT
 C.nome AS 'cancao',
 COUNT(HR.cancao_id) AS 'reproducoes'
