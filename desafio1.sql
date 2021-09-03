@@ -46,10 +46,9 @@ FOREIGN KEY (fk_id_songs) REFERENCES t_songs(id_songs)
 ) engine = InnoDB;
 
 CREATE TABLE IF NOT EXISTS t_follow_artists(
-id_follow_artist INT AUTO_INCREMENT PRIMARY KEY,
-c_follow_artists INT NOT NULL,
 fk_id_user INT NOT NULL,
 fk_id_artist INT NOT NULL,
+CONSTRAINT PRIMARY KEY (fk_id_user, fk_id_artist),
 FOREIGN KEY (fk_id_user) REFERENCES t_users(id_user),
 FOREIGN KEY (fk_id_artist) REFERENCES t_artists(id_artist)
 ) engine = InnoDB;
@@ -122,11 +121,11 @@ VALUES
 
 INSERT INTO t_follow_artists(c_follow_artists, fk_id_user, fk_id_artist)
 VALUES
-(1, 2, 2),
-(4, 3, 2),
-(2, 1, 1),
-(3, 4, 4),
-(2, 3, 2),
-(4, 2, 3),
-(1, 4, 2),
-(3, 2, 2);
+(2, 2),
+(3, 2),
+(1, 1),
+(4, 4),
+(3, 2),
+(2, 3),
+(4, 2),
+(2, 2);
