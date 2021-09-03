@@ -57,9 +57,9 @@ FOREIGN KEY (fk_id_artist) REFERENCES t_artists(id_artist)
 
 INSERT INTO t_flat (c_flat, c_preice)
 VALUES 
-('Basico', 8),
-('Normal', 12.6),
-('Premium', 15);
+('familiar', 0),
+('universitário', 5.99),
+('familiar', 7.99);
 
 INSERT INTO t_users(c_user, c_age, fk_c_flat)
 VALUES 
@@ -70,7 +70,6 @@ VALUES
 
 INSERT INTO t_artists(c_artist)
 VALUES
-('Walter Phoenix'),
 ('Walter Phoenix'),
 ('Peter Strong'),
 ('Lance Day'),
@@ -98,12 +97,12 @@ VALUES
 ('Fantasy For Me', 1),
 ('elebration Of More', 1),
 ('Rock His Everything', 3),
-('Home Forever', 2),
+('Home Forever', 5),
 ('Diamond Power', 3),
 ("Honey, Let's Be Silly", 4),
 ('Thang Of Thunder', 2),
 ('"Words Of Her Life', 1),
-('Without My Streets', 4);
+('Without My Streets', 5);
 
 INSERT INTO t_h_reproductions(c_h_reproductions, fk_id_user, fk_id_songs)
 VALUES
@@ -124,7 +123,11 @@ VALUES
 
 INSERT INTO t_follow_artists(c_follow_artists, fk_id_user, fk_id_artist)
 VALUES
+(1, 2, 2),
 (4, 3, 2),
-(2, 2, 1),
-(3, 1, 4),
-(1, 2, 2);
+(2, 1, 1),
+(3, 4, 4),
+(2, 3, 2),
+(4, 2, 3),
+(1, 4, 2),
+(2, 3, 3);
