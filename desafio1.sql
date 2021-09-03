@@ -112,7 +112,7 @@ VALUES
 -- 17	Words Of Her Life	5
 -- 18	Without My Streets	5
 
- CREATE TABLE SpotifyClone.SONGS(
+CREATE TABLE SpotifyClone.SONGS(
 song_id	INTEGER NOT NULL AUTO_INCREMENT,
 song_name	VARCHAR(100) NOT NULL,
 album_id	INTEGER NOT NULL,
