@@ -13,9 +13,9 @@ CREATE TABLE plano(
 
 INSERT INTO plano
   (titulo, valor) VALUES
-  ("titulo", 0),
-  ("gratuito", 5.99),
-  ("universitário", 7.99);
+  ("gratuito", 0),
+  ("universitário", 5.99),
+  ("familiar", 7.99);
 
 CREATE TABLE usuario(
   usuario_id INT PRIMARY KEY AUTO_INCREMENT,
