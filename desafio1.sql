@@ -58,7 +58,7 @@ VALUES
   ('Incandescent', 3),
   ('Temporary Culture', 4);
 
- CREATE TABLE Cancoes(
+  CREATE TABLE Cancoes(
     cancoes_id INT(15) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     cancoes VARCHAR(250) NOT NULL,
     album_id INT(15) NOT NULL,
@@ -94,7 +94,7 @@ VALUES
     FOREIGN KEY(artista_id) REFERENCES Artistas (artista_id)
 ) engine = InnoDB;
 
- INSERT INTO Seguidores (usuario_id, artista_id)
+INSERT INTO Seguidores (usuario_id, artista_id)
 VALUES
   (1, 1),
   (1, 3),
