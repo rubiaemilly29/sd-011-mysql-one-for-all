@@ -13,13 +13,13 @@ PRIMARY KEY (plano_id)
 
 CREATE TABLE Artistas(
 artista_id INT AUTO_INCREMENT NOT NULL,
-artista VARCHAR(30),
+artista VARCHAR(30) NOT NULL,
 PRIMARY KEY (artista_id)
 ) engine=InnoDB;
 
 CREATE TABLE Albuns(
 album_id INT AUTO_INCREMENT NOT NULL,
-album VARCHAR(30),
+album VARCHAR(30) NOT NULL,
 artista_id INT NOT NULL,
 FOREIGN KEY (artista_id) REFERENCES Artistas(artista_id),
 PRIMARY KEY (album_id)
@@ -27,7 +27,7 @@ PRIMARY KEY (album_id)
 
 CREATE TABLE Cancoes(
 cancao_id INT AUTO_INCREMENT NOT NULL,
-cancao VARCHAR(40),
+cancao VARCHAR(40) NOT NULL,
 album_id INT NOT NULL,
 FOREIGN KEY (album_id) REFERENCES Albuns(album_id),
 PRIMARY KEY (cancao_id)
@@ -43,15 +43,15 @@ FOREIGN KEY (plano_id) REFERENCES Planos(plano_id)
 ) engine=InnoDB;
 
 CREATE TABLE SeguindoArtistas(
-usuario_id INT,
-artista_id INT,
+usuario_id INT NOT NULL,
+artista_id INT NOT NULL,
 FOREIGN KEY (usuario_id) REFERENCES Usuarios(usuario_id),
 FOREIGN KEY (artista_id) REFERENCES Artistas(artista_id)
 ) engine=InnoDB;
 
 CREATE TABLE HistoricoMusicas(
-usuario_id INT,
-cancao_id INT,
+usuario_id INT NOT NULL,
+cancao_id INT NOT NULL,
 FOREIGN KEY (usuario_id) REFERENCES Usuarios(usuario_id),
 FOREIGN KEY (cancao_id) REFERENCES Cancoes(cancao_id)
 ) engine=InnoDB;
