@@ -51,13 +51,13 @@ CREATE TABLE Reproduction_history(
 
 INSERT INTO Plan (plan, plan_value)
 VALUES
-	('gratuito', 0),
+    ('gratuito', 0),
     ('familiar', 7.99),
     ('universitário', 5.99);
 
 INSERT INTO Artist (name)
 VALUES
-	('Walter Phoenix'),
+    ('Walter Phoenix'),
     ('Peter Strong'),
     ('Lance Day'),
     ('Freedie Shannon');
@@ -72,14 +72,14 @@ VALUES
 
 INSERT INTO User (name, age, plan_id)
 VALUES
-	('Thati', 23, (SELECT plan_id FROM Plan WHERE plan = 'gratuito')),
+    ('Thati', 23, (SELECT plan_id FROM Plan WHERE plan = 'gratuito')),
     ('Cintia', 35, (SELECT plan_id FROM Plan WHERE plan = 'familiar')),
     ('Bill', 20, (SELECT plan_id FROM Plan WHERE plan = 'universitário')),
     ('Roger', 45, (SELECT plan_id FROM Plan WHERE plan = 'gratuito'));
 
 INSERT INTO Song (name, album_id)
 VALUES
-	('Soul For Us', (SELECT album_id FROM Album WHERE title = 'Envious')),
+    ('Soul For Us', (SELECT album_id FROM Album WHERE title = 'Envious')),
     ('Reflections Of Magic', (SELECT album_id FROM Album WHERE title = 'Envious')),
     ('Dance With Her Own', (SELECT album_id FROM Album WHERE title = 'Envious')),
     ('Troubles Of My Inner Fire', (SELECT album_id FROM Album WHERE title = 'Exuberant')),
@@ -100,50 +100,50 @@ VALUES
     
 INSERT INTO Artist_followers (artist_id, user_id)
 VALUES
-	((SELECT artist_id FROM Artist WHERE name = 'Walter Phoenix'),
-	(SELECT user_id FROM User WHERE name = 'Thati')),
-	((SELECT artist_id FROM Artist WHERE name = 'Walter Phoenix'),
-	(SELECT user_id FROM User WHERE name = 'Cintia')),
-	((SELECT artist_id FROM Artist WHERE name = 'Walter Phoenix'),
-	(SELECT user_id FROM User WHERE name = 'Bill')),
-	((SELECT artist_id FROM Artist WHERE name = 'Peter Strong'),
-	(SELECT user_id FROM User WHERE name = 'Bill')),
-	((SELECT artist_id FROM Artist WHERE name = 'Lance Day'),
-	(SELECT user_id FROM User WHERE name = 'Thati')),
-	((SELECT artist_id FROM Artist WHERE name = 'Lance Day'),
-	(SELECT user_id FROM User WHERE name = 'Cintia')),
-	((SELECT artist_id FROM Artist WHERE name = 'Freedie Shannon'),
-	(SELECT user_id FROM User WHERE name = 'Thati')),
-	((SELECT artist_id FROM Artist WHERE name = 'Freedie Shannon'),
-	(SELECT user_id FROM User WHERE name = 'Roger'));
+    ((SELECT artist_id FROM Artist WHERE name = 'Walter Phoenix'),
+    (SELECT user_id FROM User WHERE name = 'Thati')),
+    ((SELECT artist_id FROM Artist WHERE name = 'Walter Phoenix'),
+    (SELECT user_id FROM User WHERE name = 'Cintia')),
+    ((SELECT artist_id FROM Artist WHERE name = 'Walter Phoenix'),
+    (SELECT user_id FROM User WHERE name = 'Bill')),
+    ((SELECT artist_id FROM Artist WHERE name = 'Peter Strong'),
+    (SELECT user_id FROM User WHERE name = 'Bill')),
+    ((SELECT artist_id FROM Artist WHERE name = 'Lance Day'),
+    (SELECT user_id FROM User WHERE name = 'Thati')),
+    ((SELECT artist_id FROM Artist WHERE name = 'Lance Day'),
+    (SELECT user_id FROM User WHERE name = 'Cintia')),
+    ((SELECT artist_id FROM Artist WHERE name = 'Freedie Shannon'),
+    (SELECT user_id FROM User WHERE name = 'Thati')),
+    ((SELECT artist_id FROM Artist WHERE name = 'Freedie Shannon'),
+    (SELECT user_id FROM User WHERE name = 'Roger'));
     
 INSERT INTO Reproduction_history (user_id, song_id)
 VALUES
-	((SELECT user_id FROM User WHERE name = 'Thati'),
-	(SELECT song_id FROM Song WHERE name = 'Soul For Us')),
     ((SELECT user_id FROM User WHERE name = 'Thati'),
-	(SELECT song_id FROM Song WHERE name = 'Magic Circus')),
+    (SELECT song_id FROM Song WHERE name = 'Soul For Us')),
     ((SELECT user_id FROM User WHERE name = 'Thati'),
-	(SELECT song_id FROM Song WHERE name = 'Diamond Power')),
+    (SELECT song_id FROM Song WHERE name = 'Magic Circus')),
     ((SELECT user_id FROM User WHERE name = 'Thati'),
-	(SELECT song_id FROM Song WHERE name = 'Thang Of Thunder')),
+    (SELECT song_id FROM Song WHERE name = 'Diamond Power')),
+    ((SELECT user_id FROM User WHERE name = 'Thati'),
+    (SELECT song_id FROM Song WHERE name = 'Thang Of Thunder')),
     ((SELECT user_id FROM User WHERE name = 'Cintia'),
-	(SELECT song_id FROM Song WHERE name = 'Home Forever')),
+    (SELECT song_id FROM Song WHERE name = 'Home Forever')),
     ((SELECT user_id FROM User WHERE name = 'Cintia'),
-	(SELECT song_id FROM Song WHERE name = 'Words Of Her Life')),
+    (SELECT song_id FROM Song WHERE name = 'Words Of Her Life')),
     ((SELECT user_id FROM User WHERE name = 'Cintia'),
-	(SELECT song_id FROM Song WHERE name = 'Reflections Of Magic')),
+    (SELECT song_id FROM Song WHERE name = 'Reflections Of Magic')),
     ((SELECT user_id FROM User WHERE name = 'Cintia'),
-	(SELECT song_id FROM Song WHERE name = "Honey, Let's Be Silly")),
+    (SELECT song_id FROM Song WHERE name = "Honey, Let's Be Silly")),
     ((SELECT user_id FROM User WHERE name = 'Bill'),
-	(SELECT song_id FROM Song WHERE name = 'Troubles Of My Inner Fire')),
+    (SELECT song_id FROM Song WHERE name = 'Troubles Of My Inner Fire')),
     ((SELECT user_id FROM User WHERE name = 'Bill'),
-	(SELECT song_id FROM Song WHERE name = 'Thang Of Thunder')),
+    (SELECT song_id FROM Song WHERE name = 'Thang Of Thunder')),
     ((SELECT user_id FROM User WHERE name = 'Bill'),
-	(SELECT song_id FROM Song WHERE name = 'Magic Circus')),
+    (SELECT song_id FROM Song WHERE name = 'Magic Circus')),
     ((SELECT user_id FROM User WHERE name = 'Roger'),
-	(SELECT song_id FROM Song WHERE name = 'Dance With Her Own')),
+    (SELECT song_id FROM Song WHERE name = 'Dance With Her Own')),
     ((SELECT user_id FROM User WHERE name = 'Roger'),
-	(SELECT song_id FROM Song WHERE name = 'Without My Streets')),
+    (SELECT song_id FROM Song WHERE name = 'Without My Streets')),
     ((SELECT user_id FROM User WHERE name = 'Roger'),
-	(SELECT song_id FROM Song WHERE name = 'Celebration Of More'));
+    (SELECT song_id FROM Song WHERE name = 'Celebration Of More'));
