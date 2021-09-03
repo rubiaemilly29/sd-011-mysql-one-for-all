@@ -1,3 +1,3 @@
-CREATE VIEW perfil_artistas AS
+CREATE TRIGGER trigger_usuario_delete AS
 
 FROM SpotifyClone.Artists A
