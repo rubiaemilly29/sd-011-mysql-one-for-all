@@ -60,15 +60,9 @@ FOREIGN KEY (musica_id) REFERENCES relacoes_musicas(musica_id)
 ) ENGINE=InnoDb;
 
 INSERT INTO planos (plano, valor)
-VALUES ('Gratuito', 0),
+VALUES ('Gratuito', 0.00),
 ('Familiar', 7.99),
 ('Universitário', 5.99);
-
-INSERT INTO usuarios (usuario, idade, plano_id)
-VALUES ('Thati', 23, 1),
-('Cintia', 35, 2),
-('Bill', 20, 3),
-('Roger', 45, 1);
 
 INSERT INTO artistas (nome)
 VALUES ('Walter Phoenix'),
@@ -102,6 +96,12 @@ VALUES ('Soul For Us', 1, 1),
 ('Thang Of Thunder', 4, 5),
 ('Words Of Her Life', 4, 5),
 ('Without My Streets', 4, 5);
+
+INSERT INTO usuarios (usuario, idade, plano_id)
+VALUES ('Thati', 23, 1),
+('Cintia', 35, 2),
+('Bill', 20, 3),
+('Roger', 45, 1);
 
 INSERT INTO seguindo_artistas (usuario_id, artista_id)
 VALUES (1, 1),
