@@ -9,5 +9,3 @@ ON a.artista_id = al.artista_id
 AND a.artista_id = s.artista_id
 GROUP BY `artista`, `album`
 ORDER BY `seguidores` DESC, `artista` ASC, `album` ASC;
-
-SELECT * FROM perfil_artistas
