@@ -109,7 +109,7 @@ VALUES
     cancao_id INT(15),
     CONSTRAINT PRIMARY KEY(usuario_id, cancao_id),
     FOREIGN KEY(usuario_id) REFERENCES Usuarios (usuario_id),
-    FOREIGN KEY(cancoes_id) REFERENCES Cancoes (cancao_id)
+    FOREIGN KEY(cancao_id) REFERENCES Cancoes (cancao_id)
 ) engine = InnoDB;
 
   INSERT INTO Historico (usuario_id, cancao_id)
