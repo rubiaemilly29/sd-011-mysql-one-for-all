@@ -43,7 +43,7 @@ VALUES
 
 CREATE TABLE album(
     album_id INT PRIMARY KEY AUTO_INCREMENT,
-    name_name VARCHAR(50) NOT NULL,
+    name_album VARCHAR(50) NOT NULL,
     artist_id INT NOT NULL,
     FOREIGN KEY (artist_id) REFERENCES artists (artist_id)
 ) engine = InnoDB;
@@ -84,7 +84,7 @@ VALUES
   ('Words Of Her Life', 5),
   ('Without My Streets', 5);
 
-CREATE TABLE music_history(
+CREATE TABLE musics_history(
     user_id INT,
     song_id INT,
     FOREIGN KEY (user_id) REFERENCES user (user_id),
@@ -92,7 +92,7 @@ CREATE TABLE music_history(
     PRIMARY KEY (user_id, song_id)
 ) engine = InnoDB;
 
-INSERT INTO history (user_id, song_id)
+INSERT INTO musics_history (user_id, song_id)
 VALUES
   (1, 1),
   (1, 6),
@@ -110,6 +110,7 @@ VALUES
   (4, 11);
 
 CREATE TABLE following_artists(
+    following_artists_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
     artist_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user (user_id),
