@@ -1,5 +1,4 @@
 DELIMITER $$
-
 CREATE FUNCTION SpotifyClone.quantidade_musicas_no_historico(id INT)
 RETURNS INT READS SQL DATA
 BEGIN
@@ -9,5 +8,4 @@ WHERE usuario_id = id
 INTO quantidade;
 RETURN quantidade;
 END $$
-
 DELIMITER ;
