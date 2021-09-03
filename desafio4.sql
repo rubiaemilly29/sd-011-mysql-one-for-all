@@ -3,9 +3,9 @@ SELECT
 nome AS 'artista',
 COUNT(*) AS 'seguidores'
 FROM
-SpotifyClone.Artista AS a
+SpotifyClone.Artista AS art
 INNER JOIN 
-SpotifyClone.Seguindo_Artista AS s_a ON a.id = s_a.artista_id
+SpotifyClone.Seguindo_Artista AS s_art ON art.id = s_art.artista_id
 GROUP BY `artista`
 ORDER BY `seguidores` DESC, `artista`
 LIMIT 3;
