@@ -18,4 +18,3 @@ SELECT
     FROM
       Albuns
   ) AS `albuns`;
-  
