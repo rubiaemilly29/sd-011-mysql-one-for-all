@@ -123,7 +123,9 @@ INSERT INTO Historico_Seguidores (usuario_id, artista_id)
 VALUES
 (1, 1),
 (1, 4),
+(1, 3),
 (2, 1),
+(2, 3),
 (3, 2),
 (3, 1),
 (4, 4);
