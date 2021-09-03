@@ -1,6 +1,4 @@
-DROP DATABASE IF EXISTS SpotifyClone;
-
-CREATE DATABASE SpotifyClone;
+CREATE DATABASE IF NOT EXISTS SpotifyClone;
 USE SpotifyClone;
 
 CREATE TABLE Planos(
@@ -99,18 +97,18 @@ VALUES ('Soul For Us', 1),
 INSERT INTO Historico_reproducoes (usuario_id, cancao_id)
 VALUES (1, 1),
 (1, 6),
-(1, 15),
-(1, 17),
-(2, 14),
-(2, 18),
+(1, 14),
+(1, 16),
+(2, 13),
+(2, 17),
 (2, 2),
-(2, 16),
+(2, 15),
 (3, 4),
-(3,	17),
+(3,	16),
 (3, 6),
 (4,	3),
-(4, 19),
-(4, 12);
+(4, 18),
+(4, 11);
 
 INSERT INTO Seguidores (usuario_id, artista_id)
 VALUES (1, 1),
