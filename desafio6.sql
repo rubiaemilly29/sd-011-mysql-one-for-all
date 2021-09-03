@@ -13,7 +13,3 @@ SUM(p.valor_plano) AS faturamento_total
 FROM SpotifyClone.Planos AS p
 INNER JOIN SpotifyClone.Usuarios AS u
 ON u.plano_id = p.plano_id;
-
-SELECT * FROM faturamento_atual;
-
-DROP VIEW faturamento_atual;
