@@ -114,8 +114,7 @@ CREATE TABLE following_artists(
     user_id INT NOT NULL,
     artist_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user (user_id),
-    FOREIGN KEY (artist_id) REFERENCES artists (artist_id),
-    PRIMARY KEY (user_id, artist_id)
+    FOREIGN KEY (artist_id) REFERENCES artists (artist_id)
 ) engine = InnoDB;
 
 INSERT INTO following_artists (user_id, artist_id)
