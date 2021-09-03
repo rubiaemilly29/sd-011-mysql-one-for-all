@@ -60,12 +60,12 @@ VALUES
 
 SELECT * FROM planos;
 
-INSERT INTO usuarios (nome_usuario, usuario_idade, id_plano)
+INSERT INTO usuarios (id_usuario, nome_usuario, usuario_idade, id_plano)
 VALUES
-  ('Thati', 23, 1),
-  ('Cintia', 35, 2),
-  ('Bill', 20, 3),
-  ('Roger', 45, 1);
+  (1, 'Thati', 23, 1),
+  (2, 'Cintia', 35, 2),
+  (3, 'Bill', 20, 3),
+  (4, 'Roger', 45, 1);
 
 SELECT * FROM usuarios;
 
