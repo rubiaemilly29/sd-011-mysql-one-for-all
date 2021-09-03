@@ -101,7 +101,6 @@ VALUES
 ('Thang Of Thunder', 5),
 ('"Words Of Her Life', 5),
 ('Without My Streets', 5);
--- Error Code: 1062. Duplicate entry '1-3' for key 't_h_reproductions.PRIMARY'
 
 INSERT INTO t_h_reproductions(fk_id_user, fk_id_songs)
 VALUES
