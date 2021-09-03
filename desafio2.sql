@@ -1,4 +1,21 @@
-CREATE View `estatisticas_musicais` as
-  select (select count(*) from Musicas) as `cancoes`,
-  (select count(*) from Artistas) as `artistas`,
-  (select count(*) from Albuns) as `albuns`;
+CREATE VIEW `estatisticas_musicais` AS
+SELECT
+  (
+    SELECT
+      count(*)
+    FROM
+      Musicas
+  ) AS `cancoes`,
+  (
+    SELECT
+      count(*)
+    FROM
+      Artistas
+  ) AS `artistas`,
+  (
+    SELECT
+      count(*)
+    FROM
+      Albuns
+  ) AS `albuns`;
+  
