@@ -9,7 +9,7 @@ plano_id INT AUTO_INCREMENT NOT NULL,
 plano VARCHAR(20) NOT NULL,
 valor_plano DOUBLE(4, 2) NOT NULL,
 PRIMARY KEY (plano_id)
-) engine=InnoDB;
+) engine=InnoDB; --
 
 CREATE TABLE Artistas(
 artista_id INT AUTO_INCREMENT NOT NULL,
