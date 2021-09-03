@@ -40,13 +40,17 @@ CREATE TABLE Song(
 CREATE TABLE Artist_followers(
     artist_id INT NOT NULL,
     user_id INT NOT NULL, 
-    PRIMARY KEY (artist_id, user_id)
+    CONSTRAINT PRIMARY KEY (artist_id, user_id),
+    FOREIGN KEY (artist_id) REFERENCES Artist (artist_id),
+    FOREIGN KEY (user_id) REFERENCES User (user_id)
 ) engine = InnoDB;
 
 CREATE TABLE Reproduction_history(
     user_id INT NOT NULL,
     song_id INT NOT NULL,
-    PRIMARY KEY (user_id, song_id)
+    CONSTRAINT PRIMARY KEY (user_id, song_id),
+    FOREIGN KEY (user_id) REFERENCES User (user_id),
+    FOREIGN KEY (song_id) REFERENCES Song (song_id)
 ) engine = InnoDB;
 
 INSERT INTO Plan (plan, plan_value)
