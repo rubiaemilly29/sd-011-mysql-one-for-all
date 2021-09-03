@@ -72,16 +72,28 @@ VALUES
 ('Lance Day'),
 ('Freedie Shannon');
 
+DELIMITER $$
+CREATE FUNCTION getArtistId(artistName VARCHAR(50))
+RETURNS INT READS SQL DATA
+BEGIN
+    DECLARE artistId INT;
+    SELECT artista_id
+    FROM SpotifyClone.Artista Artista
+    WHERE Artista.nome = artistName INTO artistId;
+    RETURN artistId;
+END $$
+DELIMITER ;
+
 INSERT INTO Usuario_Artista(usuario_id, artista_id)
 VALUES
-(1, 1),
-(1, 4),
-(1, 3),
-(2, 1),
-(2, 3),
-(3, 3),
-(3, 1),
-(4, 4);
+(1, (SELECT getArtistId('Walter Phoenix'))),
+(1, (SELECT getArtistId('Freedie Shannon'))),
+(1, (SELECT getArtistId('Lance Day'))),
+(2, (SELECT getArtistId('Walter Phoenix'))),
+(2, (SELECT getArtistId('Lance Day'))),
+(3, (SELECT getArtistId('Peter Strong'))),
+(3, (SELECT getArtistId('Walter Phoenix'))),
+(4, (SELECT getArtistId('Freedie Shannon')));
 
 INSERT INTO Album(nome, artista_id)
 VALUES
