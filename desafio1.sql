@@ -4,12 +4,14 @@ USE SpotifyClone;
 
 CREATE TABLE plan(
 plan_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-plan_price INT,
+plan_price DOUBLE,
 plan_name VARCHAR(50)
 );
 
+SELECT * FROM plan;
+
 INSERT INTO plan(plan_price, plan_name)
-VALUES(0,'gratuito'),
+VALUES(0.00,'gratuito'),
 (7.99,'familiar'),
 (5.99, 'universitário');
 
