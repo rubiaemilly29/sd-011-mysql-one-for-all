@@ -58,13 +58,13 @@ VALUES
   ('Temporary Culture', 4);
 
   CREATE TABLE Cancoes(
-    cancoes_id INT(15) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    cancoes VARCHAR(250) NOT NULL,
+    cancao_id INT(15) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cancao VARCHAR(250) NOT NULL,
     album_id INT(15) NOT NULL,
     FOREIGN KEY (album_id) REFERENCES Albuns (album_id)
 ) engine = InnoDB; 
 
-INSERT INTO Cancoes (cancoes, album_id)
+INSERT INTO Cancoes (cancao, album_id)
 VALUES
   ('Soul For Us', 1),
   ('Reflections Of Magic', 1),
@@ -106,13 +106,13 @@ VALUES
 
   CREATE TABLE Historico(
     usuario_id INT(15),
-    cancoes_id INT(15),
-    CONSTRAINT PRIMARY KEY(usuario_id, cancoes_id),
+    cancao_id INT(15),
+    CONSTRAINT PRIMARY KEY(usuario_id, cancao_id),
     FOREIGN KEY(usuario_id) REFERENCES Usuarios (usuario_id),
-    FOREIGN KEY(cancoes_id) REFERENCES Cancoes (cancoes_id)
+    FOREIGN KEY(cancoes_id) REFERENCES Cancoes (cancao_id)
 ) engine = InnoDB;
 
-  INSERT INTO Historico (usuario_id, cancoes_id)
+  INSERT INTO Historico (usuario_id, cancao_id)
 VALUES
   (1, 1),
   (1, 6),
