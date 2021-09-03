@@ -21,16 +21,18 @@ performer_id INT PRIMARY KEY AUTO_INCREMENT,
 performer_name VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE Songs(
-song_id INT PRIMARY KEY AUTO_INCREMENT,
-song_title VARCHAR(50) NOT NULL
-);
-
 CREATE TABLE Albuns(
 album_id INT PRIMARY KEY AUTO_INCREMENT,
 album_title VARCHAR(50) NOT NULL,
 performer_id INT NOT NULL,
 FOREIGN KEY (performer_id) REFERENCES Performers(performer_id)
+);
+
+CREATE TABLE Songs(
+song_id INT PRIMARY KEY AUTO_INCREMENT,
+song_title VARCHAR(50) NOT NULL,
+album_id INT NOT NULL,
+FOREIGN KEY (album_id) REFERENCES Albuns(album_id)
 );
 
 CREATE TABLE Followed_Performers(
@@ -47,14 +49,6 @@ song_id INT NOT NULL,
 FOREIGN KEY (user_id) REFERENCES Users(user_id),
 FOREIGN KEY (song_id) REFERENCES Songs(song_id),
 CONSTRAINT PK_Songs_Historic PRIMARY KEY (user_id, song_id)
-);
-
-CREATE TABLE Album_Songs(
-album_id INT NOT NULL,
-song_id INT NOT NULL,
-FOREIGN KEY (album_id) REFERENCES Albuns(album_id),
-FOREIGN KEY (song_id) REFERENCES Songs(song_id),
-CONSTRAINT PK_Album_Songs PRIMARY KEY (album_id, song_id)
 );
 
 INSERT INTO Spotify_Subscription(subscription_title, subscription_value)
@@ -77,27 +71,6 @@ VALUES
 ('Lance Day'),
 ('Freedie Shannon');
 
-INSERT INTO Songs(song_title)
-VALUES
-("Soul For Us"),
-("Reflections Of Magic"),
-("Dance With Her Own"),
-("Troubles Of My Inner Fire"),
-("Time Fireworks"),
-("Magic Circus"),
-("Honey, So Do I"),
-("Sweetie, Let's Go Wild"),
-("She Knows"),
-("Fantasy For Me"),
-("Celebration Of More"),
-("Rock His Everything"),
-("Home Forever"),
-("Diamond Power"),
-("Honey, Let's Be Silly"),
-("Thang Of Thunder"),
-("Words Of Her Life"),
-("Without My Streets");
-
 INSERT INTO Albuns(album_title, performer_id)
 VALUES
 ("Envious", 1),
@@ -106,26 +79,26 @@ VALUES
 ("Incandescent", 3),
 ("Temporary Culture", 4);
 
-INSERT INTO Album_Songs(album_id, song_id)
+INSERT INTO Songs(song_title, album_id)
 VALUES
-(1, 1),
-(1, 2),
-(1, 3),
-(2, 4),
-(2, 5),
-(3, 6),
-(3, 7),
-(3, 8),
-(3, 9),
-(4, 10),
-(4, 11),
-(4, 12),
-(4, 13),
-(4, 14),
-(4, 15),
-(5, 16),
-(5, 17),
-(5, 18);
+("Soul For Us", 1),
+("Reflections Of Magic", 1),
+("Dance With Her Own", 1),
+("Troubles Of My Inner Fire", 2),
+("Time Fireworks", 2),
+("Magic Circus", 3),
+("Honey, So Do I", 3),
+("Sweetie, Let's Go Wild", 3),
+("She Knows", 3),
+("Fantasy For Me", 4),
+("Celebration Of More", 4),
+("Rock His Everything", 4),
+("Home Forever", 4),
+("Diamond Power", 4),
+("Honey, Let's Be Silly", 4),
+("Thang Of Thunder", 5),
+("Words Of Her Life", 5),
+("Without My Streets", 5);
 
 INSERT INTO Songs_Historic(user_id, song_id)
 VALUES
