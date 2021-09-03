@@ -13,7 +13,9 @@ CREATE TABLE planos (
   plano varchar(100) NOT NULL,
   valor_plano double DEFAULT (0)
 ) ENGINE=InnoDB;
-INSERT INTO planos(plano,valor_plano ) VALUES ('Gratuito',0),('Familiar',7.99),('Universitário',5.99);
+INSERT INTO planos(plano,valor_plano ) VALUES ('gratuito', '0'),
+  ('familiar', '7.99'),
+  ('universitário', '5.99');
 
 CREATE TABLE usuarios (
   usuario_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
