@@ -1,3 +1,4 @@
+CREATE VIEW historico_reproducao_usuarios AS
 SELECT u.name AS 'usuario',
 s.name AS 'nome'
 FROM Reproduction_history rh
