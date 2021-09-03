@@ -8,5 +8,3 @@ SELECT COUNT(*) FROM SpotifyClone.Artistas
 (
 SELECT COUNT(*) FROM SpotifyClone.Albuns
 ) AS albuns;
-
-SELECT * FROM estatisticas_musicais;
