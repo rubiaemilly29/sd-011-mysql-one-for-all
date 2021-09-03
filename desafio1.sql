@@ -72,7 +72,7 @@ VALUE
 ('Dance With Her Own', 1),
 ('Troubles Of My Inner Fire', 2),
 ('Time Fireworks', 2),
-('Magic Circuss', 3),
+('Magic Circus', 3),
 ('Honey, So Do I', 3),
 ("Sweetie, Let's Go Wild", 3),
 ('She Knows', 3),
