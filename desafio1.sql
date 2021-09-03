@@ -108,15 +108,15 @@ INSERT INTO usuario_seguindo_artista(usuario_id, artista_id) VALUES
 INSERT INTO usuario_musica(usuario_id, musica_id) VALUES
 (1, 1),
 (1, 6),
-(1, 15),
-(1, 17),
+(1, 14),
+(1, 16),
 (2, 2),
-(2, 14),
-(2, 16),
-(2, 18),
+(2, 13),
+(2, 15),
+(2, 17),
 (3, 4),
 (3, 6),
-(3,17),
+(3,16),
 (4, 3),
-(4, 12),
-(4, 19);
+(4, 11),
+(4, 18);
