@@ -71,8 +71,8 @@ VALUES
   ('univesitário', 5.99);
   
   SELECT * FROM plans;
- 
- INSERT INTO albuns(album, artist_id)
+
+  INSERT INTO albuns(album, artist_id)
 
   VALUES
 
@@ -85,7 +85,7 @@ VALUES
   SELECT * FROM albuns;
   
   INSERT INTO songs(song, album_id)
- 
+
   VALUES
     ('Soul For Us', 1),
     ('Reflections Of Magic', 1),
@@ -115,7 +115,7 @@ VALUES
   ('Roger', 45, 1);
     
   SELECT * FROM users;
-       
+   
   INSERT INTO followers(user_id, artist_id)
   VALUES
     (1, 1),
