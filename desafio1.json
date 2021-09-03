@@ -9,8 +9,8 @@
   "tabela_que_contem_seguindo_artistas": "Followed_Performers",
   "coluna_artista": "performer_name",
   "tabela_que_contem_artista": "Performers",
-  "coluna_album": "album_id",
+  "coluna_album": "album_title",
   "tabela_que_contem_album": "Albuns",
-  "coluna_cancoes": "song_id",
+  "coluna_cancoes": "song_title",
   "tabela_que_contem_cancoes": "Songs"
 }

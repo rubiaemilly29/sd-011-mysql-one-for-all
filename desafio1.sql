@@ -59,9 +59,9 @@ CONSTRAINT PK_Album_Songs PRIMARY KEY (album_id, song_id)
 
 INSERT INTO Spotify_Subscription(subscription_title, subscription_value)
 VALUES
-('gratuito', 0),
-('familiar', 7.99),
-('universitário', 5.99);
+("gratuito", 0),
+("familiar", 7.99),
+("universitário", 5.99);
 
 INSERT INTO Users(user_name,user_age,subscription_id)
 VALUES
@@ -79,31 +79,31 @@ VALUES
 
 INSERT INTO Songs(song_title)
 VALUES
-('Soul For Us'),
-('Reflections Of Magic'),
-('Dance With Her Own'),
-('Troubles Of My Inner Fire'),
-('Time Fireworks'),
-('Magic Circus'),
-('Honey, So Do I'),
+("Soul For Us"),
+("Reflections Of Magic"),
+("Dance With Her Own"),
+("Troubles Of My Inner Fire"),
+("Time Fireworks"),
+("Magic Circus"),
+("Honey, So Do I"),
 ("Sweetie, Let's Go Wild"),
-('She Knows'),
-('Fantasy For Me'),
-('Celebration Of More'),
-('Rock His Everything'),
-('Home Forever'),
-('Diamond Power'),
+("She Knows"),
+("Fantasy For Me"),
+("Celebration Of More"),
+("Rock His Everything"),
+("Home Forever"),
+("Diamond Power"),
 ("Honey, Let's Be Silly"),
-('Thang Of Thunder'),
-('Words Of Her Life'),
-('Without My Streets');
+("Thang Of Thunder"),
+("Words Of Her Life"),
+("Without My Streets");
 
 INSERT INTO Albuns(album_title, performer_id)
 VALUES
 ("Envious", 1),
 ("Exuberant", 1),
 ("Hallowed Steam", 2),
-("ncandescent", 3),
+("Incandescent", 3),
 ("Temporary Culture", 4);
 
 INSERT INTO Album_Songs(album_id, song_id)
