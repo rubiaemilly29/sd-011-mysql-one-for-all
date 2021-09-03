@@ -6,4 +6,3 @@ INNER JOIN SpotifyClone.usuarios AS u
 ON u.usuario_id = hr.usuario_id AND u.usuario_id IN (2, 3)
 GROUP BY nome
 ORDER BY nome;
-
