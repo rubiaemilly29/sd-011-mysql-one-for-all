@@ -144,4 +144,3 @@ VALUES
     (4, 18),
     (4, 11);
   SELECT * FROM listened_history;
- 
