@@ -23,6 +23,14 @@ artista_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 artista_name VARCHAR(50)
 ) engine = InnoDB;
 
+CREATE TABLE seguidores(
+usuario_id INT,
+artista_id INT,
+CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
+FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
+FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
+) engine = InnoDB;
+
 CREATE TABLE albuns(
 album_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 album_nome VARCHAR(50),
@@ -45,13 +53,6 @@ FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
 FOREIGN KEY (musica_id) REFERENCES musicas(musica_id)
 ) engine = InnoDB;
 
-CREATE TABLE seguidores(
-usuario_id INT,
-artista_id INT,
-CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
-FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
-FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
-) engine = InnoDB;
 
 INSERT INTO planos(plano_type, plano_valor)
 VALUES
@@ -80,6 +81,17 @@ VALUES
   ('Hallowed Steam', 2),
   ('Incandescent', 3),
   ('Temporary Culture', 4);
+
+  INSERT INTO seguidores(usuario_id, artista_id)
+VALUES
+  (1, 1),
+  (1, 3),
+  (1, 4),
+  (2, 1),
+  (2, 3),
+  (3, 1),
+  (3, 2),
+  (4, 4);
 
 INSERT INTO musicas(musica_nome, album_id)
 VALUES
@@ -118,14 +130,3 @@ VALUES
   (4, 3),
   (4, 18),
   (4, 11);
-
-INSERT INTO seguidores(usuario_id, artista_id)
-VALUES
-  (1, 1),
-  (1, 3),
-  (1, 4),
-  (2, 1),
-  (2, 3),
-  (3, 1),
-  (3, 2),
-  (4, 4);
