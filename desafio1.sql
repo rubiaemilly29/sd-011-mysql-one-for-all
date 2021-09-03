@@ -140,4 +140,3 @@ VALUES
 (4, 11);
 
 SELECT * FROM historico;
-
