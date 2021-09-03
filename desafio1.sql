@@ -10,7 +10,7 @@ CREATE TABLE albums (
 ) ENGINE=InnoDB;
 
 CREATE TABLE artistas (
-  artista_id INT(30) NOT PRIMARY KEY NULL AUTO_INCREMENT,
+  artista_id INT(30) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
   artista_nome varchar(100) NOT NULL,
 ) ENGINE=InnoDB;
 
