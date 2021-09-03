@@ -62,16 +62,12 @@ VALUES
 ('familiar', 7.99),
 ('univesitário', 5.99);
 
-SELECT * FROM plano;
-
 INSERT INTO user (usuario, idade, plano_id)
 VALUES
 ('Thati', 23, 1),
 ('Cintia', 35, 2),
 ('Bill', 20, 3),
 ('Roger', 45, 1);
-
-SELECT * FROM user;
 
 INSERT INTO artista (nome)
 VALUES
@@ -80,8 +76,6 @@ VALUES
 ('Lance Day'),
 ('Freedie Shannon');
 
-SELECT * FROM artista;
-
 INSERT INTO albums (album, artista_id)
 VALUES
 ('Envious', 1),
@@ -89,8 +83,6 @@ VALUES
 ('Hallowed Steam', 2),
 ('Incandescent', 3),
 ('Temporary Culture', 4);
-
-SELECT * FROM albums;
 
 INSERT INTO seguidores (usuario_id, artista_id)
 VALUES
@@ -102,8 +94,6 @@ VALUES
 (3, 2),
 (3, 1),
 (4, 4);
-
-SELECT * FROM seguidores;
 
 INSERT INTO musicas (titulo, album_id)
 VALUES
@@ -126,8 +116,6 @@ VALUES
 ('Words Of Her Life', 5),
 ('Without My Streets', 5);
 
-SELECT * FROM musicas;
-
 INSERT INTO historico_de_reproducoes (usuario_id, musica_id)
 VALUES
 (1, 1),
@@ -144,5 +132,3 @@ VALUES
 (4, 3),
 (4, 18),
 (4, 11);
-
-SELECT * FROM historico_de_reproducoes;
