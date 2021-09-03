@@ -114,7 +114,7 @@ VALUES
   (3, 1),
   (4, 4);
 
-INSERT INTO historico_reproducoes (usuario_id, musica_id)
+INSERT INTO historico_de_reproducoes (usuario_id, musica_id)
 VALUES
   (1, 1),
   (1, 15),
