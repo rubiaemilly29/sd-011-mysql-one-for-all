@@ -13,8 +13,8 @@ PRIMARY KEY(usuarioId)
 
 CREATE TABLE plano(
 planoId INT AUTO_INCREMENT NOT NULL,
-preco DECIMAL(3, 2) NOT NULL,
 plano VARCHAR(100) NOT NULL,
+preco DECIMAL(3, 2) NOT NULL,
 PRIMARY KEY(planoId)
 ) engine = InnoDB;
 
