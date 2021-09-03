@@ -47,6 +47,7 @@ CREATE TABLE artist_followers (
     CONSTRAINT PRIMARY KEY (artist_id, user_id)
 ) ENGINE = InnoDB;
 
+
 CREATE TABLE reproduction_history (
 	user_id INT,
     song_id INT,
