@@ -4,25 +4,25 @@ CREATE database SpotifyClone;
 USE SpotifyClone;
 
 CREATE TABLE Plan (
-	plan_id INT AUTO_INCREMENT,
-    plan_name VARCHAR(30) NOT NULL,
-    price FLOAT(3,2),
-    PRIMARY KEY (plan_id)
+plan_id INT AUTO_INCREMENT,
+plan_name VARCHAR(30) NOT NULL,
+price FLOAT(3,2),
+PRIMARY KEY (plan_id)
 );
 
 INSERT INTO Plan (plan_name, price)
 VALUE
-	('gratuito', 0.00),
-	('familiar', 7.99),
-    ('universitário', 5.99);
+('gratuito', 0.00),
+('familiar', 7.99),
+('universitário', 5.99);
 
 CREATE TABLE User (
-	user_id INT AUTO_INCREMENT,
-    first_name VARCHAR(30) NOT NULL,
-    age INT NOT NULL,
-    plan_id INT NOT NULL,
-    PRIMARY KEY (user_id),
-    FOREIGN KEY (plan_id) REFERENCES Plan (plan_id)
+user_id INT AUTO_INCREMENT,
+first_name VARCHAR(30) NOT NULL,
+age INT NOT NULL,
+plan_id INT NOT NULL,
+PRIMARY KEY (user_id),
+FOREIGN KEY (plan_id) REFERENCES Plan (plan_id)
 );
 
 INSERT INTO User (first_name, age, plan_id)
