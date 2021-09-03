@@ -5,4 +5,4 @@ from SpotifyClone.usuario_segue_artista as t1
 inner join SpotifyClone.artista as t2
 on t1.artista_id = t2.artista_id
 group by t1.artista_id
-order by `seguidores` desc limit 3;
+order by `seguidores` desc, `artista` limit 3;

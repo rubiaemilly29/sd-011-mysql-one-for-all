@@ -112,7 +112,7 @@ FOREIGN KEY (`artista_id`) REFERENCES `artista`(`artista_id`)
 -- Inserindo valores na tabela `usuario_segue_artista`
 
 INSERT INTO `usuario_segue_artista`(`usuario_id`, `artista_id`) VALUES
-(1, 1), (1, 3), (1, 4), (2, 1), (2, 2), (3, 1), (3, 2), (4, 4);
+(1, 1), (1, 3), (1, 4), (2, 1), (2, 3), (3, 1), (3, 2), (4, 4);
 
 -- Estrutura para a tabela `historico_de_reproducoes`
 
