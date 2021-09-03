@@ -85,11 +85,11 @@ VALUES
   ('Without My Streets', 5);
 
 CREATE TABLE musics_history(
+    musics_history_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     song_id INT,
     FOREIGN KEY (user_id) REFERENCES user (user_id),
-    FOREIGN KEY (song_id) REFERENCES songs (song_id),
-    PRIMARY KEY (user_id, song_id)
+    FOREIGN KEY (song_id) REFERENCES songs (song_id)
 ) engine = InnoDB;
 
 INSERT INTO musics_history (user_id, song_id)
