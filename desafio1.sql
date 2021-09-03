@@ -7,7 +7,7 @@ USE SpotifyClone;
 CREATE TABLE planos(
     plano_id INT PRIMARY KEY AUTO_INCREMENT,
     plano VARCHAR(30) NOT NULL UNIQUE,
-    valor DOUBLE NOT NULL,
+    valor DOUBLE NOT NULL
 ) engine = InnoDB;
 
 CREATE TABLE usuarios(
@@ -34,7 +34,7 @@ CREATE TABLE cancoes(
 
 CREATE TABLE artistas(
     artista_id INT PRIMARY KEY AUTO_INCREMENT,
-    artista VARCHAR(50) NOT NULL,
+    artista VARCHAR(50) NOT NULL
 ) engine = InnoDB;
 
 CREATE TABLE artistas_seguidos(
@@ -84,14 +84,14 @@ VALUES
   ('Time Fireworks', 2),
   ('Magic Circus', 3),
   ('Honey, So Do I', 3),
-  (`Sweetie, Let\'s Go Wild`, 3),
+  ("Sweetie, Let\'s Go Wild", 3),
   ('She Knows', 3),
   ('Fantasy For Me', 4),
   ('Celebration Of More', 4),
   ('Rock His Everything', 4),
   ('Home Forever', 4),
   ('Diamond Power', 4),
-  (`Honey, Let\'s Be Silly`, 4),
+  ("Honey, Let\'s Be Silly", 4),
   ('Thang Of Thunder', 5),
   ('Words Of Her Life', 5),
   ('Without My Streets', 5);
