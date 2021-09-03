@@ -1,4 +1,3 @@
-USE `SpotifyClone`;
 CREATE VIEW top_3_artistas AS
 SELECT nome AS 'artista',
 (SELECT COUNT(*) FROM SpotifyClone.seguindo_artistas AS sa
