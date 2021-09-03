@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS spotifyslone;
-CREATE DATABASE   'spotifyclone';
-USE 'spotifyclone';
+DROP DATABASE IF EXISTS SpotifyClone;
+CREATE DATABASE   'SpotifyClone';
+USE 'SpotifyClone';
 
 DROP TABLE IF EXISTS `albums`;
 
