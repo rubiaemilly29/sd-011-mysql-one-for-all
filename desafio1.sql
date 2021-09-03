@@ -22,7 +22,7 @@ INSERT INTO `artista` (`artista`) VALUES
 CREATE TABLE `plano` (
 `plano_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 `plano` VARCHAR(40) NOT NULL,
-`valor` DOUBLE NOT NULL
+`valor` DECIMAL(3, 2) NOT NULL
 );
 
 -- Inserindo valores na tabela `plano`
