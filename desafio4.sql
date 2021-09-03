@@ -1,4 +1,3 @@
-USE SportifyClone;
 CREATE VIEW top_3_artistas AS
 SELECT a.name AS 'artista',
 (SELECT COUNT(fa.artist_id)
