@@ -10,6 +10,11 @@ CREATE TABLE planos(
     valor DOUBLE NOT NULL
 ) engine = InnoDB;
 
+CREATE TABLE artistas(
+    artista_id INT PRIMARY KEY AUTO_INCREMENT,
+    artista VARCHAR(50) NOT NULL
+) engine = InnoDB;
+
 CREATE TABLE usuarios(
     usuario_id INT PRIMARY KEY AUTO_INCREMENT,
     usuario VARCHAR(30) NOT NULL UNIQUE,
@@ -30,11 +35,6 @@ CREATE TABLE cancoes(
     cancao VARCHAR(50) NOT NULL,
     album_id INT NOT NULL,
     FOREIGN KEY (album_id) REFERENCES albuns(album_id)
-) engine = InnoDB;
-
-CREATE TABLE artistas(
-    artista_id INT PRIMARY KEY AUTO_INCREMENT,
-    artista VARCHAR(50) NOT NULL
 ) engine = InnoDB;
 
 CREATE TABLE artistas_seguidos(
