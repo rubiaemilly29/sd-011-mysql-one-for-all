@@ -4,8 +4,8 @@ BEFORE DELETE ON SpotifyClone.users
 FOR EACH ROW
 BEGIN
 DELETE FROM SpotifyClone.history_reproduction
-WHERE OLD.user_id = OLD.user_id;
+WHERE OLD.user_id = user_id;
 DELETE FROM SpotifyClone.following_artists
-WHERE OLD.user_id = OLD.user_id;
+WHERE OLD.user_id = user_id;
 END $$
 DELIMITER ;
