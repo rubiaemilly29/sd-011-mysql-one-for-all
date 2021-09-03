@@ -1,3 +1,4 @@
+create view perfil_artistas as
 select t1.artista as `artista`,
 t2.album as `album`,
 (select count(t3.artista_id)
