@@ -1,4 +1,3 @@
-DROP DATABASE IF EXISTS SpotifyClone;
 CREATE DATABASE SpotifyClone;
 
 USE SpotifyClone;
@@ -128,4 +127,3 @@ VALUES
   (3, 2),
   (3, 1),
   (4, 4);
-  
