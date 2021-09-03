@@ -70,24 +70,40 @@ VALUES
 
 INSERT INTO t_artists(c_artist)
 VALUES
-('Post Malone'),
-('Ivete'),
-('Thiaguinho'),
-('Luan');
+('Walter Phoenix'),
+('Walter Phoenix'),
+('Peter Strong'),
+('Lance Day'),
+('Freedie Shannon');
 
 INSERT INTO t_album(c_album, fk_id_artist)
 VALUES
-('Album 1', 2),
-('Album 2', 1),
-('Album 3', 3),
-('Album 4', 2);
+('Envious', 2),
+('Exuberant', 1),
+('Hallowed Steam', 3),
+('Incandescent', 2),
+('Temporary Culture', 4);
 
 INSERT INTO t_songs(c_songs, fk_id_album)
 VALUES
-('sMusica 1', 3),
-('sMusica 2', 4),
-('sMusica 3', 1),
-('sMusica 4', 2);
+('Soul For Us', 3),
+('Reflections Of Magic', 4),
+('Dance With Her Own', 1),
+('Troubles Of My Inner Fire', 1),
+('Time Fireworks', 2),
+('Magic Circus', 3),
+('Honey, So Do I', 2),
+("Sweetie, Let's Go Wild", 2),
+('She Knows', 3),
+('Fantasy For Me', 1),
+('elebration Of More', 1),
+('Rock His Everything', 3),
+('Home Forever', 2),
+('Diamond Power', 3),
+("Honey, Let's Be Silly", 4),
+('Thang Of Thunder', 2),
+('"Words Of Her Life', 1),
+('Without My Streets', 4);
 
 INSERT INTO t_h_reproductions(c_h_reproductions, fk_id_user, fk_id_songs)
 VALUES
@@ -108,7 +124,7 @@ VALUES
 
 INSERT INTO t_follow_artists(c_follow_artists, fk_id_user, fk_id_artist)
 VALUES
-(12, 3, 2),
-(20, 2, 1),
-(10, 1, 4),
-(5, 2, 2);
+(4, 3, 2),
+(2, 2, 1),
+(3, 1, 4),
+(1, 2, 2);
