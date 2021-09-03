@@ -120,6 +120,7 @@ INSERT INTO History (user_id, song_id)
 VALUES
   (1, 12),
   (1, 8),
+  (1, 3),
   (1, 14),
   (2, 5),
   (2, 18),
