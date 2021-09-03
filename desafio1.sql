@@ -57,7 +57,7 @@ VALUES
   ('universitário', 5.99),
   ('familiar', 7.99);
 
-INSERT INTO usuarios (usuario_nome, usuario_idade, plano_id)
+INSERT INTO usuarios (usuario_name, usuario_idade, plano_id)
 VALUES
   ('Thati', 23, 1),
   ('Cintia', 35, 2),
