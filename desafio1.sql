@@ -58,7 +58,7 @@ INSERT INTO planos (plano, valor)
 VALUES
   ('gratuito', '0'),
   ('familiar', '7.99'),
-  ('universitario', '5.99');
+  ('universitário', '5.99');
 
   INSERT INTO usuarios (usuario, idade, plano_id)
 VALUES
