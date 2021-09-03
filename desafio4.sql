@@ -1,3 +1,4 @@
+-- teste
 CREATE VIEW top_3_artistas AS SELECT
 t2.nome_artista AS `artista`,
 COUNT(t1.id_usuario) AS `seguidores`
