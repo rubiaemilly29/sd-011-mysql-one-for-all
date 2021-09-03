@@ -9,7 +9,7 @@ AL.album_nome AS 'album'
 FROM SpotifyClone.artistas AS AR
 INNER JOIN SpotifyClone.albuns AS AL
 ON AR.artista_id = AL.artista_id
-WHERE a.nome = artista;
+WHERE AR.artista_nome = artista;
 END $$
 
 DELIMITER ;
