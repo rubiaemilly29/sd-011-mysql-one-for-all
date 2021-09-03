@@ -44,12 +44,14 @@ VALUES
 
 
 CREATE TABLE user_follow(
+user_follow_id INT AUTO_INCREMENT PRIMARY KEY,
 user_id INT,
 artist_id INT,
-CONSTRAINT PRIMARY KEY(user_id, artist_id),
 FOREIGN KEY (user_id) REFERENCES user (user_id),
 FOREIGN KEY (artist_id) REFERENCES artist (artist_id)
 );
+
+SELECT * FROM user_follow;
 
 INSERT INTO user_follow(user_id, artist_id)
 VALUES
