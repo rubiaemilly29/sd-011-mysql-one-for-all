@@ -90,7 +90,7 @@ CREATE TABLE history(
     song_id INT,
     CONSTRAINT PRIMARY KEY(user_id, song_id)
     FOREIGN KEY (user_id) REFERENCES user (user_id),
-    FOREIGN KEY (song_id) REFERENCES songs (song_id),
+    FOREIGN KEY (song_id) REFERENCES songs (song_id)
 ) engine = InnoDB;
 
 INSERT INTO history (user_id, song_id)
@@ -115,7 +115,7 @@ CREATE TABLE follow(
     artist_id INT NOT NULL,
     CONSTRAINT PRIMARY KEY(user_id, artist_id)
     FOREIGN KEY (user_id) REFERENCES user (user_id),
-    FOREIGN KEY (artist_id) REFERENCES artist (artist_id),
+    FOREIGN KEY (artist_id) REFERENCES artist (artist_id)
 ) engine = InnoDB;
 
 INSERT INTO follow (user_id, artist_id)
