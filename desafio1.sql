@@ -83,49 +83,50 @@ VALUES
 
 INSERT INTO t_songs(c_songs, fk_id_album)
 VALUES
-('Soul For Us', 3),
-('Reflections Of Magic', 4),
+('Soul For Us', 1),
+('Reflections Of Magic', 1),
 ('Dance With Her Own', 1),
-('Troubles Of My Inner Fire', 1),
+('Troubles Of My Inner Fire', 2),
 ('Time Fireworks', 2),
 ('Magic Circus', 3),
-('Honey, So Do I', 2),
-("Sweetie, Let's Go Wild", 2),
+('Honey, So Do I', 3),
+("Sweetie, Let's Go Wild", 3),
 ('She Knows', 3),
-('Fantasy For Me', 1),
-('elebration Of More', 1),
-('Rock His Everything', 3),
-('Home Forever', 5),
-('Diamond Power', 3),
+('Fantasy For Me', 4),
+('elebration Of More', 4),
+('Rock His Everything', 4),
+('Home Forever', 4),
+('Diamond Power', 4),
 ("Honey, Let's Be Silly", 4),
-('Thang Of Thunder', 2),
-('"Words Of Her Life', 1),
+('Thang Of Thunder', 5),
+('"Words Of Her Life', 5),
 ('Without My Streets', 5);
+-- Error Code: 1062. Duplicate entry '1-3' for key 't_h_reproductions.PRIMARY'
 
 INSERT INTO t_h_reproductions(fk_id_user, fk_id_songs)
 VALUES
-(3, 4),
-(2, 1),
-(4, 2),
-(1, 3),
-(1, 3),
-(4, 3),
-(1, 4),
-(2, 3),
-(1, 3),
-(4, 3),
+(1, 1),
+(1, 6),
+(1, 14),
+(1, 16),
+(2, 13),
+(2, 17),
 (2, 2),
-(1, 2),
+(2, 15),
 (3, 4),
-(4, 1);
+(3, 16),
+(3, 6),
+(4, 3),
+(4, 18),
+(4, 11);
 
 INSERT INTO t_follow_artists(fk_id_user, fk_id_artist)
 VALUES
-(2, 2),
-(3, 2),
 (1, 1),
-(4, 4),
-(3, 2),
+(1, 3),
+(1, 4),
+(2, 1),
 (2, 3),
-(4, 2),
-(2, 2);
+(3, 1),
+(3, 2),
+(4, 4);
