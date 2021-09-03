@@ -112,7 +112,7 @@ VALUES
     FOREIGN KEY(cancoes_id) REFERENCES Cancoes (cancoes_id)
 ) engine = InnoDB;
 
-INSERT INTO Historico (usuario_id, cancoes_id)
+  INSERT INTO Historico (usuario_id, cancoes_id)
 VALUES
   (1, 1),
   (1, 6),
@@ -128,4 +128,3 @@ VALUES
   (4, 3),
   (4, 11),
   (4, 18);
-  
