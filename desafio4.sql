@@ -1,6 +1,4 @@
-SELECT * FROM artist;
-SELECT * from user_follow;
-
+CREATE VIEW top_3_artistas AS 
 SELECT a.artist_name AS 'artista',
 COUNT(a.artist_name) AS 'seguidores'
 FROM artist AS a
