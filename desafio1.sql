@@ -4,18 +4,20 @@ CREATE DATABASE SpotifyClone;
 
 USE SpotifyClone;
 
+CREATE TABLE plano(
+planoId INT AUTO_INCREMENT NOT NULL,
+plano VARCHAR(100) NOT NULL,
+preco DECIMAL(5, 2) NOT NULL,
+PRIMARY KEY(planoId)
+) engine = InnoDB;
+
 CREATE TABLE usuario(
 usuarioId INT AUTO_INCREMENT NOT NULL,
 nome VARCHAR(100) NOT NULL,
 idade INT NOT NULL,
-PRIMARY KEY(usuarioId)
-) engine = InnoDB;
-
-CREATE TABLE plano(
-planoId INT AUTO_INCREMENT NOT NULL,
-plano VARCHAR(100) NOT NULL,
-preco DECIMAL(3, 2) NOT NULL,
-PRIMARY KEY(planoId)
+planoId INT NOT NULL,
+PRIMARY KEY(usuarioId),
+FOREIGN KEY(planoId) REFERENCES plano (planoId)
 ) engine = InnoDB;
 
 CREATE TABLE artista(
@@ -35,9 +37,9 @@ FOREIGN KEY(artistaId) REFERENCES artista(artistaId)
 CREATE TABLE seguindoartistas(
 usuarioId INT NOT NULL,
 artistaId INT NOT NULL,
-CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
+CONSTRAINT PRIMARY KEY(usuarioId, artistaId),
 FOREIGN KEY(usuarioId) REFERENCES usuario (usuarioId),
-FOREIGN KEY(artistad) REFERENCES artista (artistaId)
+FOREIGN KEY(artistaId) REFERENCES artista (artistaId)
 ) engine = InnoDB;
 
 CREATE TABLE cancoes(
@@ -50,23 +52,23 @@ FOREIGN KEY(albumId) REFERENCES album(albumId)
 CREATE TABLE historico(
 usuarioId INT NOT NULL,
 cancoesId INT NOT NULL,
-CONSTRAINT PRIMARY KEY(usuario_id, cancoes_id),
+CONSTRAINT PRIMARY KEY(usuarioId, cancoesId),
 FOREIGN KEY(usuarioId) REFERENCES usuario (usuarioId),
 FOREIGN KEY(cancoesId) REFERENCES cancoes (cancoesId)
 ) engine = InnoDB;
-
-INSERT INTO usuario(nome, idade)
-VALUES 
-('Thati', 23),
-('Cintia', 35),
-('Bill', 20),
-('Roger', 45);
 
 INSERT INTO plano(plano, preco)
 VALUES 
 ('gratuito', 0.00),
 ('familiar', 7.99),
 ('universitário', 5.99);
+
+INSERT INTO usuario(nome, idade, planoId)
+VALUES 
+('Thati', 23, 1),
+('Cintia', 35, 2),
+('Bill', 20, 3),
+('Roger', 45, 1);
 
 INSERT INTO artista(artista)
 VALUES 
