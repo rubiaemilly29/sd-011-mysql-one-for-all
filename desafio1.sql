@@ -11,7 +11,7 @@ CREATE TABLE plans (
   plan_name VARCHAR(20) NOT NULL,
   plan_value DECIMAL(5,2) NOT NULL
   ) ENGINE = InnoDB;    
- 
+     
 CREATE TABLE users (
   user_id INT PRIMARY KEY AUTO_INCREMENT,
   user_name VARCHAR(30) NOT NULL,
@@ -132,4 +132,5 @@ VALUES
   (4, 3),
   (4, 18),
   (4, 11);
+  
   
