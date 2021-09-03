@@ -81,7 +81,7 @@ VALUES ('Thati', 23, 1),
 
 INSERT INTO Cancoes(song, album_id, artista_id)
 VALUES("Soul For Us",	1,	1),
-("Reflection Of Magic",	1,	1),
+("Reflections Of Magic",	1,	1),
 ("Dance With Her Own",	1,	1),
 ("Troubles Of My Inner Fire",	2,	1),
 ("Time Fireworks",	2,	1),
