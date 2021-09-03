@@ -6,5 +6,3 @@ INNER JOIN spotifyclone.historico AS H
 ON M.musica_id = H.musica_id
 GROUP BY cancao
 ORDER BY reproducoes DESC, cancao LIMIT 2;
-
-SELECT * FROM top_2_hits_do_momento;

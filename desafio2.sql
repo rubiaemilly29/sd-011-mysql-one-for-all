@@ -9,5 +9,3 @@ SELECT
 (
 	SELECT COUNT(*) FROM spotifyclone.albuns
 ) AS albuns;
-
-SELECT * FROM estatisticas_musicais;

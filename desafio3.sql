@@ -7,5 +7,3 @@ ON H.usuario_id = U.usuario_id
 INNER JOIN spotifyclone.musicas AS M
 ON H.musica_id = M.musica_id
 ORDER BY usuario, nome;
-
-SELECT * FROM historico_reproducao_usuarios;

@@ -6,5 +6,3 @@ INNER JOIN spotifyclone.seguidores AS S
 ON A.artista_id = S.artista_id
 GROUP BY artista
 ORDER BY seguidores DESC, artista LIMIT 3;
-
-SELECT * FROM top_3_artistas;
