@@ -63,14 +63,14 @@ VALUES
   ('Cintia', 35, 2),
   ('Bill', 20, 3),
   ('Roger', 45, 1);
-  
+
 INSERT INTO artistas(artista_name)
 VALUES
   ('Walter Phoenix'),
   ('Peter Strong'),
   ('Lance Day'),
   ('Freedie Shanno');
-  
+
 INSERT INTO albuns(album_nome, artista_id)
 VALUES
   ('Envious', 1),
@@ -78,7 +78,7 @@ VALUES
   ('Hallowed Steam', 2),
   ('Incandescent', 3),
   ('Temporary Culture', 4);
-  
+
 INSERT INTO musicas(musica_nome, album_id)
 VALUES
     ('Soul For Us', 1),
@@ -99,7 +99,7 @@ VALUES
     ('Thang Of Thunder', 5),
     ('Words Of Her Life', 5),
     ('Without My Streets', 5);
-    
+
 INSERT INTO historico(usuario_id, musica_id)
 VALUES
   (1, 1),
@@ -116,7 +116,7 @@ VALUES
   (4, 3),
   (4, 18),
   (4, 11);
-  
+
 INSERT INTO seguidores(usuario_id, artista_id)
 VALUES
   (1, 1),
