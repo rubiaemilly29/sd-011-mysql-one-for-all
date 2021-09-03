@@ -102,7 +102,7 @@ VALUES
 ('"Words Of Her Life', 1),
 ('Without My Streets', 5);
 
-INSERT INTO t_h_reproductions(c_h_reproductions, fk_id_user, fk_id_songs)
+INSERT INTO t_h_reproductions(fk_id_user, fk_id_songs)
 VALUES
 (3, 4),
 (2, 1),
@@ -119,7 +119,7 @@ VALUES
 (3, 4),
 (4, 1);
 
-INSERT INTO t_follow_artists(c_follow_artists, fk_id_user, fk_id_artist)
+INSERT INTO t_follow_artists(fk_id_user, fk_id_artist)
 VALUES
 (2, 2),
 (3, 2),
