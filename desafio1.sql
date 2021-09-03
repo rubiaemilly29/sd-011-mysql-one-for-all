@@ -1,6 +1,28 @@
 CREATE DATABASE IF NOT EXISTS SpotifyClone;
 USE SpotifyClone;
 
+CREATE TABLE plano(
+plano_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(150) NOT NULL,
+valor DECIMAL(3,2)
+);
+
+INSERT INTO plano(nome,valor)
+VALUES('gratuito', 0.00),
+('familiar', 7.99),
+('universitário', 5.99);
+
+CREATE TABLE artista(
+artista_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(150) NOT NULL
+);
+
+INSERT INTO artista(nome)
+VALUES('Walter Phoenix'),
+('Peter Strong'),
+('Lance Day'),
+('Freedie Shannon');
+
 CREATE TABLE usuario(
 usuario_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(150) NOT NULL,
@@ -14,28 +36,6 @@ VALUES('Thati', 23, 1),
 ('Cintia', 35, 2),
 ('Bill', 20, 3),
 ('Roger', 45, 1);
-
-CREATE TABLE artista(
-artista_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-nome VARCHAR(150) NOT NULL
-);
-
-INSERT INTO artista(nome)
-VALUES('Walter Phoenix'),
-('Peter Strong'),
-('Lance Day'),
-('Freedie Shannon');
-
-CREATE TABLE plano(
-plano_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-nome VARCHAR(150) NOT NULL,
-valor DECIMAL(3,2)
-);
-
-INSERT INTO plano(nome,valor)
-VALUES('gratuito', 0.00),
-('familiar', 7.99),
-('universitário', 5.99);
 
 CREATE TABLE album(
 album_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
