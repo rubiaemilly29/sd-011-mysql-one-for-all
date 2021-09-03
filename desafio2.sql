@@ -17,4 +17,4 @@ CREATE VIEW estatisticas_musicais AS
       COUNT(*)
     FROM
       SpotifyClone.album
-  ) AS 'album';
+  ) AS 'albuns';
