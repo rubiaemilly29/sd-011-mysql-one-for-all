@@ -3,5 +3,5 @@ SELECT a.artista AS 'artista', COUNT(usuario_id) AS 'seguidores'  FROM SpotifyCl
 INNER JOIN SpotifyClone.artistas AS a
 ON a.id = `as`.artista_id
 GROUP BY `artista`
-ORDER BY `seguidores` DESC
+ORDER BY `seguidores` DESC, `artista`
 LIMIT 3;
