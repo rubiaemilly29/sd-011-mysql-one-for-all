@@ -15,7 +15,6 @@ CREATE TABLE planos (
     plano_valor DECIMAL(3,2) NOT NULL
 )ENGINE = InnoDB;
 
-
 CREATE TABLE usuarios(
 	usuario_id INT PRIMARY KEY AUTO_INCREMENT,
     usuario VARCHAR(50) NOT NULL,
@@ -24,10 +23,8 @@ CREATE TABLE usuarios(
     FOREIGN KEY (plano_id) REFERENCES planos(plano_id)
 )ENGINE = InnoDB;
 
-
-
 CREATE TABLE albuns(
-	album_id INT PRIMARY KEY AUTO_INCREMENT,
+    album_id INT PRIMARY KEY AUTO_INCREMENT,
     album_name VARCHAR(150) NOT NULL,
     artista_id INT NOT NULL,
 	FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
