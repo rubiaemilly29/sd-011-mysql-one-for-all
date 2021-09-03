@@ -60,21 +60,21 @@ VALUES
   ('Lance Day'),
   ('Freedie Shannon');
   
- SELECT * FROM artists;
- 
- INSERT INTO plans(plan, price)
+  SELECT * FROM artists;
 
-VALUES
+  INSERT INTO plans(plan, price)
+
+  VALUES
 
   ('gratuito', 0.00),
   ('familiar', 7.99),
   ('univesitário', 5.99);
   
- SELECT * FROM plans;
+  SELECT * FROM plans;
  
  INSERT INTO albuns(album, artist_id)
 
-VALUES
+  VALUES
 
   ('Envious', 1),
   ('Exuberant', 1),
@@ -84,9 +84,9 @@ VALUES
   
   SELECT * FROM albuns;
   
- INSERT INTO songs(song, album_id)
+  INSERT INTO songs(song, album_id)
  
- VALUES
+  VALUES
     ('Soul For Us', 1),
     ('Reflections Of Magic', 1),
     ('Dance With Her Own', 1),
@@ -106,18 +106,17 @@ VALUES
     ('Words Of Her Life', 5),
     ('Without My Streets', 5);
     
-    SELECT * FROM songs;
-    INSERT INTO users(username, age, plan_id)
+  SELECT * FROM songs;
+  INSERT INTO users(username, age, plan_id)
   VALUES
-    ('Thati', 23, 1),
-    ('Cintia', 35, 2),
-    ('Bill', 20, 3),
-    ('Roger', 45, 1);
+  ('Thati', 23, 1),
+  ('Cintia', 35, 2),
+  ('Bill', 20, 3),
+  ('Roger', 45, 1);
     
-    SELECT * FROM users;
-    
+  SELECT * FROM users;
        
-INSERT INTO followers(user_id, artist_id)
+  INSERT INTO followers(user_id, artist_id)
   VALUES
     (1, 1),
     (1, 4),
@@ -128,8 +127,8 @@ INSERT INTO followers(user_id, artist_id)
     (3, 1),
     (4, 4);
     
-    SELECT * FROM followers;
- INSERT INTO listened_history(user_id, song_id)
+  SELECT * FROM followers;
+  INSERT INTO listened_history(user_id, song_id)
   VALUES
     (1, 1),
     (1, 6),
@@ -145,6 +144,5 @@ INSERT INTO followers(user_id, artist_id)
     (4, 3),
     (4, 18),
     (4, 11);
-    
-    SELECT * FROM listened_history;
+  SELECT * FROM listened_history;
  
