@@ -62,7 +62,7 @@ album_id INTEGER NOT NULL,
 FOREIGN KEY (album_id) REFERENCES albuns (album_id)
 );
 
-INSERT INTO songs (song_name, artist_id, album_id)
+INSERT INTO songs (song_name, album_id)
 VALUES
 ('Soul For Us', 1),
 ('Reflections Of Magic', 1),
