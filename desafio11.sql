@@ -7,4 +7,3 @@ ON C.Cancao_ID = H.Cancao_ID
 AND U.Usuario_ID = H.Usuario_ID
 GROUP BY nome
 ORDER BY nome ASC;
-    
