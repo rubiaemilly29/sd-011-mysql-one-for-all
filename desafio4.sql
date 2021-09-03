@@ -7,4 +7,3 @@ ON ar.artista_id = se.artista_id
 GROUP BY ar.artista_name
 ORDER BY `seguidores` DESC, `artista`
 LIMIT 3;
---
