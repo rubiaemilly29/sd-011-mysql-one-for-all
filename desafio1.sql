@@ -3,33 +3,38 @@ CREATE DATABASE SpotifyClone;
 USE SpotifyClone;
 
 CREATE TABLE usuario(
-	usuario_id INT AUTO_INCREMENT PRIMARY KEY,
+	usuario_id INT AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
-    idade INT
+    idade INT,
+    PRIMARY KEY(usuario_id)
 ) engine = InnoDB;
 
 CREATE TABLE plano(
-	plano_id INT AUTO_INCREMENT PRIMARY KEY,
+	plano_id INT AUTO_INCREMENT,
     preco DOUBLE(3, 2) NOT NULL,
-    plano VARCHAR(100) NOT NULL
+    plano VARCHAR(100) NOT NULL,
+    PRIMARY KEY(plano_id)
 ) engine = InnoDB;
 
 CREATE TABLE artista(
-	artista_id INT AUTO_INCREMENT PRIMARY KEY,
-    artista VARCHAR(100) NOT NULL
+	artista_id INT AUTO_INCREMENT,
+    artista VARCHAR(100) NOT NULL,
+    PRIMARY KEY(artista_id)
 ) engine = InnoDB;
 
 CREATE TABLE album(
-	album_id INT AUTO_INCREMENT PRIMARY KEY,
+	album_id INT AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL NOT NULL,
     artista_id INT NOT NULL,
+    PRIMARY KEY(album_id),
     FOREIGN KEY(artista_id) REFERENCES artista(artista_id)
 ) engine = InnoDB;
 
 CREATE TABLE seguindoartistas(
-	seguindo_id INT AUTO_INCREMENT PRIMARY KEY,
+	seguindo_id INT AUTO_INCREMENT,
     usuario_id INT NOT NULL,
     artista_id INT NOT NULL,
+    PRIMARY KEY(seguindo_id),
     FOREIGN KEY(usuario_id) REFERENCES usuario (usuario_id),
     FOREIGN KEY(artista_id) REFERENCES artista (artista_id)
 ) engine = InnoDB;
@@ -44,6 +49,7 @@ CREATE TABLE cancoes(
 CREATE TABLE historico(
 	usuario_id INT NOT NULL,
     cancoes_id INT NOT NULL,
+    CONSTRAINT PRIMARY KEY(usuario_id, cancoes_id),
     FOREIGN KEY(usuario_id) REFERENCES usuario (usuario_id),
     FOREIGN KEY(cancoes_id) REFERENCES cancoes (cancoes_id)
 ) engine = InnoDB;
