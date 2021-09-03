@@ -10,9 +10,9 @@ BEGIN
     at.nome_artistico AS 'artista',
     ab.titulo AS 'album'
   FROM
-    artista AS at
+    SpotifyClone.artista AS at
   INNER JOIN
-    album AS ab
+    SpotifyClone.album AS ab
     ON ab.artista_id = at.artista_id
   WHERE
     at.nome_artistico = artista_nome;
