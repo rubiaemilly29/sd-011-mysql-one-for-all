@@ -25,8 +25,8 @@ CREATE TABLE artistas_seguidos (
   usuario_id int NOT NULL,
   artista_id int NOT NULL,
   PRIMARY KEY (usuario_id,artista_id),
- FOREIGN KEY (usuario_id) REFERENCES usuarios (usuario_id),
- FOREIGN KEY (artista_id) REFERENCES artistas (artista_id)
+  FOREIGN KEY (usuario_id) REFERENCES usuarios (usuario_id),
+  FOREIGN KEY (artista_id) REFERENCES artistas (artista_id)
 ) ENGINE=InnoDB;
 
 INSERT INTO artistas_seguidos VALUES (1,1),(2,1),(3,1),(3,2),(1,3),(2,3),(1,4),(4,4);
