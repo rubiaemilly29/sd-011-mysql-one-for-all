@@ -1,4 +1,4 @@
--- CREATE VIEW perfil_artistas AS 
+CREATE VIEW perfil_artistas AS 
 SELECT a.artist_name as `artista`,
 alb.album_name as `album`,
 COUNT(fa.artist_id) as `seguidores`
