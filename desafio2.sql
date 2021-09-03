@@ -1,4 +1,5 @@
-SELECT
+CREATE VIEW estatisticas_musicais AS
+  SELECT
   (
     SELECT
       COUNT(*)
