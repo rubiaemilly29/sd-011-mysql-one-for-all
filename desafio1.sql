@@ -84,17 +84,17 @@ VALUES
 
 INSERT INTO t_songs(c_songs, fk_id_album)
 VALUES
-('Musica 1', 3),
-('Musica 2', 4),
-('Musica 3', 1),
-('Musica 4', 2);
+('sMusica 1', 3),
+('sMusica 2', 4),
+('sMusica 3', 1),
+('sMusica 4', 2);
 
 INSERT INTO t_h_reproductions(c_h_reproductions, fk_id_user, fk_id_songs)
 VALUES
-('Musica 1', 3, 4),
-('Musica 4', 2, 1),
-('Musica 3', 4, 2),
-('Musica 2', 1, 3);
+('hMusica 1', 3, 4),
+('hMusica 4', 2, 1),
+('hMusica 3', 4, 2),
+('hMusica 2', 1, 3);
 
 INSERT INTO t_follow_artists(c_follow_artists, fk_id_user, fk_id_artist)
 VALUES
