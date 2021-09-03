@@ -3,5 +3,5 @@ SELECT a.artista AS artista, COUNT(b.artistaId) AS seguidores FROM artistas AS a
 INNER JOIN seguindo AS b
 ON a.artistaId = b.artistaId
 GROUP BY a.artista
-ORDER BY seguidores DESC
+ORDER BY seguidores DESC, artista
 LIMIT 3;

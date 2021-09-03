@@ -1,5 +1,5 @@
 CREATE VIEW estatisticas_musicais AS
 SELECT 
-(SELECT COUNT(musica) AS cancoes FROM musicas),
-(SELECT COUNT(artista) AS artistas FROM artistas),
-(SELECT COUNT(album) AS albuns FROM albuns);
+(SELECT COUNT(musica) FROM musicas) AS cancoes,
+(SELECT COUNT(artista) FROM artistas) AS artistas,
+(SELECT COUNT(album) FROM albuns) AS albuns;
