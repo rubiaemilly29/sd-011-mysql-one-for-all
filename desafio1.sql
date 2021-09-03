@@ -41,6 +41,7 @@ VALUES ('Envious', 1), ('Exuberant', 1), ('Hallowed Steam', 2), ('Incandescent',
 CREATE TABLE seguindo (
 usuarioId INT NOT NULL,
 artistaId INT NOT NULL,
+CONSTRAINT PRIMARY KEY (usuarioId, artistaId),
 FOREIGN KEY (usuarioId) REFERENCES usuarios(usuarioId),
 FOREIGN KEY (artistaId) REFERENCES artistas(artistaId));
 
