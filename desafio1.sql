@@ -1,20 +1,17 @@
 DROP DATABASE IF EXISTS SpotifyClone;
 CREATE DATABASE SpotifyClone;
 USE SpotifyClone;
-DROP TABLE IF EXISTS albums;
 
 CREATE TABLE albums (
-  album_id int NOT NULL AUTO_INCREMENT,
+  album_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   album_nome varchar(100) NOT NULL,
   artista_id int NOT NULL,
-  PRIMARY KEY (album_id),
   FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE artistas (
-  artista_id int NOT NULL AUTO_INCREMENT,
+  artista_id int NOT PRIMARY KEY NULL AUTO_INCREMENT,
   artista_nome varchar(100) NOT NULL,
-  PRIMARY KEY (artista_id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE artistas_seguidos (
@@ -26,37 +23,33 @@ CREATE TABLE artistas_seguidos (
 ) ENGINE=InnoDB;
 
 CREATE TABLE historico (
-  historico_id int NOT NULL AUTO_INCREMENT,
+  historico_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   usuario_id int NOT NULL,
   musica_id int NOT NULL,
-  PRIMARY KEY (historico_id),
   FOREIGN KEY (usuario_id) REFERENCES usuarios (usuario_id),
   FOREIGN KEY (musica_id) REFERENCES musicas (musica_id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE musicas (
-  musica_id int NOT NULL AUTO_INCREMENT,
+  musica_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   nome_musica varchar(100) NOT NULL,
   artista_id int NOT NULL,
   album_id int NOT NULL,
-  PRIMARY KEY (musica_id),
   FOREIGN KEY (artista_id) REFERENCES artistas (artista_id),
   FOREIGN KEY (album_id) REFERENCES albums (album_id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE planos (
-  plano_id int NOT NULL AUTO_INCREMENT,
+  plano_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   plano varchar(100) NOT NULL,
   valor_plano double unsigned DEFAULT (0),
-  PRIMARY KEY (plano_id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE usuarios (
-  usuario_id int NOT NULL AUTO_INCREMENT,
+  usuario_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   usuario varchar(50) NOT NULL,
   idade int NOT NULL,
   plano_id int NOT NULL,
-  PRIMARY KEY (usuario_id),
   FOREIGN KEY (plano_id) REFERENCES planos (plano_id)
 ) ENGINE=InnoDB;
 
