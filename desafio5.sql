@@ -1,4 +1,3 @@
-USE SportifyClone;
 CREATE VIEW top_2_hits_do_momento AS
 SELECT s.name AS 'cancao',
 (SELECT COUNT(hr.song_id)
