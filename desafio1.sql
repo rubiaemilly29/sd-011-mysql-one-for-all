@@ -85,11 +85,11 @@ VALUES
   ('Without My Streets', 5);
 
 CREATE TABLE musics_history(
-    musics_history_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     song_id INT,
     FOREIGN KEY (user_id) REFERENCES user (user_id),
-    FOREIGN KEY (song_id) REFERENCES songs (song_id)
+    FOREIGN KEY (song_id) REFERENCES songs (song_id),
+    PRIMARY KEY (user_id, song_id)
 ) engine = InnoDB;
 
 INSERT INTO musics_history (user_id, song_id)
@@ -110,11 +110,11 @@ VALUES
   (4, 11);
 
 CREATE TABLE following_artists(
-    following_artists_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
     artist_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user (user_id),
-    FOREIGN KEY (artist_id) REFERENCES artists (artist_id)
+    FOREIGN KEY (artist_id) REFERENCES artists (artist_id),
+    PRIMARY KEY (user_id, artist_id)
 ) engine = InnoDB;
 
 INSERT INTO following_artists (user_id, artist_id)
