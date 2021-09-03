@@ -22,6 +22,7 @@ CREATE TABLE Albums(
     name varchar(45),
     artist_id tinyint,
     PRIMARY KEY (album_id),
+    CONSTRAINT FK_Albums_Artist_Id
     FOREIGN KEY (artist_id) REFERENCES Artists(artist_id)
 ) engine = InnoDB;
 
@@ -31,13 +32,16 @@ CREATE TABLE Users(
     age tinyint,
     plan_id tinyint,
     PRIMARY KEY (user_id),
+    CONSTRAINT FK_Users_Plan_Id
     FOREIGN KEY (plan_id) REFERENCES Plans(plan_id)
 ) engine = InnoDB;
 
 CREATE TABLE Artists_Followers(
     artist_id tinyint,
     user_id tinyint,
+    CONSTRAINT FK_AF_Artist_Id
     FOREIGN KEY (artist_id) REFERENCES Artists(artist_id),
+    CONSTRAINT FK_AF_User_Id
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 ) engine = InnoDB;
 
@@ -46,13 +50,16 @@ CREATE TABLE Songs(
     name varchar(45),
     album_id tinyint,
     PRIMARY KEY (song_id),
+    CONSTRAINT FK_Songs_Album_Id
     FOREIGN KEY (album_id) REFERENCES Albums(album_id)
 ) engine = InnoDB;
 
 CREATE TABLE History(
     user_id tinyint,
     song_id tinyint,
+    CONSTRAINT FK_History_User_Id
     FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    CONSTRAINT FK_History_Song_Id
     FOREIGN KEY (song_id) REFERENCES Songs(song_id)
 ) engine = InnoDB;
 
