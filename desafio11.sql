@@ -6,4 +6,4 @@ INNER JOIN usuarios AS c
 ON c.usuarioId = b.usuarioId
 WHERE c.planoId = 2 OR c.planoId = 3
 GROUP BY a.musicaId
-ORDER BY cancao;
+ORDER BY nome;
