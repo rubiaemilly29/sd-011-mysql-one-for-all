@@ -108,9 +108,10 @@ VALUES
 ('Without My Streets', 5);
 
 CREATE TABLE user_history(
+user_history_id INT AUTO_INCREMENT PRIMARY KEY,
 user_id INT,
 song_id INT,
-FOREIGN KEY (user_id) REFERENCES user (user_id),
+FOREIGN KEY (user_id) REFERENCES SpotifyClone.user (user_id),
 FOREIGN KEY (song_id) REFERENCES songs (song_id)
 );
 
