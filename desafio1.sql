@@ -19,7 +19,7 @@ CREATE TABLE Album(
     album_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(50) NOT NULL,
     artist_id INT DEFAULT NULL,
-    FOREIGN KEY (artist_id) REFERENCES Artist (artist_id)
+    FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
 ) engine = InnoDB;
 
 CREATE TABLE User(
@@ -27,30 +27,30 @@ CREATE TABLE User(
     name VARCHAR(50) NOT NULL,
     age INT NOT NULL,
     plan_id int NOT NULL,
-    FOREIGN KEY (plan_id) REFERENCES Plan (plan_id)
+    FOREIGN KEY (plan_id) REFERENCES Plan(plan_id)
 ) engine = InnoDB;
 
 CREATE TABLE Song(
     song_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
     album_id INT NOT NULL,
-    FOREIGN KEY (album_id) REFERENCES Album (album_id)
+    FOREIGN KEY (album_id) REFERENCES Album(album_id)
 ) engine = InnoDB;
 
 CREATE TABLE Artist_followers(
     artist_id INT NOT NULL,
     user_id INT NOT NULL, 
     CONSTRAINT PRIMARY KEY (artist_id, user_id),
-    FOREIGN KEY (artist_id) REFERENCES Artist (artist_id),
-    FOREIGN KEY (user_id) REFERENCES User (user_id)
+    FOREIGN KEY (artist_id) REFERENCES Artist(artist_id),
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
 ) engine = InnoDB;
 
 CREATE TABLE Reproduction_history(
     user_id INT NOT NULL,
     song_id INT NOT NULL,
     CONSTRAINT PRIMARY KEY (user_id, song_id),
-    FOREIGN KEY (user_id) REFERENCES User (user_id),
-    FOREIGN KEY (song_id) REFERENCES Song (song_id)
+    FOREIGN KEY (user_id) REFERENCES User(user_id),
+    FOREIGN KEY (song_id) REFERENCES Song(song_id)
 ) engine = InnoDB;
 
 INSERT INTO Plan (plan, plan_value)
