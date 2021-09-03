@@ -43,14 +43,16 @@ c_h_reproductions VARCHAR(100) NOT NULL,
 fk_id_user INT NOT NULL,
 fk_id_songs INT NOT NULL,
 FOREIGN KEY (fk_id_user) REFERENCES t_users(id_user),
-FOREIGN KEY (fk_id_songs) REFERENCES t_songs(id_songst_album)
+FOREIGN KEY (fk_id_songs) REFERENCES t_songs(id_songs)
 );
 
 CREATE TABLE IF NOT EXISTS t_follow_artists(
-id_follow_artists INT NOT NULL AUTO_INCREMENT,
-c_follow_artists INT,
+id_follow_artist INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+c_follow_artists INT NOT NULL,
 fk_id_user INT NOT NULL,
 fk_id_artist INT NOT NULL,
 FOREIGN KEY (fk_id_user) REFERENCES t_users(id_user),
 FOREIGN KEY (fk_id_artist) REFERENCES t_artists(id_artist)
 );
+-- Error Code: 1075. Incorrect table definition; there can be only one auto column and it must be defined as a key
+
