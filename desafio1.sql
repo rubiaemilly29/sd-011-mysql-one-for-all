@@ -55,25 +55,25 @@ FOREIGN KEY (song_id) REFERENCES songs(song_id),
 FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
-INSERT INTO users (`name`, age, plan_id)
-VALUES
-('Thati', 23, 1),
-('Cintia', 35, 2),
-('Bill', 20, 3),
-('Roger', 40, 1);
-  
-INSERT INTO plans (plan, plan_price)
-VALUES
-('gratuito', 0.00),
-('familiar', 7.99),
-('universitário', 5.99);
-
 INSERT INTO artists (`name`)
 VALUES
 ('Walter Phoenix'),
 ('Peter Strong'),
 ('Lance Day'),
 ('Freedie Shannon');
+
+INSERT INTO plans (plan, plan_price)
+VALUES
+('gratuito', 0.00),
+('familiar', 7.99),
+('universitário', 5.99);
+
+INSERT INTO users (`name`, age, plan_id)
+VALUES
+('Thati', 23, 1),
+('Cintia', 35, 2),
+('Bill', 20, 3),
+('Roger', 40, 1);
 
 INSERT INTO albuns (`name`, artist_id)
 VALUES
