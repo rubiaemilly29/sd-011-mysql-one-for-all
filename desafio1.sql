@@ -58,12 +58,6 @@ FOREIGN KEY (usuario_id) REFERENCES Usuarios(usuario_id),
 FOREIGN KEY (cancao_id) REFERENCES Cancoes(cancao_id)
 ) engine=InnoDB;
 
-INSERT INTO Usuarios (usuario, idade, plano_id) VALUES
-("Thati", 23, 1),
-("Cintia", 35, 2),
-("Bill", 20, 3),
-("Roger", 45, 1);
-
 INSERT INTO Planos (plano, valor_plano) VALUES
 ("gratuito", 0),
 ("familiar", 7.99),
@@ -74,6 +68,13 @@ INSERT INTO Artistas (artista) VALUES
 ("Peter Strong"),
 ("Lance Day"),
 ("Freedie Shannon");
+
+INSERT INTO Usuarios (usuario, idade, plano_id) VALUES
+("Thati", 23, 1),
+("Cintia", 35, 2),
+("Bill", 20, 3),
+("Roger", 45, 1);
+
 
 INSERT INTO Albuns (album, artista_id) VALUES
 ("Envious", 1),
