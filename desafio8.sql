@@ -1,6 +1,6 @@
 DELIMITER $$
 
-CREATE TRIGGER ao_deletar_usuario_excluir_registros
+CREATE TRIGGER trigger_usuario_delete
   AFTER DELETE ON SpotifyClone.usuario
   FOR EACH ROW
 BEGIN

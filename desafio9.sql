@@ -18,4 +18,4 @@ BEGIN
     at.nome_artistico = artista_nome;
 END $$
 
-DELIMNITER ;
+DELIMITER ;

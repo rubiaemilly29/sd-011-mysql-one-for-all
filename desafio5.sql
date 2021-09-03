@@ -5,12 +5,12 @@ CREATE VIEW top_2_hits_do_momento AS
       SELECT
         COUNT(*)
       FROM
-        usuario_historico_reproducoes AS uh
+        SpotifyClone.usuario_historico_reproducoes AS uh
       WHERE
         uh.musica_id = m.musica_id
     ) AS reproducoes
   FROM
-    musica AS m
+    SpotifyClone.musica AS m
   ORDER BY
     2 DESC,
     1 ASC
