@@ -7,7 +7,7 @@ USE SpotifyClone;
 CREATE TABLE IF NOT EXISTS t_flat (
 id_flat INT AUTO_INCREMENT PRIMARY KEY,
 c_flat VARCHAR(100),
-c_preice DECIMAL(4,2)
+c_preice FLOAT
 ) engine = InnoDB;
 
 CREATE TABLE IF NOT EXISTS t_users (
@@ -91,10 +91,20 @@ VALUES
 
 INSERT INTO t_h_reproductions(c_h_reproductions, fk_id_user, fk_id_songs)
 VALUES
-('hMusica 1', 3, 4),
-('hMusica 4', 2, 1),
-('hMusica 3', 4, 2),
-('hMusica 2', 1, 3);
+('Soul For Us', 3, 4),
+('Magic Circus', 2, 1),
+('Diamond Power', 4, 2),
+('Words Of Her Life', 1, 3),
+('Home Forever', 1, 3),
+('Words Of Her Life', 4, 3),
+('Reflections Of Magic', 1, 4),
+("Honey, Let's Be Silly", 2, 3),
+('Troubles Of My Inner Fire', 1, 3),
+('Thang Of Thunder', 4, 3),
+('Magic Circus', 2, 2),
+('Dance With Her Own', 1, 2),
+('Without My Streets', 3, 4),
+('Celebration Of More', 4, 1);
 
 INSERT INTO t_follow_artists(c_follow_artists, fk_id_user, fk_id_artist)
 VALUES
