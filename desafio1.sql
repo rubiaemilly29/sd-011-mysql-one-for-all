@@ -38,17 +38,17 @@ FOREIGN KEY (id_album) REFERENCES albuns(id_album)
 ) ENGINE = InnoDB;
 
 CREATE TABLE SpotifyClone.historico(
-id_historico INT PRIMARY KEY AUTO_INCREMENT,
 id_usuario INT NOT NULL,
 id_cancao INT NOT NULL,
+CONSTRAINT PRIMARY KEY (id_usuario, id_cancao),
 FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
 FOREIGN KEY (id_cancao) REFERENCES cancoes(id_cancao)
 ) ENGINE = InnoDB;
 
 CREATE TABLE SpotifyClone.seguidores(
-id_seguidores INT PRIMARY KEY AUTO_INCREMENT,
 id_usuario INT NOT NULL,
 id_artista INT NOT NULL,
+CONSTRAINT PRIMARY KEY (id_usuario, id_artista),
 FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
 FOREIGN KEY (id_artista) REFERENCES artistas(id_artista)
 ) ENGINE = InnoDB;
