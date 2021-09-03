@@ -11,5 +11,3 @@ ON c.cancao_id = hm.cancao_id
 GROUP BY c.cancao_id
 ORDER BY COUNT(hm.cancao_id) DESC, c.cancao ASC
 LIMIT 2;
-
-SELECT * FROM top_2_hits; 

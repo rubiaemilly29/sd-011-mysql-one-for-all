@@ -116,8 +116,8 @@ INSERT INTO SeguindoArtistas (usuario_id, artista_id) VALUES
 INSERT INTO HistoricoMusicas (usuario_id, cancao_id) VALUES
 (1,1),
 (1,6),
-(1,4),
-(1,5),
+(1,14),
+(1,16),
 (2,13),
 (2,17),
 (2,2),
