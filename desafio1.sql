@@ -58,33 +58,31 @@ VALUES
 CREATE TABLE songs (
 song_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 song_name VARCHAR(100) NOT NULL,
-artist_id INTEGER NOT NULL,
 album_id INTEGER NOT NULL,
-FOREIGN KEY (artist_id) REFERENCES artists (artist_id),
 FOREIGN KEY (album_id) REFERENCES albuns (album_id)
 );
 
 INSERT INTO songs (song_name, artist_id, album_id)
 VALUES
-('Soul For Us', 1, 1),
-('Reflections Of Magic', 1, 1),
-('Dance With Her Own', 1, 1),
-('Troubles Of My Inner Fire', 1, 2),
-('Time Fireworks', 1, 2),
-('Magic Circus', 2, 3),
-('Honey, So Do I', 2, 3),
-('Sweetie Let\'s Go Wild', 2 ,3),
-('She Knows', 2, 3), 
-('Fantasy For Me', 3, 4),
-('Celebration Of More', 3, 4),
-('Rock His Everything', 3, 4),
-('Home Forever', 3, 4),
-('Diamond Power', 3, 4),
-('Honey', 3, 4),
-('Let\'s Be Silly', 3, 4),
-('Thang Of Thunder', 4, 5),
-('Words Of Her Life', 4, 5),
-('Without My Streets', 4, 5);
+('Soul For Us', 1),
+('Reflections Of Magic', 1),
+('Dance With Her Own', 1),
+('Troubles Of My Inner Fire', 2),
+('Time Fireworks', 2),
+('Magic Circus', 3),
+('Honey, So Do I', 3),
+('Sweetie Let\'s Go Wild', 3),
+('She Knows', 3), 
+('Fantasy For Me', 4),
+('Celebration Of More', 4),
+('Rock His Everything', 4),
+('Home Forever', 4),
+('Diamond Power', 4),
+('Honey', 4),
+('Let\'s Be Silly', 4),
+('Thang Of Thunder', 5),
+('Words Of Her Life', 5),
+('Without My Streets', 5);
 
 CREATE TABLE reproduction_history (
 user_id INTEGER NOT NULL,
