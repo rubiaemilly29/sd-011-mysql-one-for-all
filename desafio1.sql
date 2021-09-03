@@ -42,6 +42,7 @@ id_h_reproductions INT PRIMARY KEY AUTO_INCREMENT,
 c_h_reproductions VARCHAR(100) NOT NULL,
 fk_id_user INT NOT NULL,
 fk_id_songs INT NOT NULL,
+CONSTRAINT PRIMARY KEY(fk_id_user, fk_id_songs),
 FOREIGN KEY (fk_id_user) REFERENCES t_users(id_user),
 FOREIGN KEY (fk_id_songs) REFERENCES t_songs(id_songs)
 ) engine = InnoDB;
