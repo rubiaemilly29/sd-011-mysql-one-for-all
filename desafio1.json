@@ -5,11 +5,11 @@
   "tabela_que_contem_plano": "Plan",
   "coluna_historico_de_reproducoes": "song_id",
   "tabela_que_contem_historico_de_reproducoes": "Reproduction_history",
-  "coluna_seguindo_artistas": "artist_id",
+  "coluna_seguindo_artistas": "user_id",
   "tabela_que_contem_seguindo_artistas": "Artist_followers",
   "coluna_artista": "name",
   "tabela_que_contem_artista": "Artist",
-  "coluna_album": "title",
+  "coluna_album": "album_id",
   "tabela_que_contem_album": "Album",
   "coluna_cancoes": "name",
   "tabela_que_contem_cancoes": "Song"
