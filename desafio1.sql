@@ -31,10 +31,10 @@ FOREIGN KEY (fk_id_artist) REFERENCEs t_artists (id_artist)
 ) engine = InnoDB;
 
 CREATE TABLE IF NOT EXISTS t_songs(
- id_songs INT PRIMARY KEY AUTO_INCREMENT,
- c_songs VARCHAR(100) NOT NULL,
- fk_id_album INT NOT NULL,
- FOREIGN KEY (fk_id_album) REFERENCES t_album(id_album)
+id_songs INT PRIMARY KEY AUTO_INCREMENT,
+c_songs VARCHAR(100) NOT NULL,
+fk_id_album INT NOT NULL,
+FOREIGN KEY (fk_id_album) REFERENCES t_album(id_album)
 ) engine = InnoDB;
 
 CREATE TABLE IF NOT EXISTS t_h_reproductions(
