@@ -72,7 +72,7 @@ VALUES
 ('Magic Circus', 3),
 ('Honey, So Do I', 3),
 ('Sweetie Let\'s Go Wild', 3),
-('She Knows', 3), 
+('She Knows', 3),
 ('Fantasy For Me', 4),
 ('Celebration Of More', 4),
 ('Rock His Everything', 4),
@@ -92,16 +92,20 @@ FOREIGN KEY (song_id) REFERENCES songs (song_id)
 );
 
 INSERT INTO reproduction_history (user_id, song_id)
-VALUES (1, 1), (1, 6), (1, 14), (1, 17),
+VALUES
+(1, 1),
+(1, 6),
+(1, 14),
+(1, 16),
 (2, 13),
-(2, 18),
+(2, 17),
 (2, 2),
-(2, 8),
+(2, 15),
 (3, 4),
-(3, 17),
+(3, 16),
 (3, 6),
 (4, 3),
-(4, 19),
+(4, 18),
 (4, 11);
 
 CREATE TABLE user_following (
