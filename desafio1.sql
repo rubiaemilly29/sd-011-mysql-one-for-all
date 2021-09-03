@@ -38,7 +38,7 @@ CREATE TABLE songs(
 ) engine = InnoDB;
 
 CREATE TABLE play_history(
-	user_id INT NOT NULL,
+    user_id INT NOT NULL,
     song_id INT NOT NULL,
     CONSTRAINT PRIMARY KEY(user_id, song_id),
     FOREIGN KEY(user_id) REFERENCES users(user_id),
@@ -46,7 +46,7 @@ CREATE TABLE play_history(
 ) engine = InnoDB;
 
 CREATE TABLE `following`(
-	user_id INT NOT NULL,
+    user_id INT NOT NULL,
     artist_id INT NOT NULL,
     CONSTRAINT PRIMARY KEY(user_id, artist_id),
     FOREIGN KEY(user_id) REFERENCES users(user_id),
