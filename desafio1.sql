@@ -54,20 +54,20 @@ CREATE TABLE historico_reproducoes(
     FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id)
 ) engine = InnoDB;
 
-INSERT INTO planos (plano, valor)
+INSERT INTO SpotifyClone.planos (plano, valor)
 VALUES
-  ('gratuito', '0'),
-  ('familiar', '7.99'),
-  ('universitário', '5.99');
+  ('gratuito', 0),
+  ('familiar', 7.99),
+  ('universitário', 5.99);
 
-  INSERT INTO usuarios (usuario, idade, plano_id)
+  INSERT INTO SpotifyClone.usuarios (usuario, idade, plano_id)
 VALUES
   ('Thati', 23, 1),
   ('Cintia', 35, 2),
   ('Bill', 20, 3),
   ('Roger', 45, 1);
 
-  INSERT INTO albuns (album, artista_id)
+  INSERT INTO SpotifyClone.albuns (album, artista_id)
 VALUES
   ('Envious', 1), 
   ('Exuberant', 1), 
@@ -75,7 +75,7 @@ VALUES
   ('Incandescent', 3), 
   ('Temporary Culture', 2);
 
-  INSERT INTO cancoes (cancao, album_id)
+  INSERT INTO SpotifyClone.cancoes (cancao, album_id)
 VALUES
   ('Soul For Us', 1),
   ('Reflections Of Magic', 1),
@@ -96,14 +96,14 @@ VALUES
   ('Words Of Her Life', 5),
   ('Without My Streets', 5);
 
-  INSERT INTO artistas (artista)
+  INSERT INTO SpotifyClone.artistas (artista)
 VALUES
   ('Walter Phoenix'),
   ('Freedie Shannon'),
   ('Lance Day'),
   ('Peter Strong');
 
-  INSERT INTO artistas_seguidos (artista_id, usuario_id)
+  INSERT INTO SpotifyClone.artistas_seguidos (artista_id, usuario_id)
 VALUES
   (1, 1),
   (2, 1),
@@ -114,7 +114,7 @@ VALUES
   (1, 3),
   (2, 4);
   
-  INSERT INTO historico_reproducoes (cancao_id, usuario_id)
+  INSERT INTO SpotifyClone.historico_reproducoes (cancao_id, usuario_id)
 VALUES
   (1, 1),
   (6, 1),
