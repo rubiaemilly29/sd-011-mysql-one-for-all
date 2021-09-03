@@ -39,6 +39,7 @@ CREATE TABLE Users(
 CREATE TABLE Artists_Followers(
     artist_id tinyint,
     user_id tinyint,
+    PRIMARY KEY (artist_id, user_id),
     CONSTRAINT FK_AF_Artist_Id
     FOREIGN KEY (artist_id) REFERENCES Artists(artist_id),
     CONSTRAINT FK_AF_User_Id
@@ -57,6 +58,7 @@ CREATE TABLE Songs(
 CREATE TABLE History(
     user_id tinyint,
     song_id tinyint,
+    PRIMARY KEY (user_id, song_id),
     CONSTRAINT FK_History_User_Id
     FOREIGN KEY (user_id) REFERENCES Users(user_id),
     CONSTRAINT FK_History_Song_Id
