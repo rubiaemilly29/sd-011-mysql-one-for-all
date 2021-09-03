@@ -69,6 +69,14 @@ FOREIGN KEY (Album_id) REFERENCES Albums(Album_id),
 FOREIGN KEY (Artist_id) REFERENCES Artists(Artist_id)
 ) engine = InnoDB;
 
+CREATE TABLE SpotifyClone.Artists_Songs(
+Artist_id INT NOT NULL,
+Songs_id INT NOT NULL,
+CONSTRAINT PRIMARY KEY(Artist_id, Songs_id),
+FOREIGN KEY (Artist_id) REFERENCES Artists(Artist_id),
+FOREIGN KEY (Songs_id) REFERENCES AllSongs(Songs_id)
+) engine = InnoDB;
+
 -- * INSERINDO VALORES AS TABELAS
 
 INSERT INTO Users (User_id, User, Age)
@@ -182,3 +190,24 @@ VALUES
 (3, 2),
 (4, 3),
 (5, 4);
+
+INSERT INTO Artists_Songs (Artist_id, Songs_id)
+VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4),
+(1, 5),
+(2, 6),
+(2, 7),
+(2, 8),
+(2, 9),
+(3, 10),
+(3, 11),
+(3, 12),
+(3, 13),
+(3, 14),
+(3, 15),
+(4, 16),
+(4, 17),
+(4, 18);
