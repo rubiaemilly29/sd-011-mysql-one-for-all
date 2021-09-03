@@ -62,30 +62,30 @@ FOREIGN KEY (musica_id) REFERENCES relacoes_musicas(musica_id)
 INSERT INTO planos (plano, valor)
 VALUES
 	('Gratuito', 0),
-    ('Familiar', 7.99),
-    ('Universitário', 5.99);
+	('Familiar', 7.99),
+	('Universitário', 5.99);
 
 INSERT INTO usuarios (usuario, idade, plano_id)
 VALUES
 	('Thati', 23, 1),
-    ('Cintia', 35, 2),
-    ('Bill', 20, 3),
-    ('Roger', 45, 1);
+	('Cintia', 35, 2),
+	('Bill', 20, 3),
+	('Roger', 45, 1);
     
 INSERT INTO artistas (nome)
 VALUES
 	('Walter Phoenix'),
-    ('Peter Strong'),
-    ('Lance Day'),
-    ('Freedie Shannon');
+	('Peter Strong'),
+	('Lance Day'),
+	('Freedie Shannon');
 
 INSERT INTO albuns (album, artista_id)
 VALUES
 	('Envious', 1),
-    ('Exuberant', 1),
-    ('Hallowed Steam', 2),
-    ('Incandescent', 3),
-    ('Temporary Culture', 4);
+	('Exuberant', 1),
+	('Hallowed Steam', 2),
+	('Incandescent', 3),
+	('Temporary Culture', 4);
    
 INSERT INTO relacoes_musicas (nome, artista_id, album_id)
 VALUES
@@ -111,13 +111,13 @@ VALUES
 INSERT INTO seguindo_artistas (usuario_id, artista_id)
 VALUES
 	(1, 1),
-    (1, 4),
-    (1, 3),
-    (2, 1),
-    (2, 3),
-    (3, 2),
-    (3, 1),
-    (4, 4);
+    	(1, 4),
+    	(1, 3),
+    	(2, 1),
+    	(2, 3),
+    	(3, 2),
+   	(3, 1),
+    	(4, 4);
 
 INSERT INTO historico_playlist_usuarios (usuario_id, musica_id)
 VALUES
