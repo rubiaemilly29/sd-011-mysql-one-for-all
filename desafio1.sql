@@ -38,7 +38,7 @@ PRIMARY KEY (artista_id)
 INSERT INTO artistas(artista_id, artista) VALUES(1, 'Walter Phoenix');
 INSERT INTO artistas(artista_id, artista) VALUES(2, 'Peter Strong');
 INSERT INTO artistas(artista_id, artista) VALUES(3, 'Lance Day');
-INSERT INTO artistas(artista_id, artista) VALUES(4, 'Freedie Shano');
+INSERT INTO artistas(artista_id, artista) VALUES(4, 'Freedie Shannon');
 
 
 CREATE TABLE  IF NOT EXISTS albuns(
