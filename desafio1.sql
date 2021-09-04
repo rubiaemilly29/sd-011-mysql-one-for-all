@@ -70,7 +70,7 @@ FOREIGN KEY (album_id) REFERENCES albuns (album_id)
 INSERT INTO cancoes (titulo, artista_id, album_id)
 VALUES
 ('Soul For Us', 1, 1),
-('Reflection Of Magic', 1, 1),
+('Reflections Of Magic', 1, 1),
 ('Dance With Her Own', 1, 1),
 ('Troubles Of My Inner Fire', 1, 2),
 ('Time Fireworks', 1, 2),
