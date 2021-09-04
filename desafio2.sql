@@ -9,4 +9,3 @@ SELECT COUNT(DISTINCT artista_id) FROM SpotifyClone.artistas
 (
 SELECT COUNT(*) FROM SpotifyClone.albuns
 ) AS albuns;
-SELECT * FROM estatiticas_musicais;
