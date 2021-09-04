@@ -7,7 +7,7 @@
 -- Seu resultado deve estar ordenado em ordem decrescente, baseando-se na quantidade de seguidores. Em caso de empate, ordene os resultados pelo nome da pessoa artista em ordem alfabética.
 
 -- DROP VIEW `top_3_artistas`;
-CREATE VIEW `top_3_artistas` AS 
+CREATE VIEW `SpotifyClone.top_3_artistas` AS 
     SELECT 
         art.nome_artista as `artista`,
         COUNT(seg.artista_id) as `seguidores`
@@ -17,4 +17,3 @@ CREATE VIEW `top_3_artistas` AS
     GROUP BY seg.artista_id
     ORDER BY `seguidores` DESC, `artista`
     LIMIT 3;
-    
