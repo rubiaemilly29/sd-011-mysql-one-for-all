@@ -123,13 +123,7 @@ VALUES
 (1, 1),
 (1, 6),
 (1, 14),
-(1, 16),SELECT a.nome AS artista, 
-(SELECT COUNT(s.artista_id) 
-FROM SpotifyClone.seguindo AS s
-WHERE s.artista_id = a.artista_id) AS seguidores
-FROM SpotifyClone.artistas AS a
-ORDER BY seguidores DESC, artista
-LIMIT 3;
+(1, 16),
 (2, 13),
 (2, 17),
 (2, 2),
