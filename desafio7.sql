@@ -6,4 +6,4 @@ ON a.artista_id = ab.artista_id
 INNER JOIN artistas_seguidos ars
 ON ars.artista_id = a.artista_id
 GROUP BY ab.album
-ORDER BY seguidores DESC, ab.album DESC;	
+ORDER BY seguidores DESC, a.artista, ab.album;
