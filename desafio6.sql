@@ -1,4 +1,4 @@
-CREATE VIEW faturamento_atual AS;
+CREATE VIEW faturamento_atual AS
 SELECT
 FORMAT(MIN(pl.valor_plano), 2) AS `faturamento_minimo`,
 
