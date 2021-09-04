@@ -9,4 +9,5 @@ seguidores AS S ON A.artista_id = S.artista_id
 INNER JOIN
 usuario AS U ON S.usuario_id = U.usuario_id
 GROUP BY A.nome_artista
-ORDER BY seguidores DESC, artista ASC;
+ORDER BY seguidores DESC, artista ASC
+LIMIT 3;
