@@ -11,4 +11,5 @@ CREATE VIEW cancoes_premium AS
     FROM SpotifyClone.usuarios
     WHERE plano_id != 1
   )
-  GROUP BY `nome`;
+  GROUP BY `nome`
+  ORDER BY `nome`;
