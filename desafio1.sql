@@ -75,10 +75,10 @@ VALUES
 
 INSERT INTO t_album(c_album, fk_id_artist)
 VALUES
-('Envious', 2),
+('Envious', 1),
 ('Exuberant', 1),
-('Hallowed Steam', 3),
-('Incandescent', 2),
+('Hallowed Steam', 2),
+('Incandescent', 3),
 ('Temporary Culture', 4);
 
 INSERT INTO t_songs(c_songs, fk_id_album)
