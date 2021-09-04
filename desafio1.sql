@@ -77,7 +77,7 @@ VALUES
     ('Lance Day'),
     ('Freedie Shannon');
 
-INSERT INTO Album (nome_album, artist_id)
+INSERT INTO Album (nome_album, artista_id)
 VALUES
     ('Envious', 1),
     ('Exuberant', 1),
@@ -126,7 +126,7 @@ VALUES
     (4, 11);
   
 
-INSERT INTO Seguidores (usuario_id, artist_id)
+INSERT INTO Seguidores (usuario_id, artista_id)
 VALUES 
     (1, 1),
     (1, 4),
