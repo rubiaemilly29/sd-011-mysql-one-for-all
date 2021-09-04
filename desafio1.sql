@@ -52,11 +52,11 @@ FOREIGN KEY (artista_id) REFERENCES artistas (artista_id)
 
 INSERT INTO albuns (titulo, artista_id)
 VALUES
-('Envious', 1),
-('Exuberant', 1),
-('hallowed Steam', 2),
-('Incandescent', 3),
-('Temporary Culture', 4);
+("Envious", 1),
+("Exuberant", 1),
+("Hallowed Steam", 2),
+("Incandescent", 3),
+("Temporary Culture", 4);
 
 CREATE TABLE cancoes(
 cancao_id INT PRIMARY KEY AUTO_INCREMENT,
