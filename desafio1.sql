@@ -13,7 +13,7 @@ PRIMARY KEY (plano_id)
 
 INSERT INTO planos(plano_id, plano_nome, plano_valor) VALUES(1,'Gratuito', 0.00 );
 INSERT INTO planos(plano_id, plano_nome, plano_valor) VALUES(2,'Familiar', 7.99 );
-INSERT INTO planos(plano_id, plano_nome, plano_valor) VALUES(3,'Gratuito', 5.99 );
+INSERT INTO planos(plano_id, plano_nome, plano_valor) VALUES(3,'Universitário', 5.99 );
 
 CREATE TABLE  IF NOT EXISTS usuarios(
 usuario_id INT NOT NULL AUTO_INCREMENT,
