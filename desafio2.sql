@@ -7,11 +7,13 @@
 
 -- A terceira coluna deve exibir a quantidade de álbuns e deverá ter o alias "albuns".
 
+DROP VIEW estatisticas_musicais;
+
 CREATE VIEW estatisticas_musicais AS
     SELECT 
-        COUNT(MUS.musica_id) AS cancoes,
-        COUNT(ART.artista_id) AS artistas,
-        COUNT(ALB.album_id) AS albuns
-    FROM SpotifyClone.Album AS ALB
-    INNER JOIN SpotifyClone.Artista AS ART ON ALB.artista_id = ART.artista_id
-    INNER JOIN SpotifyClone.Musica AS MUS ON ALB.album_id = MUS.album_id;
+        COUNT(DISTINCT MUS.nome_musica) AS cancoes,
+        COUNT(DISTINCT ART.nome_artista) AS artistas,
+        COUNT(DISTINCT ALB.nome_album) AS albuns
+    FROM SpotifyClone.Musica AS MUS 
+    INNER JOIN SpotifyClone.Album AS ALB ON ALB.album_id = MUS.album_id
+    INNER JOIN SpotifyClone.Artista AS ART ON ALB.artista_id = ART.artista_id;
