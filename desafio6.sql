@@ -11,7 +11,7 @@
 
 -- Para cada um desses dados, por se tratarem de valores monetários, deve-se arredondar o faturamento usando apenas duas casas decimais.
 
-DROP VIEW `faturamento_atual`;
+-- DROP VIEW `faturamento_atual`;
 
 CREATE VIEW `faturamento_atual` AS
     SELECT 
