@@ -3,4 +3,3 @@ SELECT art.nome_artista AS `artista`, (SELECT COUNT(fav.artista_id) FROM Spotify
 FROM SpotifyClone.artistas AS art
 ORDER BY `seguidores` DESC, `artista`
 LIMIT 3;
-
