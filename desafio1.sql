@@ -102,7 +102,8 @@ CREATE TABLE reproduction_history(
     user_id INTEGER,
     songs_id INTEGER,
     FOREIGN KEY (user_id) REFERENCES user (user_id),
-    FOREIGN KEY (songs_id) REFERENCES songs (songs_id)
+    FOREIGN KEY (songs_id) REFERENCES songs (songs_id),
+    CONSTRAINT PRIMARY KEY(user_id, songs_id)
 ) engine = InnoDB;
 
 INSERT INTO reproduction_history(user_id, songs_id)
