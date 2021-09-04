@@ -65,7 +65,7 @@ INSERT INTO songs(songs, album_id, singer_id)
 VALUES('Soul For Us', 1, 1),
       ('Reflections Of Magic', 1, 1),
       ('Dance With Her Own', 1, 1),
-      ('Troubles Of My InnerFire', 2, 1),
+      ('Troubles Of My Inner Fire', 2, 1),
       ('Time Fireworks', 2, 1),
       ('Magic Circus', 3, 2),
       ('Honey, So Do I', 3, 2),
