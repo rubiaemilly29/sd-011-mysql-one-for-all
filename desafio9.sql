@@ -12,5 +12,5 @@ BEGIN
     WHERE artista_nome = nome_do_artista
   )
   ORDER BY `album`;
-END $
+END $$
 DELIMITER ;
