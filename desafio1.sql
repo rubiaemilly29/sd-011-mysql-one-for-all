@@ -77,7 +77,7 @@ INSERT INTO cancoes(cancao, album_id) VALUES('Celebration Of More', 4);
 INSERT INTO cancoes(cancao, album_id) VALUES('Rock His Everything', 4);
 INSERT INTO cancoes(cancao, album_id) VALUES('Home Forever', 4);
 INSERT INTO cancoes(cancao, album_id) VALUES('Diamond Power', 4);
-INSERT INTO cancoes(cancao, album_id) VALUES('Honey, Lets Be Silly', 4);
+INSERT INTO cancoes(cancao, album_id) VALUES("Honey, Let's Be Silly", 4);
 INSERT INTO cancoes(cancao, album_id) VALUES('Thang Of Thunder', 5);
 INSERT INTO cancoes(cancao, album_id) VALUES('Words Of Her Life', 5);
 INSERT INTO cancoes(cancao, album_id) VALUES('Without My Streets', 5);
