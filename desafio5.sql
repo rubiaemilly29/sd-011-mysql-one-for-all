@@ -7,11 +7,11 @@
 
 -- Seu resultado deve estar ordenado em ordem decrescente, baseando-se no número de reproduções. Em caso de empate, ordene os resultados pelo nome da canção em ordem alfabética. Queremos apenas o top 2 de músicas mais tocadas.
 
-DROP VIEW `top_2_hits_do_momento`;
+-- DROP VIEW `top_2_hits_do_momento`;
 CREATE VIEW `top_2_hits_do_momento` AS
     SELECT 
         mus.nome_musica AS `cancao`,
-        COUNT(hist.usuario_id) AS `reproducoes`
+        COUNT(*) AS `reproducoes`
     FROM SpotifyClone.Historico AS hist 
     INNER JOIN SpotifyClone.Musica AS mus ON hist.musica_id = mus.musica_id
     GROUP BY `cancao`
