@@ -8,6 +8,8 @@
 
 -- Confirme a execução correta da procedure, chamando-a e passando o nome igual a "Walter Phoenix". Sua procedure deve retornar o mesmo que o resultado abaixo:
 
+-- CALL albuns_do_artista('Walter Phoenix');
+-- DROP PROCEDURE albuns_do_artista;
 DELIMITER $$
 
 CREATE PROCEDURE albuns_do_artista(IN nome VARCHAR(100))
@@ -22,6 +24,3 @@ BEGIN
 END $$
 
 DELIMITER ;
-
--- CALL albuns_do_artista('Walter Phoenix');
--- DROP PROCEDURE albuns_do_artista;
