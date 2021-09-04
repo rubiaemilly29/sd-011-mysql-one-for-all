@@ -54,7 +54,7 @@ CREATE TABLE seguindo_artistas(
 
 INSERT INTO planos (nome, preco)
 VALUES
-  ('Gratuito', 0),
+  ('Gratuito', 0.00),
   ('Universitário', 5.99),
   ('Familiar', 7.99);  
 
