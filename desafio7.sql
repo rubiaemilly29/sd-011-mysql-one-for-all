@@ -5,7 +5,7 @@ COUNT(*) AS seguidores
 FROM SpotifyClone.artistas AS A
 INNER JOIN SpotifyClone.albuns AS AB
 INNER JOIN SpotifyClone.seguindo AS S
-ON A.artista_id = AB.album_id
+ON A.artista_id = AB.artista_id
 AND A.artista_id = S.artista_id
 GROUP BY artista, album
 ORDER BY seguidores DESC, artista, album;
