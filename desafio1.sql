@@ -41,7 +41,8 @@ CREATE TABLE SpotifyClone.historico_reproducoes (
 historico_id SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 historico_reproducoes VARCHAR(100),
 usuario_id SMALLINT NOT NULL,
-FOREIGN KEY (usuario_id) REFERENCES SpotifyClone.usuarios(usuario_id)
+FOREIGN KEY (usuario_id) REFERENCES SpotifyClone.usuarios(usuario_id),
+CONSTRAINT PRIMARY KEY(usuario_id)
 ) ENGINE = InnoDB;
 
 CREATE TABLE SpotifyClone.seguindo_artistas (
