@@ -1,4 +1,4 @@
-CREATE VIEW `historico_reproducao_usuarios` AS
+CREATE VIEW `cancoes_premium` AS
 SELECT
   musica AS `nome`,
   count(*) AS `reproducoes`
