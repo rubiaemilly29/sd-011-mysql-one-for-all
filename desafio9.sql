@@ -24,5 +24,4 @@ END $$
 DELIMITER ;
 
 -- CALL albuns_do_artista('Walter Phoenix');
-
 -- DROP PROCEDURE albuns_do_artista;
