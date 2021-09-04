@@ -85,7 +85,8 @@ CREATE TABLE followers(
     user_id INTEGER,
     singer_id INTEGER,
     FOREIGN KEY (user_id) REFERENCES user (user_id),
-    FOREIGN KEY (singer_id) REFERENCES singer (singer_id)
+    FOREIGN KEY (singer_id) REFERENCES singer (singer_id),
+    CONSTRAINT PRIMARY KEY(user_id, singer_id)
 ) engine = InnoDB;
 
 INSERT INTO followers(user_id, singer_id)
