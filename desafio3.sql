@@ -1,4 +1,4 @@
-CREATE VIEW historico_reproducao_usuario AS
+CREATE VIEW historico_reproducao_usuarios AS
 SELECT U.nome AS usuario, C.cancao AS nome
 FROM Usuarios AS U
 INNER JOIN Historico_de_Reproducoes AS HR
