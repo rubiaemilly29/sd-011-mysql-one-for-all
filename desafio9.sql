@@ -5,6 +5,7 @@ SELECT a.name AS 'artista',
 ab.title AS 'album'
 FROM Artist a
 INNER JOIN Album ab
-ON a.artist_id = ab.artist_id;
+ON a.artist_id = ab.artist_id
+LIMIT 2;
 END $$
 DELIMITER ;
