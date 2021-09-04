@@ -1,0 +1,1 @@
+SELECT * FROM SpotifyClone.top_2_hits_do_momento;
