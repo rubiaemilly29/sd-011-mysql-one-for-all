@@ -14,6 +14,4 @@ CREATE VIEW SpotifyClone.cancoes_premium AS
         pln.nome_plano IN ('familiar' , 'universitário')
     GROUP BY mus.nome_musica
     ORDER BY nome;
-
-    DROP view SpotifyClone.cancoes_premium;
     
