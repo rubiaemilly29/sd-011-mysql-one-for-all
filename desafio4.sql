@@ -5,4 +5,4 @@ FROM singer AS singer
 INNER JOIN followers AS followers
 ON singer.singer_id = followers.singer_id
 GROUP BY singer.singer
-ORDER BY `seguidores` DESC, `artistas`;
+ORDER BY `seguidores` DESC, `artista`;
