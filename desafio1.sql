@@ -18,15 +18,15 @@ CREATE TABLE Usuario(
 ) engine = InnoDB;
 
 CREATE TABLE Artista(
-    artist_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    artista_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome_artista VARCHAR(100) NOT NULL
 ) engine = InnoDB;
 
 CREATE TABLE Album(
     album_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome_album VARCHAR(100) NOT NULL,
-    artist_id INT NOT NULL,
-    FOREIGN KEY (artist_id) REFERENCES Artista (artist_id)
+    artista_id INT NOT NULL,
+    FOREIGN KEY (artista_id) REFERENCES Artista (artist_id)
 ) engine = InnoDB;
 
 CREATE TABLE Musica(
@@ -48,10 +48,10 @@ CREATE TABLE Historico(
 
 CREATE TABLE Seguidores(
     usuario_id INT NOT NULL,
-    artist_id INT NOT NULL,
-    CONSTRAINT PRIMARY KEY(usuario_id, artist_id),
+    artista_id INT NOT NULL,
+    CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
     FOREIGN KEY (usuario_id) REFERENCES Usuario (usuario_id),
-    FOREIGN KEY (artist_id) REFERENCES Artista (artist_id)
+    FOREIGN KEY (artista_id) REFERENCES Artista (artista_id)
 ) engine = InnoDB;
 
 
