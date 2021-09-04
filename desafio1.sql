@@ -56,7 +56,9 @@ CREATE TABLE songs(
     songs_id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     songs VARCHAR(60) NOT NULL,
     album_id INTEGER,
-    singer_id INTEGER
+    singer_id INTEGER,
+    FOREIGN KEY (album_id) REFERENCES album (album_id),
+    FOREIGN KEY (singer_id) REFERENCES singer (singer_id)
 ) engine = InnoDB;
 
 INSERT INTO songs(songs, album_id, singer_id)
