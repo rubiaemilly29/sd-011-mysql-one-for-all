@@ -9,13 +9,13 @@ RETURNS INT READS SQL DATABASE
 BEGIN
     DECLARE qtd_musicas_historico INT;
 
-    SELECT COUNT(hist.musica_id) AS `qtd_musica`
+    SELECT COUNT(hist.musica_id) AS `quantidade_musicas_no_historico`
     FROM SpotifyClone.Historico AS hist 
-    INNER JOIN SpotifyClone.Usuario AS usr ON hist.usuario_id = usr.usuario_id
     INNER JOIN SpotifyClone.Musica AS mus ON mus.musica_id = hist.musica_id
+    INNER JOIN SpotifyClone.Usuario AS usr ON hist.usuario_id = usr.usuario_id
     WHERE usr.usuario_id = new_id
     GROUP BY hist.usuario_id
-        INTO qtd_musicas_historico
+    INTO qtd_musicas_historico
 RETURN qtd_musicas_historico;
 END $$
 DELIMITER ;
