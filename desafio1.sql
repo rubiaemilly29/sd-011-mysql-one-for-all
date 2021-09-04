@@ -67,6 +67,13 @@ VALUES
 ("Bill", 20, 3),
 ("Roger", 45, 1);
 
+INSERT INTO SpotifyClone.artistas (artista)
+VALUES
+("Walter Phoenix"),
+("Freedie Shannon"),
+("Lance Day"),
+("Peter Strong");
+
 INSERT INTO SpotifyClone.albuns (album, artista_id)
 VALUES
 ("Envious", 1), 
@@ -95,13 +102,6 @@ VALUES
 ("Thang Of Thunder", 5),
 ("Words Of Her Life", 5),
 ("Without My Streets", 5);
-
-INSERT INTO SpotifyClone.artistas (artista)
-VALUES
-("Walter Phoenix"),
-("Freedie Shannon"),
-("Lance Day"),
-("Peter Strong");
 
 INSERT INTO SpotifyClone.artistas_seguidos (artista_id, usuario_id)
 VALUES
