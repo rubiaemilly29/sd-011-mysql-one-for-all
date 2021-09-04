@@ -1,4 +1,4 @@
-CREATE VIEW perfil_artista AS
+CREATE VIEW perfil_artistas AS
 SELECT ar.nome AS artista, al.album AS album, 
 (SELECT COUNT(s.artista_id) 
 FROM SpotifyClone.seguindo AS s
