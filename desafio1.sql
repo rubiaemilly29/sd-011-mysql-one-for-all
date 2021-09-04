@@ -12,7 +12,7 @@ valor_plano DECIMAL(5, 2) NOT NULL
 
 INSERT INTO plano (tipo, valor_plano)
 VALUES
-('gratuito', 0),
+('gratuito', 0.00),
 ('familiar', 7.99),
 ('universitário', 5.99);
 
@@ -20,16 +20,16 @@ CREATE TABLE usuario(
 id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(50) NOT NULL,
 idade TINYINT NOT NULL,
-plano_id INTEGER,
+plano_id INT NOT NULL,
 CONSTRAINT FOREIGN KEY (plano_id) REFERENCES plano (id)
 ) engine = InnoDB;
 
-INSERT INTO usuario (nome, idade)
+INSERT INTO usuario(nome, idade, plano_id)
 VALUES
-('Thati', 23),
-('Cintia', 35),
-('Bill', 20 ),
-('Roger', 45);
+('Thati', 23, 1),
+('Cintia', 35, 2),
+('Bill', 20, 3),
+('Roger', 45, 1);
 
 CREATE TABLE artista(
 id INT PRIMARY KEY AUTO_INCREMENT,
@@ -47,7 +47,7 @@ CREATE TABLE album(
 id INT PRIMARY KEY AUTO_INCREMENT,
 nome_album VARCHAR(100) NOT NULL,
 artista_id INT NOT NULL,
-FOREIGN KEY (artista_id) REFERENCES artista (id)
+CONSTRAINT FOREIGN KEY (artista_id) REFERENCES artista (id)
 ) engine = InnoDB;
 
 INSERT INTO album (nome_album, artista_id)
@@ -58,31 +58,12 @@ VALUES
 ('Incandescent', 3),
 ('Temporary Culture', 4);
 
-CREATE TABLE seguindo_artistas(
-usuario_id INT NOT NULL,
-artista_id INT NOT NULL,
-CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
-FOREIGN KEY (artista_id) REFERENCES artista (id),
-FOREIGN KEY (usuario_id) REFERENCES usuario (id)
-) engine = InnoDB;
-
-INSERT INTO seguindo_artistas (usuario_id, artista_id)
-VALUES
-(1, 1),
-(1, 4),
-(1, 3),
-(2, 1),
-(2, 3),
-(3, 2),
-(3, 1),
-(4, 4);
-
 CREATE TABLE cancoes(
 id INT PRIMARY KEY AUTO_INCREMENT,
-nome_cancao VARCHAR(50) NOT NULL,
+nome_cancao VARCHAR(100) NOT NULL,
 album_id INT NOT NULL,
 artista_id INT NOT NULL,
-FOREIGN KEY (album_id) REFERENCES album (id),
+CONSTRAINT FOREIGN KEY (album_id) REFERENCES album (id),
 FOREIGN KEY (artista_id) REFERENCES artista (id)
 ) engine = InnoDB;
 
@@ -107,6 +88,24 @@ VALUES
 ("Words Of Her Life", 5, 4),
 ("Without My Streets", 5, 4);
 
+CREATE TABLE seguindo_artistas(
+usuario_id INT NOT NULL,
+artista_id INT NOT NULL,
+CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
+FOREIGN KEY (usuario_id) REFERENCES usuario (id),
+FOREIGN KEY (artista_id) REFERENCES artista (id)
+) engine = InnoDB;
+
+INSERT INTO seguindo_artistas (usuario_id, artista_id)
+VALUES
+(1, 1),
+(1, 4),
+(1, 3),
+(2, 1),
+(2, 3),
+(3, 2),
+(3, 1),
+(4, 4);
     
 CREATE TABLE historico_de_reproducoes(
 usuario_id INT NOT NULL,
