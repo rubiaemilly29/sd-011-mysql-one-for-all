@@ -29,7 +29,7 @@ VALUES('Thati', 23, 1),
 
 CREATE TABLE singer(
     singer_id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    singer VARCHAR(40) NOT NULL
+    singer VARCHAR(40) NOT NULL UNIQUE
 ) engine = InnoDB;
 
 INSERT INTO singer(singer)
@@ -84,20 +84,22 @@ VALUES('Soul For Us', 1, 1),
 CREATE TABLE followers(
     user_id INTEGER,
     singer_id INTEGER,
+    singer VARCHAR(60) NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user (user_id),
     FOREIGN KEY (singer_id) REFERENCES singer (singer_id),
-    CONSTRAINT PRIMARY KEY(user_id, singer_id)
+    FOREIGN KEY (singer) REFERENCES singer (singer),
+    CONSTRAINT PRIMARY KEY(user_id, singer)
 ) engine = InnoDB;
 
-INSERT INTO followers(user_id, singer_id)
-VALUES(1, 1),
-      (1, 3),
-      (1, 4),
-      (1, 1),
-      (2, 3),
-      (3, 1),
-      (3, 2),
-      (4, 4);
+INSERT INTO followers(user_id, singer_id, singer)
+VALUES(1, 1, 'Walter Phoenix'),
+      (1, 3, 'Lance Day'),
+      (1, 4, 'Freedie Shannon'),
+      (1, 1, 'Walter Phoenix'),
+      (2, 3, 'Lance Day'),
+      (3, 1, 'Walter Phoenix'),
+      (3, 2, 'Peter Strong'),
+      (4, 4, 'Freedie Shannon');
       
 CREATE TABLE reproduction_history(
     user_id INTEGER,
