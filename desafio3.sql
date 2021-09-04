@@ -6,9 +6,9 @@
 
 -- Os resultados devem estar ordenados por nome da pessoa usuária em ordem alfabética e em caso de empate no nome os resultados devem ser ordenados pelo nome da canção em ordem alfabética.
 
-DROP VIEW historico_reproducao_usuarios;
+DROP VIEW `historico_reproducao_usuarios`;
 
-CREATE VIEW historico_reproducao_usuarios AS 
+CREATE VIEW `historico_reproducao_usuarios` AS 
     SELECT 
         USR.nome_usuario AS usuario,
         MUS.nome_musica AS nome
