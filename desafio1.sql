@@ -61,10 +61,10 @@ VALUES
 
 INSERT INTO t_users(c_user, c_age, fk_c_flat)
 VALUES 
-('Marlon Ramos', 24, 1),
-('Diogo Algusto', 27, 2),
-('Josan Johnata', 28, 3),
-('Bruno Duarte', 38, 1);
+('Thati', 23, 1),
+('Cintia', 35, 2),
+('Bill', 20, 3),
+('Roger', 45, 1);
 
 INSERT INTO t_artists(c_artist)
 VALUES
@@ -99,7 +99,7 @@ VALUES
 ('Diamond Power', 4),
 ("Honey, Let's Be Silly", 4),
 ('Thang Of Thunder', 5),
-('"Words Of Her Life', 5),
+('Words Of Her Life', 5),
 ('Without My Streets', 5);
 
 INSERT INTO t_h_reproductions(fk_id_user, fk_id_songs)
