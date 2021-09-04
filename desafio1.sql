@@ -15,6 +15,22 @@ artista_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   artista VARCHAR(50) NOT NULL
 ) engine = InnoDB;
 
+CREATE TABLE Usuarios(
+  usuario_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL,
+  idade INT NOT NULL,
+  plano_id INT NOT NULL,
+  FOREIGN KEY (plano_id) REFERENCES Planos(plano_id)
+) engine = InnoDB;
+
+CREATE TABLE Seguindo_Artistas(
+  usuario_id INT NOT NULL,
+  artista_id INT NOT NULL,
+  CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
+  FOREIGN KEY (usuario_id) REFERENCES Usuarios(usuario_id),
+  FOREIGN KEY (artista_id) REFERENCES Artistas(artista_id)
+) engine = InnoDB;
+
 CREATE TABLE Albuns(
   album_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   album VARCHAR(60) NOT NULL,
@@ -29,25 +45,7 @@ CREATE TABLE Cancoes(
   FOREIGN KEY (album_id) REFERENCES Albuns(album_id)
 ) engine = InnoDB;
 
-CREATE TABLE Usuarios(
-  usario_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  nome VARCHAR(50) NOT NULL,
-  idade INT NOT NULL,
-  plano_id INT NOT NULL,
-  FOREIGN KEY (plano_id) REFERENCES Planos(plano_id)
-) engine = InnoDB;
-
-CREATE TABLE Seguindo_Artistas(
-  seguindo_artista_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  usuario_id INT NOT NULL,
-  artista_id INT NOT NULL,
-  CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
-  FOREIGN KEY (usuario_id) REFERENCES Usuarios(usuario_id),
-  FOREIGN KEY (artista_id) REFERENCES Artistas(artista_id)
-) engine = InnoDB;
-
 CREATE TABLE Historico_de_Reproducoes(
-  historico_de_reproducoes_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   usuario_id INT NOT NULL,
   cancao_id INT NOT NULL,
   CONSTRAINT PRIMARY KEY (usuario_id, cancao_id),
@@ -68,7 +66,7 @@ VALUES
 ('Lance Day'),
 ('Freedie Shannon');
 
-INSERT INTO Albuns (albuns, artista_id)
+INSERT INTO Albuns (album, artista_id)
 VALUES
 ('Envious', 1),
 ('Exuberant', 1),
@@ -85,14 +83,14 @@ VALUES
 ('Time Fireworks', 2),
 ('Magic Circus', 3),
 ('Honey, So Do I', 3),
-(`Sweetie, Let's go Wild`, 3),
+("Sweetie, Let's go Wild", 3),
 ('She Knows', 3),
 ('Fantasy For Me', 4),
 ('Celebration Of More', 4),
 ('Rock His Everything', 4),
 ('Home Forever', 4),
 ('Diamond Power', 4),
-(`Honey, Let's Be Silly`, 4),
+("Honey, Let's Be Silly", 4),
 ('Thang Of Thunder', 5),
 ('Words Of Her Life', 5),
 ('Without My Streets', 5);
