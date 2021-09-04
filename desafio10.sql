@@ -10,5 +10,4 @@ WHERE SpotifyClone.historico.usuarioId = usuarioId INTO quantidade_musicas_no_hi
 RETURN quantidade_musicas_no_historico;
 END $$
 DELIMITER ;
-
 SELECT quantidade_de_musicas_no_historico(3);
