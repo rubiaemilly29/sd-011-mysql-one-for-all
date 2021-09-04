@@ -26,7 +26,7 @@ CREATE TABLE Album(
     album_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome_album VARCHAR(100) NOT NULL,
     artista_id INT NOT NULL,
-    FOREIGN KEY (artista_id) REFERENCES Artista (artist_id)
+    FOREIGN KEY (artista_id) REFERENCES Artista (artista_id)
 ) engine = InnoDB;
 
 CREATE TABLE Musica(
