@@ -1,7 +1,7 @@
-CREATE VIEW faturamento_atual AS
+CREATE VIEW faturamento_atual AS;
 SELECT 
-MIN(p.valor) `faturamento_minimo`,
-MAX(p.valor) `faturamento_maximo`,
+ROUND(MIN(p.valor), 2) `faturamento_minimo`,
+ROUND(MAX(p.valor), 2) `faturamento_maximo`,
 ROUND(AVG(p.valor), 2) `faturamento_medio`,
 ROUND(SUM(p.valor), 2) `faturamento_total`
 FROM usuarios u
