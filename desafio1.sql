@@ -110,7 +110,7 @@ VALUES
 INSERT INTO seguindo (usuario_id, artista_id)
 VALUES
 (1, 1),
-(1, 2),
+(1, 3),
 (1, 4),
 (2, 1),
 (2, 3),
@@ -123,7 +123,13 @@ VALUES
 (1, 1),
 (1, 6),
 (1, 14),
-(1, 16),
+(1, 16),SELECT a.nome AS artista, 
+(SELECT COUNT(s.artista_id) 
+FROM SpotifyClone.seguindo AS s
+WHERE s.artista_id = a.artista_id) AS seguidores
+FROM SpotifyClone.artistas AS a
+ORDER BY seguidores DESC, artista
+LIMIT 3;
 (2, 13),
 (2, 17),
 (2, 2),
