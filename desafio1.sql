@@ -102,23 +102,25 @@ VALUES(1, 1),
 CREATE TABLE reproduction_history(
     user_id INTEGER,
     songs_id INTEGER,
+    songs VARCHAR(60) NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user (user_id),
     FOREIGN KEY (songs_id) REFERENCES songs (songs_id),
-    CONSTRAINT PRIMARY KEY(user_id, songs_id)
+    FOREIGN KEY (songs) REFERENCES songs (songs),
+    CONSTRAINT PRIMARY KEY(user_id, songs)
 ) engine = InnoDB;
 
-INSERT INTO reproduction_history(user_id, songs_id)
-VALUES(1, 1),
-      (1, 6),
-      (1, 14),
-      (1, 16),
-      (2, 13),
-      (2, 17),
-      (2, 2),
-      (2, 15),
-      (3, 4),
-      (3, 16),
-      (3, 6),
-      (4, 3),
-      (4, 18),
-      (4, 11);
+INSERT INTO reproduction_history(user_id, songs_id, songs)
+VALUES(1, 1, 'Soul For Us'),
+      (1, 6, 'Magic Circus'),
+      (1, 14, 'Diamond Power'),
+      (1, 16, 'Thang Of Thunder'),
+      (2, 13, 'Home Forever'),
+      (2, 17, 'Words Of Her Life'),
+      (2, 2, 'Reflections Of Magic'),
+      (2, 15, 'Honey, Let’s Be Silly'),
+      (3, 4, 'Troubles Of My InnerFire'),
+      (3, 16, 'Thang Of Thunder'),
+      (3, 6, 'Magic Circus'),
+      (4, 3, 'Dance With Her Own'),
+      (4, 18, 'Without My Streets'),
+      (4, 11, 'Celebration Of More');
