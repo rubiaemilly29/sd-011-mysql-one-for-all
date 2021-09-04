@@ -6,13 +6,13 @@
 
 -- Os resultados devem estar ordenados por nome da pessoa usuária em ordem alfabética e em caso de empate no nome os resultados devem ser ordenados pelo nome da canção em ordem alfabética.
 
-DROP VIEW `historico_reproducao_usuarios`;
+-- DROP VIEW `historico_reproducao_usuarios`;
 
 CREATE VIEW `historico_reproducao_usuarios` AS 
     SELECT 
-        USR.nome_usuario AS `usuario`,
-        MUS.nome_musica AS `nome`
-    FROM SpotifyClone.Usuario AS USR 
-    INNER JOIN SpotifyClone.Historico AS HIST ON USR.usuario_id = HIST.usuario_id
-    INNER JOIN SpotifyClone.Musica AS MUS ON HIST.musica_id = MUS.musica_id
+        usr.nome_usuario AS `usuario`,
+        mus.nome_musica AS `nome`
+    FROM SpotifyClone.Usuario AS usr 
+    INNER JOIN SpotifyClone.Historico AS hist ON usr.usuario_id = hist.usuario_id
+    INNER JOIN SpotifyClone.Musica AS mus ON hist.musica_id = mus.musica_id
     ORDER BY `usuario`, `nome` ASC;
