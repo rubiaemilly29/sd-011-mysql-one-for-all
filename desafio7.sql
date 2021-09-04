@@ -12,5 +12,5 @@ INNER JOIN SpotifyClone.Albuns AS alb
 ON art.artista_id = alb.artista_id
 INNER JOIN SpotifyClone.SeguindoArtistas as sa
 ON art.artista_id = sa.artista_id
-GROUP BY alb.album
+GROUP BY alb.album_id
 ORDER BY COUNT(sa.artista_id) DESC, art.artista ASC;
