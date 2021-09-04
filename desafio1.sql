@@ -42,7 +42,7 @@ VALUES
 ('Walter Phoenix'),
 ('Peter Strong'),
 ('Lance Day'),
-('Freedie Shanno');
+('Freedie Shannon');
 
 CREATE TABLE seguidores(
 usuario_id INT NOT NULL,
