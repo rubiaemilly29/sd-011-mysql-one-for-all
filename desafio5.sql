@@ -1,4 +1,4 @@
-REATE VIEW top_2_hits_do_momento AS
+CREATE VIEW top_2_hits_do_momento AS
 SELECT S.song_title AS 'cancao',
 (
 SELECT COUNT(*)
