@@ -10,10 +10,10 @@
 DROP VIEW `estatisticas_musicais`;
 
 CREATE VIEW `estatisticas_musicais` AS
-SELECT 
-    COUNT(DISTINCT MUS.musica_id) AS cancoes,
-    COUNT(DISTINCT ART.artista_id) AS artistas,
-    COUNT(DISTINCT ALB.album_id) AS albuns
+    SELECT 
+        COUNT(DISTINCT MUS.musica_id) AS `cancoes`,
+        COUNT(DISTINCT ART.artista_id) AS `artistas`,
+        COUNT(DISTINCT ALB.album_id) AS `albuns`
     FROM SpotifyClone.Musica AS MUS 
     INNER JOIN SpotifyClone.Album AS ALB ON ALB.album_id = MUS.album_id
     INNER JOIN SpotifyClone.Artista AS ART ON ALB.artista_id = ART.artista_id;
