@@ -3,14 +3,14 @@ CREATE DATABASE SpotifyClone;
 USE SpotifyClone;
 
 CREATE TABLE artistas (
-  artista_id INT NOT NULL AUTO_INCREMENT,
-  artista_nome varchar(100) NOT NULL
-  CONSTRAINT PRIMARY KEY(artista_id),
+  artista_id INT AUTO_INCREMENT,
+  artista_nome varchar(100) NOT NULL,
+  CONSTRAINT PRIMARY KEY(artista_id)
 ) ENGINE=InnoDB;
 INSERT INTO artistas(artista_nome) VALUES ('Walter Phoenix'),('Peter Strong'),('Lance Day'),('Freedie Shannon');
 
 CREATE TABLE planos (
-  plano_id INT NOT NULL AUTO_INCREMENT,
+  plano_id INT AUTO_INCREMENT,
   plano varchar(100) NOT NULL,
   valor_plano double,
   CONSTRAINT PRIMARY KEY(plano_id)
@@ -20,7 +20,7 @@ INSERT INTO planos(plano,valor_plano ) VALUES ('gratuito', '0'),
   ('universitário', '5.99');
 
 CREATE TABLE usuarios (
-  usuario_id INT NOT NULL AUTO_INCREMENT,
+  usuario_id INT AUTO_INCREMENT,
   usuario varchar(50) NOT NULL,
   idade INT NOT NULL,
   plano_id INT NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE usuarios (
 INSERT INTO usuarios(usuario, idade, plano_id) VALUES ('Thati',23,1),('Cintia',35,2),('Bill',20,3),('Roger',45,1);
 
 CREATE TABLE albums (
-  album_id INT NOT NULL AUTO_INCREMENT,
+  album_id INT AUTO_INCREMENT,
   album_nome varchar(100) NOT NULL,
   artista_id INT NOT NULL,
   CONSTRAINT PRIMARY KEY(album_id),
