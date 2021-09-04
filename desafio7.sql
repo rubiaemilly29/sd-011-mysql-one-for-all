@@ -13,4 +13,5 @@ ON t2.artist_id = t3.artist_id
 GROUP BY t2.album_id
 ORDER BY
 `seguidores` DESC,
-`artista`;
+`artista`,
+`album`;
