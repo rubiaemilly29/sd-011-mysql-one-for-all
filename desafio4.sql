@@ -1,6 +1,6 @@
 CREATE VIEW top_3_artistas AS
   SELECT (
-    SELECT nome
+    SELECT artista_nome
     FROM SpotifyClone.artistas AS a
     WHERE sa.artista_id = a.artista_id
   ) AS `artista`,

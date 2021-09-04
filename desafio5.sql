@@ -1,6 +1,6 @@
 CREATE VIEW top_2_hits_do_momento AS
   SELECT (
-    SELECT nome
+    SELECT cancao_nome
     FROM SpotifyClone.cancoes AS c
     WHERE hist.cancao_id = c.cancao_id
   ) AS `cancao`,
