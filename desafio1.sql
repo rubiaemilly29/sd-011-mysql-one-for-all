@@ -42,7 +42,7 @@ album_id INT NOT NULL,
 FOREIGN KEY(album_id) REFERENCES albuns(album_id)
 ) engine = InnoDB;
 
-CREATE TABLE historico(
+CREATE TABLE historico_de_reproducao(
 usuario_id INT NOT NULL,
 cancoes_id INT NOT NULL,
 CONSTRAINT PRIMARY KEY(usuario_id, cancoes_id),
@@ -51,36 +51,31 @@ FOREIGN KEY(cancoes_id) REFERENCES cancoes (cancoes_id)
 ) engine = InnoDB;
 
 INSERT INTO planos(plano, preco)
-VALUES 
-('gratuito', 0.00),
+VALUES ('gratuito', 0.00),
 ('familiar', 7.99),
 ('universitário', 5.99);
 
 INSERT INTO usuarios(nome, idade)
-VALUES 
-('Thati', 23),
+VALUES ('Thati', 23),
 ('Cintia', 35),
 ('Bill', 20),
 ('Roger', 45);
 
 INSERT INTO artistas(artista)
-VALUES 
-('Walter Phoenix'),  
+VALUES ('Walter Phoenix'),  
 ('Peter Strong'),
 ('Lance Day'),
 ('Freedie Shannon');
 
 INSERT INTO albuns(nome, artista_id)
-VALUES 
-('Envious', 1),
+VALUES ('Envious', 1),
 ('Exuberant', 1),
 ('Hallowed Steam', 2),
 ('Incandescent', 3),
 ('Temporary Culture', 4);
 
 INSERT INTO cancoes(titulo, album_id)
-VALUES 
-('Soul For Us', 1),
+VALUES ('Soul For Us', 1),
 ('Reflections Of Magic', 1),
 ('Dance With Her Own', 1),
 ('Troubles Of My Inner Fire', 1),
@@ -100,8 +95,7 @@ VALUES
 ('Without My Streets', 4);
 
 INSERT INTO seguindoartistas(usuario_id, artista_id)
-VALUES 
-(1, 1),
+VALUES (1, 1),
 (1, 3),
 (1, 4),
 (2, 3),
@@ -110,9 +104,8 @@ VALUES
 (3, 2),
 (4, 4);
 
-INSERT INTO historico(usuario_id, cancoes_id)
-VALUES 
-(1, 1),
+INSERT INTO historico_de_reproducao(usuario_id, cancoes_id)
+VALUES (1, 1),
 (1, 6),
 (1, 14),
 (1, 16),
