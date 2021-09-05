@@ -6,4 +6,4 @@ LEFT JOIN spotifyclone.historico AS h
 ON h.usuario_id = u.usuario_id
 INNER JOIN spotifyclone.musicas AS m
 ON h.musica_id = m.musica_id
-ORDER BY usuario ASC, nome ASC;
+ORDER BY u.usuario ASC, m.nome_musica ASC;
