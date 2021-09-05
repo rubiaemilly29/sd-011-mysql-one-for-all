@@ -1,4 +1,4 @@
--- create view cancoes_premium as
+create view cancoes_premium as
 select t1.musica as nome,
 count(t2.musica_id) as reproducoes
 from musica as t1
