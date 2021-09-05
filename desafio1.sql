@@ -14,48 +14,40 @@ FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
 CREATE TABLE artista (
   artista_id INT PRIMARY KEY AUTO_INCREMENT,      
   artista VARCHAR (50)    
-  )ENGINE=InnoDB;
+)ENGINE=InnoDB;
 
 CREATE TABLE plano (
   plano_id INT PRIMARY KEY AUTO_INCREMENT,   
   plano VARCHAR(30),    
   valor_plano DECIMAL(4,2)
-  ) ENGINE=InnoDB;
-
-CREATE TABLE album (
-  album_id INT PRIMARY KEY AUTO_INCREMENT,    
-  album VARCHAR(50),   
-  artista_id INT,    
-  FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
-  ) ENGINE=InnoDB;
+) ENGINE=InnoDB;
 
 CREATE TABLE album (
   album_id INT PRIMARY KEY AUTO_INCREMENT,    
   album VARCHAR(50),    
   artista_id INT,    
   FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
-  ) ENGINE=InnoDB;
+) ENGINE=InnoDB;
 
 CREATE TABLE seguindo (
   usuario_id INT,    
   artista_id INT,    
   PRIMARY KEY (usuario_id, artista_id)
-  ) ENGINE=InnoDB;
+) ENGINE=InnoDB;
 
 CREATE TABLE usuario (
   usuario_id INT PRIMARY KEY AUTO_INCREMENT,    
   usuario VARCHAR(50),    
   idade TINYINT,    
   plano_id INT,    
-  FOREIGN KEY (plano_id) 
-  REFERENCES plano(plano_id)
-  )	ENGINE=InnoDB;
+  FOREIGN KEY (plano_id) REFERENCES plano(plano_id)
+)	ENGINE=InnoDB;
 
 CREATE TABLE historico (
   cancoes_id INT,    
   user_id INT,    
   PRIMARY KEY (cancoes_id, user_id)
-  ) ENGINE=InnoDB;
+) ENGINE=InnoDB;
   
 INSERT INTO album(album)
 VALUES
