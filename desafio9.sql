@@ -5,6 +5,6 @@ SELECT A.artista AS artista,
 AB.album AS album
 FROM artistas A
 INNER JOIN albuns AB ON AB.artista_id = A.artista_id
-WHERE nomeArtista = A.artista_id;
+WHERE nomeArtista = A.artista;
 END $$
 DELIMITER ;
