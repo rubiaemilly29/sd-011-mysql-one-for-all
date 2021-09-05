@@ -7,7 +7,10 @@ CREATE VIEW cancoes_premium AS
   ON u.usuario_id = hr.usuario_id
   INNER JOIN SpotifyClone.planos AS p
   ON u.plano_id = p.plano_id
-  WHERE p.plano_id = 'Universitátio' AND plano = 'Familiar'
+  WHERE p.plano = 'Universitátio' AND p.plano = 'Familiar'
   GROUP BY `nome`
   ORDER BY `nome`;
-  
+
+SELECT * FROM cancoes_premium;
+
+-- DROP VIEW cancoes_premium;
