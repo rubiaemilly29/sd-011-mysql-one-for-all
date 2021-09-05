@@ -7,4 +7,4 @@ WHERE f.artista_id = a.artista_id
 ) AS 'seguidores'
 FROM SpotifyClone.artistas AS a
 ORDER BY 2 DESC, 1 ASC
-LIMIT 5;
+LIMIT 3;
