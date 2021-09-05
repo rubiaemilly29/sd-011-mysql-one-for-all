@@ -6,7 +6,7 @@ CREATE VIEW top_3_artistas AS
       WHERE f.artista_id = a.artista_id
     ) AS seguidores
   FROM
-    SpotifyClone.artista AS a
+    SpotifyClone.artistas AS a
   ORDER BY
     seguidores ASC,
     a.nome_artista DESC
