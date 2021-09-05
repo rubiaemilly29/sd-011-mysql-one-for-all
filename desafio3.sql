@@ -1,5 +1,5 @@
 CREATE VIEW historico_reproducao_usuarios AS
-SELECT u.usuario,
+SELECT u.usuario AS usuario,
 m.nome_musica AS nome
 FROM spotifyclone.usuarios AS u
 LEFT JOIN spotifyclone.historico AS h
