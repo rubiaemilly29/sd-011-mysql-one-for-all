@@ -82,10 +82,11 @@ VALUES
 
 INSERT INTO cancoes (cancoes, album_id)
 VALUES
-('Soul For Us', 1), ('Reflections Of Magic', 1), ('Dance With Her Own', 1), ('Troubles Of My Inner Fire', 1), ('Time Fireworks', 1),
-('Magic Circus', 2), ('Honey, So Do I', 2), ("Sweetie, Let's Go Wild", 2), ('She Knows', 2),
-('Fantasy For Me', 3), ('Celebration Of More', 3), ('Rock His Everything', 3), ('Home Forever', 3), ('Diamond Power', 3), ("Honey, Let's Be Silly", 3),
-('Thang Of Thunder', 4), ('Words Of Her Life', 4), ('Without My Streets', 4);
+('Soul For Us', 1), ('Reflections Of Magic', 1), ('Dance With Her Own', 1),
+('Troubles Of My Inner Fire', 2), ('Time Fireworks', 2),
+('Magic Circus', 3), ('Honey, So Do I', 3), ("Sweetie, Let's Go Wild", 3), ('She Knows', 3),
+('Fantasy For Me', 4), ('Celebration Of More', 4), ('Rock His Everything', 4), ('Home Forever', 4), ('Diamond Power', 4), ("Honey, Let's Be Silly", 4),
+('Thang Of Thunder', 5), ('Words Of Her Life', 5), ('Without My Streets', 5);
 
 INSERT INTO seguindo_artistas (usuario_id, artista_id)
 VALUES
@@ -96,7 +97,7 @@ VALUES
 
 INSERT INTO historico_reproducoes (usuario_id, cancoes_id)
 VALUES
-(1, 1), (1, 2), (1, 14), (1, 16),
+(1, 1), (1, 6), (1, 14), (1, 16),
 (2, 13), (2, 17), (2, 2), (2, 15),
 (3, 4), (3, 16), (3, 6), 
 (4, 3), (4, 18), (4, 11);
