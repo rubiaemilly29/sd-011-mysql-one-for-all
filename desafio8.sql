@@ -6,5 +6,4 @@ BEGIN
 DELETE FROM SpotifyClone.seguindo_artistas WHERE usuario_id = 'Thati';
 DELETE FROM SpotifyClone.historico_de_reproducoes WHERE usuario_id = usuario;
 END $$
-
 DELIMITER ;
