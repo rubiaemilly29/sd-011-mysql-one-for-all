@@ -12,3 +12,5 @@ RETURN history_total;
 END $$
 
 DELIMITER ;
+
+SELECT quantidade_musicas_no_historico("Bill");
