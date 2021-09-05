@@ -41,7 +41,6 @@ CREATE TABLE history_reproduction(
     user_id INTEGER NOT NULL,
     song_id INTEGER NOT NULL,
     CONSTRAINT PRIMARY KEY(user_id, song_id),
-    -- reproduction_id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users (user_id),
     FOREIGN KEY (song_id) REFERENCES songs (song_id)
 ) engine = InnoDB;
@@ -50,7 +49,6 @@ CREATE TABLE following_artists(
     user_id INTEGER NOT NULL,
     artist_id INTEGER NOT NULL,
     CONSTRAINT PRIMARY KEY(user_id, artist_id),
-    -- following_id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users (user_id),
     FOREIGN KEY (artist_id) REFERENCES artists (artist_id)
 ) engine = InnoDB;
