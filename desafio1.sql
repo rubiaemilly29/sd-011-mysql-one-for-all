@@ -3,17 +3,16 @@ DROP DATABASE IF EXISTS SpotifyClone;
 CREATE DATABASE SpotifyClone;
 
 USE SpotifyClone;
+CREATE TABLE artista (
+  artista_id INT PRIMARY KEY AUTO_INCREMENT,      
+  artista VARCHAR (50)    
+)ENGINE=InnoDB;
 
 CREATE TABLE cancoes (
 cancoes_id INT PRIMARY KEY AUTO_INCREMENT,
 nome_cancoes VARCHAR(200),
 artista_id INT,    
 FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
-)ENGINE=InnoDB;
-
-CREATE TABLE artista (
-  artista_id INT PRIMARY KEY AUTO_INCREMENT,      
-  artista VARCHAR (50)    
 )ENGINE=InnoDB;
 
 CREATE TABLE plano (
@@ -45,8 +44,8 @@ CREATE TABLE usuario (
 
 CREATE TABLE historico (
   cancoes_id INT,    
-  user_id INT,    
-  PRIMARY KEY (cancoes_id, user_id)
+  usuario_id INT,    
+  PRIMARY KEY (cancoes_id, usuario_id)
 ) ENGINE=InnoDB;
   
 INSERT INTO album(album)
