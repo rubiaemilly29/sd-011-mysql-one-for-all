@@ -8,4 +8,3 @@ CREATE VIEW top_3_artistas AS
   FROM spotifyclone.artistas AS a
   ORDER BY seguidores ASC, a.nome_artista DESC
   LIMIT 3;
-  
