@@ -21,8 +21,7 @@ usuario_id INT PRIMARY KEY AUTO_INCREMENT,
 usuario VARCHAR(50) NOT NULL,
 idade INT NOT NULL,
 plano_id INT NOT NULL,
-FOREIGN KEY (plano_id) REFERENCES plano (plano_id),
-historico_de_reproducoes VARCHAR(150)
+FOREIGN KEY (plano_id) REFERENCES plano (plano_id)
 );
 
 INSERT INTO user (usuario, idade, plano_id)
