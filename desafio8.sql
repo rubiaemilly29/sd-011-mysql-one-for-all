@@ -14,4 +14,3 @@ DELIMITER ;
 SET FOREIGN_KEY_CHECKS=0;
 DELETE from SpotifyClone.usuarios
 WHERE usuario_id = 1;
-
