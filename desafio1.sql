@@ -73,7 +73,7 @@ VALUES
   ('Hallowed Steam',  2),
   ('Incandescent',  3),
   ('Temporary Culture', 4);
- 
+
 INSERT INTO musicas (nome_musica, album_id)
 VALUES 
   ('Soul For Us', 1),
@@ -129,4 +129,4 @@ VALUES
   (19, 2),
   (19, 1),
   (20, 4);
- 
+  
