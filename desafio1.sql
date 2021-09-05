@@ -41,16 +41,16 @@ CREATE TABLE seguindo(
     usuario_id SMALLINT NOT NULL,
     artista_id SMALLINT NOT NULL,
     CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
-    FOREIGN KEY (usuario_id) REFERENCES usuarios (usuario_id),
-    FOREIGN KEY (artista_id) REFERENCES artistas (artista_id)
+    FOREIGN KEY (usuario_id) REFERENCES usuarios (usuario_id) ON DELETE CASCADE,
+    FOREIGN KEY (artista_id) REFERENCES artistas (artista_id) ON DELETE CASCADE
 );
 
 CREATE TABLE historico(
     usuario_id SMALLINT NOT NULL,
     cancao_id SMALLINT NOT NULL,
     CONSTRAINT PRIMARY KEY (usuario_id, cancao_id),
-    FOREIGN KEY (usuario_id) REFERENCES usuarios (usuario_id),
-    FOREIGN KEY (cancao_id) REFERENCES cancoes (cancao_id)
+    FOREIGN KEY (usuario_id) REFERENCES usuarios (usuario_id) ON DELETE CASCADE,
+    FOREIGN KEY (cancao_id) REFERENCES cancoes (cancao_id) ON DELETE CASCADE
 );
 
 INSERT INTO artistas(artista)
