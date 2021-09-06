@@ -48,7 +48,6 @@ FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id)
 CREATE TABLE SpotifyClone.historico_reproducoes(
 cancao_id INT NOT NULL,
 usuario_id INT NOT NULL,
-data_reproducao DATETIME,
 CONSTRAINT PRIMARY KEY(cancao_id, usuario_id),
 FOREIGN KEY (cancao_id) REFERENCES cancoes(cancao_id),
 FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id)
