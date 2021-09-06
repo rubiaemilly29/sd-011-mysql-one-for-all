@@ -48,7 +48,7 @@ CREATE TABLE Reproducao(
 CREATE TABLE Seguidores(
       id_usuario INT NOT NULL,
       id_artista INT NOT NULL,
-	  CONSTRAINT PRIMARY KEY(id_usuario, id_artista),
+      CONSTRAINT PRIMARY KEY(id_usuario, id_artista),
       FOREIGN KEY(id_usuario) REFERENCES Usuario(id),
       FOREIGN KEY(id_artista) REFERENCES Artista(id)
 ) engine = InnoDB;
