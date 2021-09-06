@@ -56,8 +56,9 @@ FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id)
 INSERT INTO SpotifyClone.planos (plano, valor)
 VALUES
 ('gratuito', 0),
-('universitário', 5.99),
-('familiar', 7.99);
+('familiar', 7.99),
+('universitário', 5.99);
+
 
 INSERT INTO SpotifyClone.artistas (artista)
 VALUES
