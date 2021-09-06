@@ -58,11 +58,11 @@ VALUES ('gratuito', 0.00),
 ('familiar', 7.99),
 ('universitário', 5.99);
 
-INSERT INTO usuarios(nome, idade)
-VALUES ('Thati', 23),
-('Cintia', 35),
-('Bill', 20),
-('Roger', 45);
+INSERT INTO usuarios(nome, idade, plano_id)
+VALUES ('Thati', 23, 1),
+('Cintia', 35, 2),
+('Bill', 20, 3),
+('Roger', 45, 1);
 
 INSERT INTO artistas(artista)
 VALUES ('Walter Phoenix'),  
