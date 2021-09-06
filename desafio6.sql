@@ -6,4 +6,3 @@ ROUND(AVG(p.valor_plano), 2) AS 'faturamento_medio',
 ROUND(SUM(p.valor_plano), 2) AS 'faturamento_total'
 FROM SpotifyClone.plano AS p
 INNER JOIN SpotifyClone.usuario AS u ON p.id = u.plano_id;
-SELECT * FROM faturamento_atual;
