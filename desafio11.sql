@@ -10,5 +10,5 @@ INNER JOIN SpotifyClone.musics AS m
 ON m.music_id = h.music_id
 WHERE p.plan IN ('familiar', 'universitario')
 GROUP BY h.music_id
-ORDER BY nome;
+ORDER BY nome
 );
