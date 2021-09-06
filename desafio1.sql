@@ -69,24 +69,24 @@ VALUES
 
 INSERT INTO cancoes(nome_cancoes, artista_id)
 VALUES
-('Soul For Us', 1), 
-('Reflections Of Magic', 1), 
-('Dance With Her Own', 1), 
-('Troubles Of My Inner Fire', 2), 
-('Time Fireworks', 2), 
-('Magic Circus', 3),
-('Honey, So Do I', 3), 
-("Sweetie, Let's Go Wild", 3), 
-('She Knows', 3),
-('Fantasy For Me', 4), 
-('Celebration Of More', 4), 
-('Rock His Everything', 4),
-('Home Forever', 4), 
-('Diamond Power', 4), 
-("Honey, Let's Be Silly", 4),
-('Thang Of Thunder', 5), 
-('Words Of Her Life', 5), 
-('Without My Streets', 5);
+('Soul For Us', 1), --1
+('Reflections Of Magic', 1), -- 2
+('Dance With Her Own', 1), -- 3
+('Troubles Of My Inner Fire', 2), --4
+('Time Fireworks', 2), --5 
+('Magic Circus', 3),--6
+('Honey, So Do I', 3), --7
+("Sweetie, Let's Go Wild", 3), --8
+('She Knows', 3), --9
+('Fantasy For Me', 4), --10
+('Celebration Of More', 4), --11 
+('Rock His Everything', 4), --12
+('Home Forever', 4), --13
+('Diamond Power', 4), --14
+("Honey, Let's Be Silly", 4),--15
+('Thang Of Thunder', 5), --16
+('Words Of Her Life', 5), --17
+('Without My Streets', 5);--18
 
 INSERT INTO plano(plano, valor_plano)
 VALUES
@@ -100,3 +100,32 @@ VALUES
 ('Cintia', 35, 2), 
 ('Bill', 20, 3), 
 ('Roger', 45, 1);
+
+INSERT INTO historico(cancoes_id, usuario_id)
+VALUES
+(1, 1),
+(6, 1),
+(14, 1),
+(16, 1),
+(13, 2),
+(17, 2),
+(2, 2),
+(15, 2),
+(4 ,3),
+(16 ,3),
+(6 ,3),
+(3 ,4),
+(18 ,4),
+(11 ,4);
+
+INSERT INTO seguindo(usuario_id, artista_id)
+VALUES
+(1, 1),
+(1, 4),
+(1, 3),
+(2, 1),
+(2, 3),
+(3, 2),
+(3, 1),
+(4, 4);
+
