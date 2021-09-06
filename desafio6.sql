@@ -1,9 +1,9 @@
 CREATE VIEW SpotifyClone.faturamento_atual AS
 SELECT
-ROUND(MIN(value), 2) AS 'faturamento_minimo',
-ROUND(MAX(value), 2) AS 'faturamento_maximo',
-ROUND(AVG(value), 2) AS 'faturamento_medio',
-ROUND(SUM(value), 2) AS 'faturamento_total'
+CAST(MIN(value) AS DECIMAL(5,2)) AS 'faturamento_minimo',
+CAST(MAX(value) AS DECIMAL(5,2)) AS 'faturamento_maximo',
+CAST(AVG(value) AS DECIMAL(5,2)) AS 'faturamento_medio',
+CAST(SUM(value) AS DECIMAL(5,2)) AS 'faturamento_total'
 FROM
 (
 SELECT
