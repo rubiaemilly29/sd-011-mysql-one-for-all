@@ -5,8 +5,8 @@ BEGIN
 DECLARE qtd_musicas INT;
 SELECT
 COUNT(hist.usuario_id)
-FROM SpotifyClone.historico_musicas AS hist WHERE hist.usuario_id = 
-(SELECT usuario_id FROM SpotifyClone.usuarios WHERE usuario_nome = usuario)
+FROM SpotifyClone.historico_musicas AS hist
+WHERE hist.usuario_id = (SELECT usuario_id FROM SpotifyClone.usuarios WHERE usuario_nome = usuario)
 INTO qtd_musicas;
 RETURN qtd_musicas;
 END $$
