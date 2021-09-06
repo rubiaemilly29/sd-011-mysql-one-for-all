@@ -13,7 +13,9 @@ preco DOUBLE NOT NULL
 CREATE TABLE usuarios(
 usuario_id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(20) NOT NULL,
-idade INT NOT NULL
+idade INT NOT NULL,
+plano_id INT NOT NULL,
+FOREIGN KEY (plano_id) REFERENCES planos(plano_id)
 ) engine = InnoDB;
 
 CREATE TABLE artistas(
