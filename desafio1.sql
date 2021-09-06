@@ -74,8 +74,8 @@ INSERT INTO Usuario (id_plano, nome, idade) VALUES
       (1, 'Envious'),
       (1, 'Exuberant'),
       (2, 'Hallowed Steam'),
-      (2, 'Incandescent'),
-      (3, 'Temporary Culture');
+      (3, 'Incandescent'),
+      (4, 'Temporary Culture');
 
   INSERT INTO Cancao (id_album, nome) VALUES
       (1, 'Soul For Us'),
