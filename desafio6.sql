@@ -1,4 +1,4 @@
-CREATE VIEW faturamento_atual AS;
+CREATE VIEW faturamento_atual AS
 SELECT 
 ROUND(MIN(p.valor), 2) `faturamento_minimo`,
 ROUND(MAX(p.valor), 2) `faturamento_maximo`,
