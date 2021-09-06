@@ -5,9 +5,9 @@ CREATE FUNCTION quantidade_musicas_no_historico(user_id INT)
 RETURNS INT READS SQL DATA
 BEGIN
 DECLARE total INT;
-SELECT COUNT(*)
-FROM SpotifyClone.reproduction_history
-WHERE user_id = user_id
+SELECT COUNT(hr.user_id)
+FROM SpotifyClone.reproduction_history AS hr
+WHERE hr.user_id = 4
 INTO total;
 RETURN total;
 END $$
