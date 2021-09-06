@@ -9,10 +9,10 @@ CREATE TABLE artista (
 )ENGINE=InnoDB;
 
 CREATE TABLE cancoes (
-cancoes_id INT PRIMARY KEY AUTO_INCREMENT,
-nome_cancoes VARCHAR(200),
-artista_id INT,    
-FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
+  cancoes_id INT PRIMARY KEY AUTO_INCREMENT,
+  nome_cancoes VARCHAR(200),
+  artista_id INT,    
+  FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
 )ENGINE=InnoDB;
 
 CREATE TABLE plano (
@@ -31,7 +31,9 @@ CREATE TABLE album (
 CREATE TABLE seguindo (
   usuario_id INT,    
   artista_id INT,    
-  PRIMARY KEY (usuario_id, artista_id)
+  CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
+  FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id),
+  FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE usuario (
@@ -45,7 +47,9 @@ CREATE TABLE usuario (
 CREATE TABLE historico (
   cancoes_id INT,    
   usuario_id INT,    
-  PRIMARY KEY (cancoes_id, usuario_id)
+  CONSTRAINT PRIMARY KEY (cancoes_id, usuario_id),
+  FOREIGN KEY (cancoes_id) REFERENCES cancoes(cancoes_id),
+  FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id)
 ) ENGINE=InnoDB;
   
 INSERT INTO album(album)
