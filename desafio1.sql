@@ -60,8 +60,8 @@ VALUES
 INSERT INTO Usuario (id_plano, nome, idade)
 VALUES
       (1, 'Thati', 23),
-	  (2, 'Cintia',35),
-	  (3, 'Bill',20),
+      (2, 'Cintia',35),
+      (3, 'Bill',20),
       (1, 'Roger', 45);
   
   INSERT INTO Artista (nome)
@@ -87,7 +87,7 @@ VALUES
       (2, 'Troubles Of My Inner Fire'),
       (2, 'Time Fireworks'),
       (3, 'Magic Circus'),
-	  (3, 'Honey, So Do I'),
+      (3, 'Honey, So Do I'),
       (3, 'Sweetie, Let''s Go Wild'),
       (3, 'She Knows'),
       (4, 'Fantasy For Me'),
@@ -96,9 +96,9 @@ VALUES
       (4, 'Home Forever'),
       (4, 'Diamond Power'),
       (4, 'Honey, Let''s Be Silly'),
-	  (5, 'Thang Of Thunder'),
+      (5, 'Thang Of Thunder'),
       (5, 'Words Of Her Life'),
-	  (5, 'Without My Streets');
+      (5, 'Without My Streets');
 
   INSERT INTO Reproducao (id_usuario, id_cancao)
 VALUES
