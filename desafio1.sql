@@ -51,36 +51,31 @@ CREATE TABLE Seguidores(
       FOREIGN KEY(id_artista) REFERENCES Artista(id)
 ) engine = InnoDB;
 
-INSERT INTO Plano (nome, valor)
-VALUES
+INSERT INTO Plano (nome, valor) VALUES
       ('gratuito', 0),
       ('familiar', 7.99),
       ('universitário', 5.99);
 
-INSERT INTO Usuario (id_plano, nome, idade)
-VALUES
+INSERT INTO Usuario (id_plano, nome, idade) VALUES
       (1, 'Thati', 23),
       (2, 'Cintia',35),
       (3, 'Bill',20),
       (1, 'Roger', 45);
   
-  INSERT INTO Artista (nome)
-VALUES
+  INSERT INTO Artista (nome) VALUES
       ('Walter Phoenix'),
       ('Peter Strong'),
       ('Lance Day'),
       ('Freedie Shannon');
 
-  INSERT INTO Album (id_artista, nome)
-VALUES
+  INSERT INTO Album (id_artista, nome) VALUES
       (1, 'Envious'),
       (1, 'Exuberant'),
       (2, 'Hallowed Steam'),
       (2, 'Incandescent'),
       (3, 'Temporary Culture');
 
-  INSERT INTO Cancao (id_album, nome)
-VALUES
+  INSERT INTO Cancao (id_album, nome) VALUES
       (1, 'Soul For Us'),
       (1, 'Reflections Of Magic'),
       (1, 'Dance With Her Own'),
@@ -100,8 +95,7 @@ VALUES
       (5, 'Words Of Her Life'),
       (5, 'Without My Streets');
 
-  INSERT INTO Reproducao (id_usuario, id_cancao)
-VALUES
+  INSERT INTO Reproducao (id_usuario, id_cancao) VALUES
       (1,1),
       (1,6),
       (1,14),
@@ -117,8 +111,7 @@ VALUES
       (4,18),
       (4,11);
   
-   INSERT INTO Seguidores (id_usuario, id_artista)
-VALUES
+    INSERT INTO Seguidores (id_usuario, id_artista) VALUES
       (1,1),
       (1,4),
       (1,3),
