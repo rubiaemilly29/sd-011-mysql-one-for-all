@@ -1,5 +1,3 @@
-USE SpotifyClone;
-
 DELIMITER $$
 
 CREATE FUNCTION quantidade_musicas_no_historico (
@@ -10,7 +8,7 @@ DECLARE contador INT;
 
 SELECT
 COUNT(A.id_usuario)
-FROM Reproducoes A 
+FROM SpotifyClone.Reproducoes A 
 WHERE A.id = id_usuario
 INTO contador;
 
