@@ -1,3 +1,4 @@
+DELIMITER //
 CREATE FUNCTION quantidade_musicas_no_historico(username VARCHAR(20))
 RETURNS VARCHAR(50) READS SQL DATA
 BEGIN
