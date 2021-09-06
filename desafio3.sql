@@ -6,4 +6,4 @@ INNER JOIN SpotifyClone.Historico_reproducoes AS hr
 ON u.UsuarioID = hr.UsuarioID
 INNER JOIN SpotifyClone.Cancoes_album AS ca
 ON hr.CancaoID = ca.CancaoID
-ORDER BY usuario;
+ORDER BY `usuario`, `nome`;
