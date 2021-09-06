@@ -1,5 +1,4 @@
 USE SpotifyClone;
-
 DELIMITER $$
 CREATE TRIGGER trigger_usuario_delete
     BEFORE DELETE ON user
