@@ -47,6 +47,24 @@ VALUES
 ("Lance Day"),
 ("Freedie Shannon");
 
+CREATE TABLE album(
+  album_id INT AUTO_INCREMENT,
+  titulo_do_album VARCHAR(80) NOT NULL, 
+  artista_id INT NOT NULL,
+  PRIMARY KEY(album_id),
+  FOREIGN KEY (artista_id) REFERENCES artista (artista_id)
+) ENGINE=InnoDb;
+
+INSERT INTO album(titulo_do_album, artista_id)
+VALUES 
+("Envious", 1),
+("Exuberant",1),
+("Hallowed Steam",2),
+("Incandescent",3),
+("Temporary Culture",4);
+
+
 SELECT * FROM artista
+
 
 SHOW TABLES;
