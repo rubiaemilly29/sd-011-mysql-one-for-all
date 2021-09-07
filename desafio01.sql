@@ -92,7 +92,28 @@ INSERT INTO musica
   ("Words Of Her Life", 5),
   ("Without My Streets", 5);
 
-SELECT * FROM musica;
+
+CREATE TABLE segue_artista(
+  usuario_id INT NOT NULL,
+  artista_id INT NOT NULL,
+  CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
+  FOREIGN KEY (usuario_id) REFERENCES usuario (usuario_id),
+  FOREIGN KEY (artista_id) REFERENCES artista (artista_id)
+) ENGINE=InnoDb;
+
+INSERT INTO segue_artista(usuario_id,artista_id)
+VALUES
+(1, 1),
+(1, 3),
+(1, 4),
+(2, 1),
+(2, 3),
+(3, 1),
+(3, 2),
+(4, 4);
+
+
+SELECT * FROM segue_artista;
 
 
 SHOW TABLES;
