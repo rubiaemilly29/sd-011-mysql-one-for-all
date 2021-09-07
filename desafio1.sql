@@ -7,11 +7,11 @@ USE SpotifyClone;
 CREATE TABLE planos(
   plano_id INT AUTO_INCREMENT PRIMARY KEY,
   plano_nome VARCHAR(30) NOT NULL,
-  plano_valor DOUBLE
+  plano_valor DECIMAL(3, 2) NOT NULL
 ) engine = InnoDB;
 INSERT INTO SpotifyClone.planos (plano_nome, plano_valor)
 VALUES
-  ('gratuito', 0),
+  ('gratuito', 0.00),
   ('familiar', 7.99),
   ('universitário', 5.99);
 
