@@ -1,11 +1,13 @@
+-- CODIGO RETIRADO DO PR DA GABRIELA FEIJO
+-- https://github.com/tryber/sd-011-mysql-one-for-all/pull/93
 DELIMITER $$
 CREATE TRIGGER trigger_usuario_delete
-AFTER DELETE ON SpotifyClone.usuarios
+BEFORE DELETE ON usuarios
 FOR EACH ROW
 BEGIN
-DELETE FROM SpotifyClone.tabela_seguidores_artistas
-WHERE SpotifyClone.usuarios.id_usuario = old.id_usuario;
-DELETE FROM SpotifyClone.historico_de_reproducoes
-WHERE SpotifyClone.usuarios.id_usuario = old.id_usuario;
+DELETE FROM historico_de_reproducoes
+WHERE id_usuario = OLD.id_usuario;
+DELETE FROM tabela_seguidores_artistas
+WHERE id_usuario = OLD.id_usuario;
 END $$
 DELIMITER ;
