@@ -11,5 +11,6 @@ SpotifyClone.album AS B
 ON B.artista_id = A.artista_id
 WHERE
 A.nome_do_artista = artista_nome;
-END $$
+END 
+$$
 DELIMITER;
