@@ -35,6 +35,5 @@ VALUES
 ("Roger",45,1);
 
 
-SELECT * FROM usuario;
 
 
