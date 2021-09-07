@@ -3,3 +3,4 @@ SELECT a.artista AS artista, al.album AS album, (SELECT COUNT(*) FROM SpotifyClo
 FROM SpotifyClone.artistas AS a
 INNER JOIN SpotifyClone.albuns AS al ON al.artista_id = a.artista_id
 ORDER BY 3 DESC, 1, 2;
+
