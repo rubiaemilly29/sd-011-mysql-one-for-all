@@ -1,4 +1,4 @@
--- CREATE VIEW perfil_artistas AS
+CREATE VIEW perfil_artistas AS
 SELECT A.nome, AL.album, SA.seguidores
 FROM SpotifyClone.artistas AS A
 INNER JOIN 
