@@ -1,6 +1,6 @@
 DELIMITER $$
 CREATE TRIGGER trigger_usuario_delete
-AFTER DELETE ON usuarios
+BEFORE DELETE ON usuarios
 FOR EACH ROW
 BEGIN
 DELETE FROM usuarios_cancoes WHERE id_usuarios = OLD.id_usuarios;
