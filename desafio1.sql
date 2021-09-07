@@ -86,7 +86,7 @@ VALUES
 ("Soul For Us", 1), 
 ("Reflections Of Magic", 1),
 ("Dance With Her Own", 1), 
-("Troubles Of My Inner Fire'", 1),
+("Troubles Of My Inner Fire", 1),
 ("Time Fireworks", 1),
 ("Magic Circus", 2),
 ("Honey, So Do I", 2),
