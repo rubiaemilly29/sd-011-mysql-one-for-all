@@ -1,7 +1,8 @@
-CREATE VIEW historico_reproducao_usuarios AS SELECT
-SELECT u.nome_usuario AS usuario, m.nome_musicas AS nome
---  preciso fazer dois inner joins e depois juntas as tabelas. Os inners devem levar como base a tabela historico_de_reproducao.
+CREATE VIEW historico_reproducao_usuarios AS 
+SELECT u.nome_usuario AS usuario, 
+m.nome_musica AS nome
 FROM SpotifyClone.usuarios u
-RIGHT JOIN historico_de_reproducoes hdr ON u.nome_usuario = hdr.musica_id;
-
-SELECT nome_usuario FROM SpotifyClone.usuarios;
+INNER JOIN SpotifyClone.historico_de_reproducoes AS hdr 
+INNER JOIN SpotifyClone.musicas AS m
+ON hdr.musica_id = m.musica_id AND u.usuario_id = hdr.usuario_id
+ORDER BY usuario, nome;
