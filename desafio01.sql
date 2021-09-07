@@ -17,7 +17,6 @@ VALUES
 ("universitário",5.99),
 ("familiar", 7.99);
 
-
 CREATE TABLE usuario(
   usuario_id INT AUTO_INCREMENT,
   nome VARCHAR(40) NOT NULL,
@@ -92,7 +91,6 @@ INSERT INTO musica
   ("Words Of Her Life", 5),
   ("Without My Streets", 5);
 
-
 CREATE TABLE segue_artista(
   usuario_id INT NOT NULL,
   artista_id INT NOT NULL,
@@ -112,8 +110,27 @@ VALUES
 (3, 2),
 (4, 4);
 
+CREATE TABLE historico_de_reproducoes(
+  usuario_id INT NOT NULL,
+  musica_id INT NOT NULL,
+  CONSTRAINT PRIMARY KEY (usuario_id, musica_id),
+  FOREIGN KEY (usuario_id) REFERENCES usuario (usuario_id),
+  FOREIGN KEY (musica_id) REFERENCES musica (musica_id)
+) ENGINE=InnoDb;
 
-SELECT * FROM segue_artista;
-
-
-SHOW TABLES;
+INSERT INTO historico_de_reproducoes(usuario_id, musica_id)
+VALUES
+(1, 1),
+(1, 6),
+(1, 14),
+(1, 16),
+(2, 13),
+(2, 17),
+(2, 2),
+(2, 15),
+(3, 4),
+(3, 16),
+(3, 6),
+(4, 3),
+(4, 18),
+(4, 11);
