@@ -6,7 +6,7 @@ BEGIN
 DECLARE quant INT;
 SELECT COUNT(*) AS quantidade_musicas_no_historico
 FROM spotifyclone.historico
-WHERE usuario_id = id INTO quantidade;
+WHERE usuario_id = id INTO id;
 RETURN quantidade;
 END $$
 
