@@ -17,4 +17,24 @@ VALUES
 ("universitário",5.99),
 ("familiar", 7.99);
 
-SELECT * FROM plano
+
+CREATE TABLE usuario(
+  usuario_id INT AUTO_INCREMENT,
+  nome VARCHAR(40) NOT NULL,
+  idade INT NOT NULL,
+  plano_id INT NOT NULL,
+  PRIMARY KEY(usuario_id),
+  FOREIGN KEY (plano_id) REFERENCES plano (plano_id)
+) ENGINE=InnoDb;
+
+INSERT INTO usuario(nome,idade,plano_id)
+VALUES 
+("Thati",23,1),
+("Cintia",35,3),
+("Bill",20,2),
+("Roger",45,1);
+
+
+SELECT * FROM usuario;
+
+
