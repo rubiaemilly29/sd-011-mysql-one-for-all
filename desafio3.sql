@@ -6,3 +6,5 @@ INNER JOIN SpotifyClone.historico_de_reproducoes AS hdr
 INNER JOIN SpotifyClone.musicas AS m
 ON hdr.musica_id = m.musica_id AND u.usuario_id = hdr.usuario_id
 ORDER BY usuario, nome;
+
+SELECT * FROM historico_reproducao_usuarios;
