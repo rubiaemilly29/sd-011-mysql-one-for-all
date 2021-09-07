@@ -34,6 +34,19 @@ VALUES
 ("Bill",20,2),
 ("Roger",45,1);
 
+CREATE TABLE artista(
+  artista_id INT AUTO_INCREMENT,
+  nome_do_artista VARCHAR(80) NOT NULL, 
+  PRIMARY KEY(artista_id)
+) ENGINE=InnoDb;
 
+INSERT INTO artista(nome_do_artista)
+VALUES 
+("Walter Phoenix"),
+("Peter Strong"),
+("Lance Day"),
+("Freedie Shannon");
 
+SELECT * FROM artista
 
+SHOW TABLES;
