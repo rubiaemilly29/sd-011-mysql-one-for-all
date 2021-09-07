@@ -5,52 +5,52 @@ CREATE DATABASE SpotifyClone;
 USE SpotifyClone;
 
 CREATE TABLE Planos(
-	plano_id INT PRIMARY KEY AUTO_INCREMENT,
-    plano VARCHAR(50) NOT NULL,
-    valor DECIMAL(4,2)
+plano_id INT PRIMARY KEY AUTO_INCREMENT,
+plano VARCHAR(50) NOT NULL,
+valor DECIMAL(4,2)
 ) engine = InnoDB;
 
 CREATE TABLE Usuario(
-    usuario_id INT PRIMARY KEY AUTO_INCREMENT,
-    usuario VARCHAR(50) NOT NULL,
-    idade INT NOT NULL,
-    plano_id INT,
-    FOREIGN KEY (plano_id) REFERENCES Planos(plano_id)
+usuario_id INT PRIMARY KEY AUTO_INCREMENT,
+usuario VARCHAR(50) NOT NULL,
+idade INT NOT NULL,
+plano_id INT,
+FOREIGN KEY (plano_id) REFERENCES Planos(plano_id)
 ) engine = InnoDB;
 
 CREATE TABLE Artista(
-	artista_id INT PRIMARY KEY AUTO_INCREMENT,
-    artista VARCHAR(50) NOT NULL
+artista_id INT PRIMARY KEY AUTO_INCREMENT,
+artista VARCHAR(50) NOT NULL
 ) engine = InnoDB;
 
 CREATE TABLE Albuns(
-	album_id INT PRIMARY KEY AUTO_INCREMENT,
-    album VARCHAR(150) NOT NULL,
-    artista_id INT,
-    FOREIGN KEY (artista_id) REFERENCES Artista(artista_id)
+album_id INT PRIMARY KEY AUTO_INCREMENT,
+album VARCHAR(150) NOT NULL,
+artista_id INT,
+FOREIGN KEY (artista_id) REFERENCES Artista(artista_id)
 ) engine = InnoDB;
 
 CREATE TABLE Musicas(
-	musica_id INT PRIMARY KEY AUTO_INCREMENT,
-    musica VARCHAR(200) NOT NULL,
-    album_id INT,
-    FOREIGN KEY (album_id) REFERENCES Albuns(album_id)
+musica_id INT PRIMARY KEY AUTO_INCREMENT,
+musica VARCHAR(200) NOT NULL,
+album_id INT,
+FOREIGN KEY (album_id) REFERENCES Albuns(album_id)
 ) engine = InnoDB;
 
 CREATE TABLE Seguidores(
-	usuario_id INT,
-	artista_id INT,
-	CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
-	FOREIGN KEY (usuario_id) REFERENCES Usuario(usuario_id),
-	FOREIGN KEY (artista_id) REFERENCES Artista(artista_id)
+usuario_id INT,
+artista_id INT,
+CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
+FOREIGN KEY (usuario_id) REFERENCES Usuario(usuario_id),
+FOREIGN KEY (artista_id) REFERENCES Artista(artista_id)
 ) engine = InnoDB;
 
 CREATE TABLE Historico(
-	usuario_id INT,
-	musica_id INT,
-	CONSTRAINT PRIMARY KEY(usuario_id, musica_id),
-	FOREIGN KEY (usuario_id) REFERENCES Usuario(usuario_id),
-	FOREIGN KEY (musica_id) REFERENCES Musicas(musica_id)
+usuario_id INT,
+musica_id INT,
+CONSTRAINT PRIMARY KEY(usuario_id, musica_id),
+FOREIGN KEY (usuario_id) REFERENCES Usuario(usuario_id),
+FOREIGN KEY (musica_id) REFERENCES Musicas(musica_id)
 ) engine = InnoDB;
 
 INSERT INTO Planos (plano, valor)
@@ -122,7 +122,3 @@ VALUES(1, 1),
 (4, 3),
 (4, 18),
 (4, 11);
-
-
-
-
