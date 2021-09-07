@@ -5,54 +5,54 @@ CREATE DATABASE SpotifyClone;
 USE SpotifyClone;
 
 CREATE TABLE planos_mensais(
-    id_plano INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    tipo_plano VARCHAR(30) NOT NULL,
-    valor_plano DEC(5,2) NOT NULL
+id_plano INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+tipo_plano VARCHAR(30) NOT NULL,
+valor_plano DEC(5,2) NOT NULL
 ) ENGINE = InnoDB;
 
 CREATE TABLE artistas(
-    id_artista INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(50) NOT NULL
+id_artista INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50) NOT NULL
 ) ENGINE = InnoDB;
 
 CREATE TABLE albuns(
-    id_album INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    album VARCHAR(100) NOT NULL,
-    id_artista INT NOT NULL,
-    FOREIGN KEY (id_artista) REFERENCES artistas(id_artista)  
+id_album INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+album VARCHAR(100) NOT NULL,
+id_artista INT NOT NULL,
+FOREIGN KEY (id_artista) REFERENCES artistas(id_artista)  
 ) ENGINE = InnoDB;
 
 CREATE TABLE musicas(
-    id_musica INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
-	id_album INT NOT NULL,
-    FOREIGN KEY (id_album) REFERENCES albuns(id_album),
-    id_artista INT NOT NULL,
-    FOREIGN KEY (id_artista) REFERENCES artistas(id_artista)  
+id_musica INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(100) NOT NULL,
+id_album INT NOT NULL,
+FOREIGN KEY (id_album) REFERENCES albuns(id_album),
+id_artista INT NOT NULL,
+FOREIGN KEY (id_artista) REFERENCES artistas(id_artista)  
 ) ENGINE = InnoDB;
 
 CREATE TABLE usuarios(
-    id_usuario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    usuario VARCHAR(50) NOT NULL,
-    idade INT NOT NULL,
-	id_plano INT NOT NULL,
-    FOREIGN KEY (id_plano) REFERENCES planos_mensais(id_plano)
+id_usuario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+usuario VARCHAR(50) NOT NULL,
+idade INT NOT NULL,
+id_plano INT NOT NULL,
+FOREIGN KEY (id_plano) REFERENCES planos_mensais(id_plano)
 ) ENGINE = InnoDB;
 
 CREATE TABLE tabela_seguidores_artistas(
-	id_usuario INT NOT NULL,
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
-    id_artista INT NOT NULL,
-    FOREIGN KEY (id_artista) REFERENCES artistas(id_artista),
-    UNIQUE (id_usuario, id_artista)
+id_usuario INT NOT NULL,
+FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+id_artista INT NOT NULL,
+FOREIGN KEY (id_artista) REFERENCES artistas(id_artista),
+UNIQUE (id_usuario, id_artista)
 ) ENGINE = InnoDB;
 
 CREATE TABLE historico_de_reproducoes(
-    id_historico INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    id_usuario INT NOT NULL,
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
-    id_musica INT NOT NULL,
-    FOREIGN KEY (id_musica) REFERENCES musicas(id_musica)
+id_historico INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+id_usuario INT NOT NULL,
+FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+id_musica INT NOT NULL,
+FOREIGN KEY (id_musica) REFERENCES musicas(id_musica)
 ) ENGINE = InnoDB;
 
 INSERT INTO planos_mensais (id_plano, tipo_plano, valor_plano)
