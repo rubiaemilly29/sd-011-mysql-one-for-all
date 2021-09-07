@@ -1,5 +1,5 @@
 {
-  "coluna_usuario": "id_usuario",
+  "coluna_usuario": "usuario",
   "tabela_que_contem_usuario": "usuarios",
   "coluna_plano": "id_plano",
   "tabela_que_contem_plano": "planos_mensais",
