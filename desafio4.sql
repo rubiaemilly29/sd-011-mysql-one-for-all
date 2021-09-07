@@ -6,5 +6,5 @@ FROM SpotifyClone.artista_seguidores AS AC
 LEFT JOIN SpotifyClone.artista AS A
 ON AC.artista_id = A.artista_id
 GROUP BY A.nome
-ORDER BY COUNT(AC.usuario_id) DESC
+ORDER BY COUNT(AC.usuario_id), A.nome DESC
 LIMIT 3;
