@@ -5,8 +5,8 @@ CREATE DATABASE SpotifyClone;
 USE SpotifyClone;
 
 CREATE TABLE planos(
-  plano_id INT PRIMARY KEY AUTO_INCREMENT,
-  nome_plano VARCHAR(20),
+  plano_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome_plano VARCHAR(20) NOT NULL,
   valor_plano DECIMAL(5, 2) NOT NULL
 ) engine = InnoDB;
 
@@ -16,7 +16,7 @@ INSERT INTO planos (nome_plano, valor_plano) VALUES
 ("familiar", 7.99);
 
 CREATE TABLE usuarios(
-  usuario_id INT PRIMARY KEY AUTO_INCREMENT,
+  usuario_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   nome_usuario VARCHAR(50) NOT NULL,
   idade INT NOT NULL,
   plano_id INT NOT NULL,
@@ -30,8 +30,8 @@ INSERT INTO usuarios (nome_usuario, idade, plano_id) VALUES
 ("Roger", 45, 1);
 
 CREATE TABLE artistas(
-  artista_id INT PRIMARY KEY AUTO_INCREMENT,
-  nome_artista VARCHAR(50)
+  artista_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome_artista VARCHAR(50) NOT NULL
 ) engine = InnoDB;
 
 INSERT INTO artistas (nome_artista) VALUES
@@ -41,8 +41,8 @@ INSERT INTO artistas (nome_artista) VALUES
 ("Freedie Shannon");
 
 CREATE TABLE albuns(
-  album_id INT PRIMARY KEY AUTO_INCREMENT,
-  nome_album VARCHAR(50),
+  album_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome_album VARCHAR(50) NOT NULL,
   artista_id INT NOT NULL,
   FOREIGN KEY (artista_id) REFERENCES artistas (artista_id)
 ) engine = InnoDB;
@@ -55,8 +55,8 @@ INSERT INTO albuns (nome_album, artista_id) VALUES
 ("Temporary Culture", 4);
 
 CREATE TABLE cancoes(
-  cancao_id INT PRIMARY KEY AUTO_INCREMENT,
-  cancao VARCHAR(50),
+  cancao_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  cancao VARCHAR(50) NOT NULL,
   album_id INT NOT NULL,
   FOREIGN KEY (album_id) REFERENCES albuns (album_id)
 ) engine = InnoDB;
