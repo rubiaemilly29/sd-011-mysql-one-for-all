@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS SpotifyClone;
+
 CREATE DATABASE SpotifyClone;
 
 USE SpotifyClone;
@@ -25,7 +27,7 @@ VALUES
   ('Thati', 23, 1),
   ('Cintia', 35, 2),
   ('Bill', 20, 3),
-  ('Roger', 45, 4);
+  ('Roger', 45, 1);
 
 CREATE TABLE artistas(
   artista_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -47,10 +49,10 @@ CREATE TABLE albuns(
 INSERT INTO SpotifyClone.albuns (album_nome, artista_id)
 VALUES
   ('Envious', 1),
-  ('Exuberant', 2),
-  ('Hallowed Steam', 3),
-  ('Incandescent', 4),
-  ('Temporary Culture', 5);
+  ('Exuberant', 1),
+  ('Hallowed Steam', 2),
+  ('Incandescent', 3),
+  ('Temporary Culture', 4);
 
 CREATE TABLE musicas(
   musica_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -85,7 +87,7 @@ CREATE TABLE artistas_seguidores(
   CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
   FOREIGN KEY (usuario_id) REFERENCES SpotifyClone.usuarios (usuario_id),
   FOREIGN KEY (artista_id) REFERENCES SpotifyClone.artistas (artista_id)
-) engine = InnobDB;
+) engine = InnoDB;
 INSERT INTO SpotifyClone.artistas_seguidores (usuario_id, artista_id)
 VALUES
   (1, 1),
