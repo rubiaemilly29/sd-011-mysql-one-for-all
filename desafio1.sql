@@ -34,16 +34,16 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`musicas` (
 );
 
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`seguidores` (
-  `follow_id` INT NOT NULL AUTO_INCREMENT,
   `usuario_id` INT NOT NULL,
   `artista_id` INT NOT NULL,
-  PRIMARY KEY (`follow_id`),
+  CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
   FOREIGN KEY (`usuario_id`) REFERENCES `SpotifyClone`.`usuarios` (`usuario_id`),
   FOREIGN KEY (`artista_id`) REFERENCES `SpotifyClone`.`artistas` (`artista_id`)
 );
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`historico_reproducoes` (
   `usuario_id` INT NOT NULL,
   `musica_id` INT NOT NULL,
+  CONSTRAINT PRIMARY KEY(usuario_id, musica_id),
   FOREIGN KEY (`usuario_id`) REFERENCES `SpotifyClone`.`usuarios` (`usuario_id`),
   FOREIGN KEY (`musica_id`) REFERENCES `SpotifyClone`.`musicas` (`musica_id`)
 );
