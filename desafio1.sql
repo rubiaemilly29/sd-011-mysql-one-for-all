@@ -44,15 +44,15 @@ id_usuario INT NOT NULL,
 FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
 id_artista INT NOT NULL,
 FOREIGN KEY (id_artista) REFERENCES artistas(id_artista),
-UNIQUE (id_usuario, id_artista)
+PRIMARY KEY (id_usuario, id_artista)
 ) ENGINE = InnoDB;
 
 CREATE TABLE historico_de_reproducoes(
-id_historico INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 id_usuario INT NOT NULL,
 FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
 id_musica INT NOT NULL,
-FOREIGN KEY (id_musica) REFERENCES musicas(id_musica)
+FOREIGN KEY (id_musica) REFERENCES musicas(id_musica),
+PRIMARY KEY (id_usuario, id_musica)
 ) ENGINE = InnoDB;
 
 INSERT INTO planos_mensais (id_plano, tipo_plano, valor_plano)
@@ -115,19 +115,19 @@ VALUES
 (1,	4),
 (1,	3);
 
-INSERT INTO historico_de_reproducoes (id_historico,	id_usuario,	id_musica)
+INSERT INTO historico_de_reproducoes (id_usuario, id_musica)
 VALUES
-(1,	1,	1),
-(2,	1,	6),
-(3,	1,	14),
-(4,	1,	16),
-(5,	2,	13),
-(6,	2,	17),
-(7,	2,	2),
-(8,	2,	15),
-(9,	3,	4),
-(10, 3,	16),
-(11, 3, 6),
-(12, 4,	3),
-(13, 4,	18),
-(14, 4,	11);
+(1,	1),
+(1,	6),
+(1,	14),
+(1,	16),
+(2,	13),
+(2,	17),
+(2,	2),
+(2,	15),
+(3,	4),
+(3,	16),
+(3, 6),
+(4,	3),
+(4,	18),
+(4,	11);
