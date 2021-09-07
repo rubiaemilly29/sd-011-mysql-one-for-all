@@ -5,6 +5,5 @@ FORMAT(AVG(p.valor_plano), 2) AS faturamento_medio,
 FORMAT(SUM(p.valor_plano), 2) AS faturamento_total
 FROM SpotifyClone.planos AS p
 INNER JOIN SpotifyClone.usuarios AS u
-ON u.plano_id = p.plano_id;
 
-SELECT * FROm faturamento_atual;
+ON u.plano_id = p.plano_id;
