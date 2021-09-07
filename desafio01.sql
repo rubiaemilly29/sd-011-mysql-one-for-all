@@ -11,4 +11,10 @@ CREATE TABLE plano(
   PRIMARY KEY(plano_id)
 ) ENGINE=InnoDb;
 
-SELECT * FROM plano;
+INSERT INTO plano (titulo, valor)
+VALUES 
+("gratuito", 0),
+("universitário",5.99),
+("familiar", 7.99);
+
+SELECT * FROM plano
