@@ -7,7 +7,6 @@
 --  Comando end e o delimiter
 -- volta o delimiter do jeito que era
 -- DELETE FROm SpotifyClone.usuarios WHERE nome_usuario = 'Cintia';
--- 
 DELIMITER $$
 
 CREATE TRIGGER trigger_usuario_delete
