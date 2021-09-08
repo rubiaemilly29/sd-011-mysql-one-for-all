@@ -95,21 +95,20 @@ VALUES
 
 INSERT INTO SpotifyClone.history (user_id, song_id)
 VALUES
-VALUES
 (1, 1),
 (1, 6),
 (1, 14),
 (1, 16),
 (2, 13),
-(2 ,17),
+(2, 17),
 (2, 2),
 (2, 15),
 (3, 4),
-(3, 6),
 (3, 16),
+(3, 6),
 (4, 3),
-(4, 11),
-(4, 18);
+(4, 18),
+(4, 11);
 
 INSERT INTO SpotifyClone.artists (artist)
 VALUES
