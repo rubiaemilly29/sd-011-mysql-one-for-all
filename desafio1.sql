@@ -96,7 +96,7 @@ VALUES
 ('Words Of Her Life', 5, 4),
 ('Without My Streets', 5, 4);
 
-INSERT INTO seguir (usuario_id, artista_id)
+INSERT INTO seguir_historico (usuario_id, artista_id)
 VALUES
 ('1','1'),
 ('1','4'),
