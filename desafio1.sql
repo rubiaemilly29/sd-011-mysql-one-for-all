@@ -63,9 +63,10 @@ CREATE TABLE history(
 ) ENGINE = InnoDB;
 
 INSERT INTO plans (PlanName, Value)
-VALUES ('Gratuito', 0),
-       ('Familiar', 7.99),
-       ('Universitário', 5.99);
+VALUES
+        ('Gratuito', 0),
+        ('Familiar', 7.99),
+        ('Universitário', 5.99);
 
 INSERT INTO users (UserName, Age, PlanID)
 VALUES
