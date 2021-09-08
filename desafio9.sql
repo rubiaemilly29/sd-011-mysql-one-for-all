@@ -6,6 +6,6 @@ FROM Artistas AS A
 INNER JOIN Albuns AS Al
   ON Al.artista_id = A.artista_id
 WHERE nome = A.artista
-ORDER BY artista;
+ORDER BY album;
 END $$
 DELIMITER ;
