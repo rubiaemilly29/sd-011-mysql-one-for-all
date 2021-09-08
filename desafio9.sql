@@ -12,9 +12,18 @@
 --  AS procedures podem ter valores de saidas. PAra isso usamos dentro dos parametros () OUT e o nome da variavel de saida + tipo - EX DOUBLE
 --  AS procedures podem ter valores de entrada e saidas. PAra isso usamos ambas as sintaxes
 --  AS procedures podem ter valores de entrada e saidas juntos. PAra isso usamos o parametro INOUT com o nome da variavel + tipo 7
--- DELIMITER $$
+-- CALL albuns_do_artista('Walter Phoenix');
+DELIMITER $$
 
--- CREATE Procedure
--- BEGIN 
+CREATE PROCEDURE albuns_do_artista (IN nome VARCHAR(50))
+BEGIN 
+SELECT a.nome_artista AS artista,
+al.nome_album AS album
+FROM SpotifyClone.artistas AS a
+INNER JOIN SpotifyClone.albums al
+ON a.artista_id = al.artista_id
+WHERE a.nome_artista = nome
+ORDER BY album;
+END $$
 
--- END $$
+DELIMITER ;
