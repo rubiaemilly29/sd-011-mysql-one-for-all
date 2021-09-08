@@ -1,4 +1,4 @@
-CREATE VIEW cancoes_premium AS;
+CREATE VIEW cancoes_premium AS
 SELECT S.song nome,
 COUNT(H.user_id) reproducoes
 FROM SpotifyClone.history H
