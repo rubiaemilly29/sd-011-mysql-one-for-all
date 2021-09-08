@@ -12,7 +12,7 @@ preco DECIMAL(4, 2) NOT NULL
 
 CREATE TABLE usuarios(
 usuario_id INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(30) NOT NULL,
+nome VARCHAR(20) NOT NULL,
 idade INT,
 plano_id INT NOT NULL,
 FOREIGN KEY (plano_id) REFERENCES planos(plano_id)
