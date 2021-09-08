@@ -76,6 +76,7 @@ VALUES
 CREATE TABLE reproducoes (
 usuario_id INTEGER,
 cancao_id INTEGER,
+CONSTRAINT PRIMARY KEY (usuario_id, cancao_id),
 FOREIGN KEY (usuario_id) REFERENCES usuarios (id),
 FOREIGN KEY (cancao_id) REFERENCES cancoes (id)
 ) engine = InnoDB;
@@ -97,7 +98,8 @@ VALUES
 (4, 11);
 CREATE TABLE seguindo_artistas (
 usuario_id INTEGER,
-artista_id VARCHAR(500),
+artista_id VARCHAR(100),
+CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
 FOREIGN KEY (usuario_id) REFERENCES usuarios (id),
 FOREIGN KEY (artista_id) REFERENCES artistas (id)
 ) engine = InnoDB;
