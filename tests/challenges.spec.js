@@ -275,8 +275,6 @@ describe('Queries de seleção', () => {
       await sequelize.query(challengeQuery, { type: 'RAW' });
 
       const result = await sequelize.query('SELECT * FROM faturamento_atual;', { type: 'SELECT' });
-      console.log('XXXXXXXXXXXXX');
-      console.log(result);
       const expectedResult = [
         {
           faturamento_maximo: '7.99',
@@ -297,8 +295,6 @@ describe('Queries de seleção', () => {
       await sequelize.query(challengeQuery, { type: 'RAW' });
 
       const result = await sequelize.query('SELECT * FROM perfil_artistas;', { type: 'SELECT' });
-      console.log('XXXXXXXXXXXXX');
-      console.log(result);
       const expectedResult = [
         { album: 'Envious', artista: 'Walter Phoenix', seguidores: 3 },
         { album: 'Exuberant', artista: 'Walter Phoenix', seguidores: 3 },
