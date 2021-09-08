@@ -150,7 +150,7 @@ VALUES
 (1, 14),
 (1, 16),
 (2, 13),
-(2 ,17),
+(2, 17),
 (2, 2),
 (2, 15),
 (3, 4),
@@ -159,3 +159,5 @@ VALUES
 (4, 3),
 (4, 18),
 (4, 11);
+
+SELECT COUNT(song_id) AS musicas_escutadas FROM SpotifyClone.history;
