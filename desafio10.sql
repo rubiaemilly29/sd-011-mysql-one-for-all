@@ -8,5 +8,4 @@ BEGIN
     WHERE user_id = id_user INTO songs_total;
     RETURN songs_total;
 END $$ 
-
 DELIMITER ;
