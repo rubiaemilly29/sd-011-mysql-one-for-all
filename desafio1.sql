@@ -159,5 +159,3 @@ VALUES
 (4, 3),
 (4, 11),
 (4, 18);
-
-select count(history_id) from SpotifyClone.history;
