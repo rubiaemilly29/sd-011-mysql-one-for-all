@@ -1,16 +1,15 @@
 DELIMITER $$
 
-CREATE FUNCTION quantidade_musicas_no_historico (nome_usuario VARCHAR(50))
+CREATE FUNCTION quantidade_musicas_no_historico (id INT)
 RETURNS INT READS SQL DATA
 BEGIN
 DECLARE total_musicas INT;
 SELECT COUNT(*)
-FROM SpotifyClone.Historico AS h
-INNER JOIN SpotifyClone.Usuario AS u ON h.usuario_id = u.usuario_id
-WHERE u.usuario = nome_usuario INTO total_musicas;
+FROM SpotifyClone.Historico
+WHERE usuario_id = id INTO total_musicas;
 RETURN total_musicas;
 END $$
 
 DELIMITER ;
 
-SELECT quantidade_musicas_no_historico('Bill');
+SELECT quantidade_musicas_no_historico(3)
