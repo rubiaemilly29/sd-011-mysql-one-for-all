@@ -17,7 +17,7 @@ VALUES
   ('familiar', 7.99);
 
 CREATE TABLE Artistas(
-	artista_id INT PRIMARY KEY AUTO_INCREMENT,
+	  artista_id INT PRIMARY KEY AUTO_INCREMENT,
     artista VARCHAR(50) NOT NULL
 ) engine = InnoDB;
 
@@ -48,8 +48,8 @@ CREATE TABLE Albuns(
     album_id INT PRIMARY KEY AUTO_INCREMENT,
     album VARCHAR(50) NOT NULL,
     artista_id INT NOT NULL,
-  FOREIGN KEY (artista_id)
-  REFERENCES SpotifyClone.Artistas (artista_id)
+    FOREIGN KEY (artista_id)
+    REFERENCES SpotifyClone.Artistas (artista_id)
 ) engine = InnoDB;
 
 INSERT INTO Albuns (album, artista_id)
