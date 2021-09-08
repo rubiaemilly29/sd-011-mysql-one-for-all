@@ -4,13 +4,13 @@ USE SpotifyClone;
 
 CREATE TABLE planos(
 plano_id INT PRIMARY KEY AUTO_INCREMENT,
-plano_nome VARCHAR(50) NOT NULL,
+plano VARCHAR(50) NOT NULL,
 plano_valor DECIMAL(3,2) NOT NULL 
 ) engine = InnoDB;
 
 CREATE TABLE usuarios(
 usuario_id INT PRIMARY KEY AUTO_INCREMENT,
-usuario_nome VARCHAR(50) NOT NULL,
+nome_usuario VARCHAR(50) NOT NULL,
 usuario_idade INT NOT NULL,
 plano_id INT NOT NULL,
 FOREIGN KEY (plano_id) REFERENCES planos(plano_id)
@@ -18,12 +18,12 @@ FOREIGN KEY (plano_id) REFERENCES planos(plano_id)
 
 CREATE TABLE artistas(
 artista_id INT KEY AUTO_INCREMENT,
-artista_nome VARCHAR(100) NOT NULL
+nome_artista VARCHAR(100) NOT NULL
 ) engine = InnoDB;
 
 CREATE TABLE albuns(
 album_id INT PRIMARY KEY AUTO_INCREMENT,
-album_titulo VARCHAR(100) NOT NULL,
+nome_album VARCHAR(100) NOT NULL,
 artista_id INT NOT NULL,
 FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
 ) engine = InnoDB;
@@ -43,20 +43,16 @@ FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
 FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
 ) engine = InnoDB;
 
-
-
-
-
 CREATE TABLE historico_de_reproducoes(
 usuario_id INT NOT NULL,
 musica_id INT NOT NULL,
 CONSTRAINT PRIMARY KEY (usuario_id, cancao_id),
 FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
-FOREIGN KEY (musica_id) REFERENCES musicas(cancao_id)
+FOREIGN KEY (musica_id) REFERENCES musicas(musica_id)
 ) engine = InnoDB;
 
 INSERT INTO planos (plano_nome, plano_valor)
-VALUES ('familiar', 7.99), ('universitário', 5.99),('gratuito', 0.00);
+VALUES ('Familiar', 7.99), ('Universitário', 5.99),('Gratuito', 0.00);
 
 INSERT INTO usuarios (usuario_nome, usuario_idade, plano_id)
 VALUES ('Thati', 23, 1), ('Cintia', 35, 3), ('Bill', 20, 2), ('Roger', 45, 1);
@@ -67,7 +63,7 @@ VALUES ('Walter Phoenix'), ('Peter Strong'), ('Lance Day'), ('Freedie Shannon');
 INSERT INTO albuns (album_titulo, artista_id)
 VALUES ('Envious', 1), ('Exuberant', 1), ('Hallowed Steam', 2), ('Incandescent', 3), ('Temporary Culture', 4);
 
-INSERT INTO musicas (cancao_título, album_id)
+INSERT INTO musicas (nome_musica, album_id)
 VALUES
 ('Soul For Us', 1),
 ('Reflections Of Magic', 1),
