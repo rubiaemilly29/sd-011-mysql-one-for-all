@@ -1,10 +1,10 @@
 DELIMITER $$
 CREATE TRIGGER trigger_usuario_delete
 BEFORE DELETE
-ON `user`
+ON userSpotify
 FOR EACH ROW
 BEGIN
-DELETE FROM SpotifyClone.musics_history WHERE musics_history.user_id = OLD.user_id;
-DELETE FROM SpotifyClone.following_artists WHERE following_artists.user_id = OLD.user_id;
+DELETE FROM musics_history WHERE user_id = OLD.user_id;
+DELETE FROM following_artists WHERE user_id = OLD.user_id;
 END $$
 DELIMITER ;

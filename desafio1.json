@@ -1,6 +1,6 @@
 {
   "coluna_usuario": "user_id",
-  "tabela_que_contem_usuario": "user",
+  "tabela_que_contem_usuario": "userSpotify",
   "coluna_plano": "plan_id",
   "tabela_que_contem_plano": "plan",
   "coluna_historico_de_reproducoes": "user_id",

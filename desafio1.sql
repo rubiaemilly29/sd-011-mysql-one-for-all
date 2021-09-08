@@ -26,7 +26,7 @@ VALUES
   ('familiar', 7.99),
   ('universitário', 5.99);
 
-CREATE TABLE user(
+CREATE TABLE userSpotify(
     user_id INT PRIMARY KEY AUTO_INCREMENT,
     name_user VARCHAR(50) NOT NULL,
     age INT NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE user(
     FOREIGN KEY (plan_id) REFERENCES plan (plan_id)
 ) engine = InnoDB;
 
-INSERT INTO user (name_user, age, plan_id)
+INSERT INTO userSpotify (name_user, age, plan_id)
 VALUES
   ('Thati', 23, 1),
   ('Cintia', 35, 2),
@@ -87,7 +87,7 @@ VALUES
 CREATE TABLE musics_history(
     user_id INT,
     song_id INT,
-    FOREIGN KEY (user_id) REFERENCES user (user_id),
+    FOREIGN KEY (user_id) REFERENCES userSpotify (user_id),
     FOREIGN KEY (song_id) REFERENCES songs (song_id),
     PRIMARY KEY (user_id, song_id)
 ) engine = InnoDB;
@@ -112,7 +112,7 @@ VALUES
 CREATE TABLE following_artists(
     user_id INT NOT NULL,
     artist_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user (user_id),
+    FOREIGN KEY (user_id) REFERENCES userSpotify (user_id),
     FOREIGN KEY (artist_id) REFERENCES artists (artist_id),
     PRIMARY KEY (user_id, artist_id)
 ) engine = InnoDB;
