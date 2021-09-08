@@ -159,3 +159,5 @@ VALUES
 (4, 3),
 (4, 18),
 (4, 11);
+
+SELECT COUNT(song_id) AS musicas_escutadas FROM SpotifyClone.history;
