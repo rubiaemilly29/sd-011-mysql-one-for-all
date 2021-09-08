@@ -17,14 +17,28 @@ plan_id INT NOT NULL,
 FOREIGN KEY (plan_id) REFERENCES plans(plan_id)
 );
 
-CREATE TABLE IF NOT EXISTS SpotifyClone.songs(
-song_id INT PRIMARY KEY AUTO_INCREMENT,
-song VARCHAR(200) NOT NULL
-);
-
 CREATE TABLE IF NOT EXISTS SpotifyClone.artists(
 artist_id INT PRIMARY KEY AUTO_INCREMENT,
 artist VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SpotifyClone.albums(
+album_id INT PRIMARY KEY AUTO_INCREMENT,
+album VARCHAR(200) NOT NULL,
+artist_id INT NOT NULL,
+FOREIGN KEY (artist_id) REFERENCES artists(artist_id)
+);
+
+-- CREATE TABLE IF NOT EXISTS SpotifyClone.songs(
+-- song_id INT PRIMARY KEY AUTO_INCREMENT,
+-- song VARCHAR(200) NOT NULL
+-- );
+
+CREATE TABLE IF NOT EXISTS SpotifyClone.songs(
+song_id INT PRIMARY KEY AUTO_INCREMENT,
+song VARCHAR(200) NOT NULL,
+album_id INT NOT NULL,
+FOREIGN KEY (album_id) REFERENCES albums(album_id)
 );
 
 CREATE TABLE IF NOT EXISTS SpotifyClone.user_following(
@@ -35,20 +49,13 @@ FOREIGN KEY (artist_id) REFERENCES artists(artist_id),
 CONSTRAINT PRIMARY KEY(user_id, artist_id)
 );
 
-CREATE TABLE IF NOT EXISTS SpotifyClone.albums(
-album_id INT PRIMARY KEY AUTO_INCREMENT,
-album VARCHAR(200) NOT NULL,
-artist_id INT NOT NULL,
-FOREIGN KEY (artist_id) REFERENCES artists(artist_id)
-);
-
-CREATE TABLE IF NOT EXISTS SpotifyClone.album_songs(
-album_id INT NOT NULL,
-song_id INT NOT NULL,
-FOREIGN KEY (album_id) REFERENCES albums(album_id),
-FOREIGN KEY (song_id) REFERENCES songs(song_id),
-CONSTRAINT PRIMARY KEY(album_id, song_id)
-);
+-- CREATE TABLE IF NOT EXISTS SpotifyClone.album_songs(
+-- album_id INT NOT NULL,
+-- song_id INT NOT NULL,
+-- FOREIGN KEY (album_id) REFERENCES albums(album_id),
+-- FOREIGN KEY (song_id) REFERENCES songs(song_id),
+-- CONSTRAINT PRIMARY KEY(album_id, song_id)
+-- );
 
 CREATE TABLE IF NOT EXISTS SpotifyClone.history(
 user_id INT NOT NULL,
@@ -73,33 +80,41 @@ VALUES
 ('Bill', 20, 3),
 ('Roger', 45, 1);
 
-INSERT INTO SpotifyClone.songs (song)
-VALUES
-('Soul For Us'),
-('Reflections Of Magic'),
-('Dance With Her Own'),
-('Troubles Of My Inner Fire'),
-('Time Fireworks'),
-('Magic Circus'),
-('Honey, So Do I'),
-("Sweetie, Let's Go Wild"),
-('She Knows'),
-('Fantasy For Me'),
-('Celebration Of More'),
-('Rock His Everything'),
-('Home Forever'),
-('Diamond Power'),
-("Honey, Let's Be Silly"),
-('Thang Of Thunder'),
-('Words Of Her Life'),
-('Without My Streets');
-
 INSERT INTO SpotifyClone.artists (artist)
 VALUES
 ('Walter Phoenix'),
 ('Peter Strong'),
 ('Lance Day'),
 ('Freedie Shannon');
+
+INSERT INTO SpotifyClone.albums (album, artist_id)
+VALUES
+('Envious', 1),
+('Exuberant', 1),
+('Hallowed Steam', 2),
+('Incandescent', 3),
+('Temporary Culture', 4);
+
+INSERT INTO SpotifyClone.songs (song, album_id)
+VALUES
+('Soul For Us', 1),
+('Reflections Of Magic', 1),
+('Dance With Her Own', 1),
+('Troubles Of My Inner Fire', 2),
+('Time Fireworks', 2),
+('Magic Circus', 3),
+('Honey, So Do I', 3),
+("Sweetie, Let's Go Wild", 3),
+('She Knows', 3),
+('Fantasy For Me', 4),
+('Celebration Of More', 4),
+('Rock His Everything', 4),
+('Home Forever', 4),
+('Diamond Power', 4),
+("Honey, Let's Be Silly", 4),
+('Thang Of Thunder', 5),
+('Words Of Her Life', 5),
+('Without My Streets', 5);
 
 INSERT INTO SpotifyClone.user_following (user_id, artist_id)
 VALUES
@@ -111,37 +126,6 @@ VALUES
 (3, 2),
 (3, 1),
 (4, 4);
-
-INSERT INTO SpotifyClone.albums (album, artist_id)
-VALUES
-('Envious', 1),
-('Exuberant', 1),
-('Hallowed Steam', 2),
-('Incandescent', 3),
-('Temporary Culture', 4);
-
-
-
-INSERT INTO SpotifyClone.album_songs (album_id, song_id)
-VALUES
-(1, 1),
-(1, 2),
-(1, 3),
-(2, 4),
-(2, 5),
-(3, 6),
-(3, 7),
-(3, 8),
-(3, 9),
-(4, 10),
-(4, 11),
-(4, 12),
-(4, 13),
-(4, 14),
-(4, 15),
-(5, 16),
-(5, 17),
-(5, 18);
 
 INSERT INTO SpotifyClone.history(user_id, song_id)
 VALUES
@@ -159,5 +143,3 @@ VALUES
 (4, 3),
 (4, 18),
 (4, 11);
-
--- SELECT COUNT(song_id) AS musicas_escutadas FROM SpotifyClone.history;
