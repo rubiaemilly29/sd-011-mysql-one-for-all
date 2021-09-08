@@ -68,66 +68,72 @@ VALUES ('Gratuito', 0),
        ('Universitário', 5.99);
 
 INSERT INTO users (UserName, Age, PlanID)
-VALUES ('Thati', 23, 1),
-       ('Cintia', 35, 2),
-       ('Bill', 20, 3),
-       ('Roger', 45, 1);
+VALUES
+        ('Thati', 23, 1),
+        ('Cintia', 35, 2),
+        ('Bill', 20, 3),
+        ('Roger', 45, 1);
 
 INSERT INTO artists (ArtistName)
-VALUES ('Walter Phoenix'),
-       ('Peter Strong'),
-       ('Lance Day'),
-       ('Freedie Shannon');
+VALUES
+        ('Walter Phoenix'),
+        ('Peter Strong'),
+        ('Lance Day'),
+        ('Freedie Shannon');
 
 INSERT INTO albuns (AlbumName, ArtistID)
-VALUES ('Envious', 1),
-       ('Exuberant', 1),
-       ('Hallowed Steam', 2),
-       ('Incandescent', 3),
-       ('Temporary Culture', 4);
+VALUES
+        ('Envious', 1),
+        ('Exuberant', 1),
+        ('Hallowed Steam', 2),
+        ('Incandescent', 3),
+        ('Temporary Culture', 4);
 
 INSERT INTO songs (SongName, ArtistID, AlbumID)
-VALUES ('Soul For Us', 1, 1),
-       ('Reflection Of Magic', 1, 1),
-       ('Dance With Her Own', 1, 1),
-       ('Troubles Of My Inner Fire', 1, 2),
-       ('Time Fireworks', 1, 2),
-       ('Magic Circus', 2, 3),
-       ('Honey, So Do I', 2, 3),
-       ('Sweetie, Lets Go Wild', 2, 3),
-       ('She Knows', 2, 3),
-       ('Fantasy For Me', 3, 4),
-       ('Celebration Of More', 3, 4),
-       ('Rock His Everything', 3, 4),
-       ('Home Forever', 3, 4),
-       ('Diamond Power', 3, 4),
-       ('Honey, Lets Be Silly', 3, 4),
-       ('Thang Of Thunder', 4, 5),
-       ('Words Of Her Life', 4, 5),
-       ('Without My Streets', 4, 5);
+VALUES
+        ('Soul For Us', 1, 1),
+        ('Reflection Of Magic', 1, 1),
+        ('Dance With Her Own', 1, 1),
+        ('Troubles Of My Inner Fire', 1, 2),
+        ('Time Fireworks', 1, 2),
+        ('Magic Circus', 2, 3),
+        ('Honey, So Do I', 2, 3),
+        ('Sweetie, Lets Go Wild', 2, 3),
+        ('She Knows', 2, 3),
+        ('Fantasy For Me', 3, 4),
+        ('Celebration Of More', 3, 4),
+        ('Rock His Everything', 3, 4),
+        ('Home Forever', 3, 4),
+        ('Diamond Power', 3, 4),
+        ('Honey, Lets Be Silly', 3, 4),
+        ('Thang Of Thunder', 4, 5),
+        ('Words Of Her Life', 4, 5),
+        ('Without My Streets', 4, 5);
 
 INSERT INTO following (ArtistID, UserID)
-VALUES (1, 1),
-       (4, 1),
-       (3, 1),
-       (1, 2),
-       (3, 2),
-       (2, 3),
-       (1, 3),
-       (4, 4);
+VALUES
+        (1, 1),
+        (4, 1),
+        (3, 1),
+        (1, 2),
+        (3, 2),
+        (2, 3),
+        (1, 3),
+        (4, 4);
 
 INSERT INTO history (SongID, UserID)
-VALUES (1, 1),
-       (6, 1),
-       (14, 1),
-       (16, 1),
-       (13, 2),
-       (17, 2),
-       (2, 2),
-       (15, 2),
-       (4, 3),
-       (16, 3),
-       (6, 3),
-       (3, 4),
-       (18, 4),
-       (11, 4);
+VALUES
+        (1, 1),
+        (6, 1),
+        (14, 1),
+        (16, 1),
+        (13, 2),
+        (17, 2),
+        (2, 2),
+        (15, 2),
+        (4, 3),
+        (16, 3),
+        (6, 3),
+        (3, 4),
+        (18, 4),
+        (11, 4);
