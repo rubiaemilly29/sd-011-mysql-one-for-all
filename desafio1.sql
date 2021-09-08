@@ -3,7 +3,7 @@ CREATE SCHEMA IF NOT EXISTS `SpotifyClone` ;
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`planos` (
   `plano_id` INT PRIMARY KEY AUTO_INCREMENT,
   `plano_nome` VARCHAR(45) NOT NULL,
-  `plano_valor` DOUBLE NOT NULL
+  `plano_valor` DECIMAL NOT NULL
 );
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`usuarios` (
   `usuario_id` INT NOT NULL AUTO_INCREMENT,
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`historico_reproducoes` (
 );
 INSERT INTO SpotifyClone.planos (plano_nome, plano_valor)
 VALUES
-('gatuito', 0),
+('gatuito', 0,00),
 ('familiar', 7.99),
 ('universitário', 5.99);
 INSERT INTO SpotifyClone.usuarios (usuario, usuario_idade, plano_id)
