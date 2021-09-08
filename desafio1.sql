@@ -30,28 +30,34 @@ artista_id INT NOT NULL,
 FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
 ) engine = InnoDB;
 
-CREATE TABLE cancoes(
-cancao_id INT PRIMARY KEY AUTO_INCREMENT,
-titulo VARCHAR(50) NOT NULL,
-album_id INT,
-FOREIGN KEY (album_id) REFERENCES albuns(album_id)
-) engine = InnoDB;
-
-CREATE TABLE historico_de_reproducoes (
-usuario_id INT NOT NULL,
-cancao_id INT NOT NULL,
-CONSTRAINT PRIMARY KEY(usuario_id, cancao_id),
-FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
-FOREIGN KEY (cancao_id) REFERENCES cancoes(cancao_id)
-) engine = InnoDB;
-
-CREATE TABLE seguindo_artistas (
+CREATE TABLE seguindo_artistas(
 usuario_id INT NOT NULL,
 artista_id INT NOT NULL,
 CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
 FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
 FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
 ) engine = InnoDB;
+
+CREATE TABLE cancoes(
+cancao_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+titulo VARCHAR(50) NOT NULL,
+album_id INT NOT NULL,
+FOREIGN KEY(album_id) REFERENCES albuns(album_id)
+) engine = InnoDB;
+
+CREATE TABLE historico_de_reproducao(
+usuario_id INT NOT NULL,
+cancao_id INT NOT NULL,
+CONSTRAINT PRIMARY KEY(usuario_id, cancao_id),
+FOREIGN KEY(usuario_id) REFERENCES usuarios (usuario_id),
+FOREIGN KEY(cancao_id) REFERENCES cancoes (cancao_id)
+) engine = InnoDB;
+
+INSERT INTO planos(plano, preco)
+VALUES
+('gratuito', 0.00),
+('familiar', 7.99),
+('universitário', 5.99);
 
 INSERT INTO usuarios(nome, idade, plano_id)
 VALUES
@@ -60,11 +66,12 @@ VALUES
 ('Bill', 20, 3),
 ('Roger', 45, 1);
 
-INSERT INTO planos(plano, preco)
+INSERT INTO artistas(artista)
 VALUES
-('gratuito', 0.00),
-('familiar', 7.99),
-('universitário', 5.99);
+('Walter Phoenix'),
+('Peter Strong'),
+('Lance Day'),
+('Freedie Shannon');
 
 INSERT INTO albuns(album, artista_id)
 VALUES
@@ -74,14 +81,7 @@ VALUES
 ('Incandescent', 3),
 ('Temporary Culture', 4);
 
-INSERT INTO artistas(artista)
-VALUES
-('Walter Phoenix'),
-('Peter Strong'),
-('Lance Day'),
-('Freedie Shannon');
-
-INSERT INTO cancoes(cancao, album_id)
+INSERT INTO cancoes(titulo, album_id)
 VALUES
 ('Soul For Us', 1),
 ('Reflections Of Magic', 1),
@@ -102,7 +102,18 @@ VALUES
 ('Words Of Her Life', 4),
 ('Without My Streets', 4);
 
-INSERT INTO historico_de_reproducao(cancao_id)
+INSERT INTO seguindo_artistas(usuario_id, artista_id)
+VALUES
+(1, 1),
+(1, 3),
+(1, 4),
+(2, 3),
+(2, 1),
+(3, 1),
+(3, 2),
+(4, 4);
+
+INSERT INTO historico_de_reproducao(usuario_id, cancao_id)
 VALUES
 (1, 1),
 (1, 6),
@@ -118,14 +129,3 @@ VALUES
 (4, 3),
 (4, 18),
 (4, 11);
-
-INSERT INTO seguindo_artistas(usuario_id, artista_id)
-VALUES
-(1, 1),
-(1, 4),
-(1, 3),
-(2, 1),
-(2, 3),
-(3, 2),
-(3, 1),
-(4, 4);
