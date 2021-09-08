@@ -40,8 +40,6 @@ CREATE TABLE Cancoes(
     REFERENCES SpotifyClone.Albuns (album_id)
 ) engine = InnoDB;
 
-
-
 CREATE TABLE seguindo_artistas(
     usuario_id INT NOT NULL,
     artista_id INT NOT NULL,
@@ -68,7 +66,7 @@ VALUES
   ('universitário', 5.99),
   ('familiar', 7.99);
   
-   INSERT INTO Usuarios (plano_id, usuario, idade)
+INSERT INTO Usuarios (plano_id, usuario, idade)
 VALUES
   (1, 'Thati', 23),
   (3, 'Cintia', 35),
@@ -138,4 +136,3 @@ VALUES
   (4 , 3),
   (4 , 18),
   (4, 11);
-  
