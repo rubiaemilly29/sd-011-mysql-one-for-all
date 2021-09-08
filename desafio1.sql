@@ -98,7 +98,7 @@ VALUES
 (4, 11);
 CREATE TABLE seguindo_artistas (
 usuario_id INTEGER,
-artista_id VARCHAR(100),
+artista_id INTEGER,
 CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
 FOREIGN KEY (usuario_id) REFERENCES usuarios (id),
 FOREIGN KEY (artista_id) REFERENCES artistas (id)
