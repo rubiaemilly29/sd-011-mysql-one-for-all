@@ -5,4 +5,3 @@ CREATE VIEW estatisticas_musicais AS
         COUNT(DISTINCT Album_ID) AS albuns
     FROM
         SpotifyClone.Cancao;
-
