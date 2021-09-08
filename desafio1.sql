@@ -20,8 +20,7 @@ FOREIGN KEY (plano_id) REFERENCES planos(plano_id)
 
 CREATE TABLE artista (
 artista_id INT PRIMARY KEY AUTO_INCREMENT,
-primeiro_nome_artista VARCHAR(50),
-segundo_nome_artista VARCHAR(50)
+nome_artista VARCHAR(50)
 ) engine = InnoDB;
 
 CREATE TABLE album (
@@ -39,11 +38,11 @@ FOREIGN KEY (album_id) REFERENCES album(album_id)
 ) engine = InnoDB;
 
 CREATE TABLE seguindo (
-artista_id INT,
 usuario_id INT,
-CONSTRAINT PRIMARY KEY (artista_id, usuario_id),
-FOREIGN KEY (artista_id) REFERENCES artista(artista_id),
-FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id)
+artista_id INT,
+CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
+FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id),
+FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
 ) engine = InnoDB;
 
 CREATE TABLE historico (
@@ -67,12 +66,12 @@ VALUES
 ('Bill', 20, 3),
 ('Roger', 45, 1);
 
-INSERT INTO artista (primeiro_nome_artista, segundo_nome_artista)
+INSERT INTO artista (nome_artista)
 VALUES
-('Walter', 'Phoenix'),
-('Peter', 'Strong'),
-('Lance', 'Day'),
-('Freedie', 'Shannon');
+('Walter Phoenix'),
+('Peter Strong'),
+('Lance Day'),
+('Freedie Shannon');
 
 INSERT INTO album (nome_album, artista_id)
 VALUES
