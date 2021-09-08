@@ -84,7 +84,7 @@ VALUES
 
 INSERT INTO musica (nome_musica, album_id)
 VALUES
-('Soul For Us', 1),	
+('Soul For Us', 1),
 ('Reflections Of Magic', 1),
 ('Dance With Her Own', 1),
 ('Troubles Of My Inner Fire', 2),
@@ -130,4 +130,3 @@ VALUES
 (4, 3),
 (4, 18),
 (4, 11);
-
