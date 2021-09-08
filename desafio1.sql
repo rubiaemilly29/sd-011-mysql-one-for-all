@@ -3,9 +3,9 @@ CREATE DATABASE SpotifyClone;
 USE SpotifyClone;
 
 CREATE TABLE plans (
-    planId INT AUTO_INCREMENT PRIMARY KEY,
+   planId INT AUTO_INCREMENT PRIMARY KEY,
    `name` VARCHAR(50) NOT NULL,
-    price DECIMAL(3 , 2 ) NOT NULL
+   price DECIMAL(3 , 2 ) NOT NULL
 )  ENGINE=INNODB;
 
 CREATE TABLE users (
