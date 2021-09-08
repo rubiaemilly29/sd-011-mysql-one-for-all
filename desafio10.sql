@@ -6,4 +6,3 @@
 --  O comando e onde ele deve ser feito. Usar o id comparando o old. Repete quantas vezes for necessario
 --  Comando end e o delimiter
 -- volta o delimiter do jeito que era
--- 
