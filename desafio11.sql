@@ -1,0 +1,4 @@
+--  Precisa ter um delimiter
+--  nome CREATE VIEW cancoes_premium AS
+-- 
+-- 

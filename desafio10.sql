@@ -1,0 +1,9 @@
+--  Precisa ter um delimiter
+--  nome CREATE FUNCTION quantidade_musicas_no_historico(
+--  Comando before ou after e onde ele é aplicado
+--  Para quais linhas
+--  Precisa ter begin
+--  O comando e onde ele deve ser feito. Usar o id comparando o old. Repete quantas vezes for necessario
+--  Comando end e o delimiter
+-- volta o delimiter do jeito que era
+-- 
