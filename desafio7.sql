@@ -1,7 +1,7 @@
 CREATE VIEW perfil_artistas AS 
 SELECT 
-a.artist_name AS 'artista',
 alb.album_name AS 'album',
+a.artist_name AS 'artista',
 COUNT(a.artist_name) AS 'seguidores'
 FROM artist AS a
 INNER JOIN album AS alb ON a.artist_id = alb.artist_id
