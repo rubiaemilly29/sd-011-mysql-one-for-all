@@ -72,7 +72,7 @@ CREATE TABLE seguir_historico(
     artista_id INT NOT NULL,
     PRIMARY KEY(usuario_id, artista_id),
     FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id),
-	FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
+	  FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
 ) engine = InnoDB;
 
 INSERT INTO musica (nome_musica, album_id, artista_id)
@@ -102,16 +102,16 @@ VALUES
   ('1','4'),
   ('1','3'),
   ('2','1'),
-  ('2', '3'),
-  ('3', '1'),
-  ('4', '4');
+  ('2','3'),
+  ('3','1'),
+  ('4','4');
   
 CREATE TABLE historico_tocadas(
     fk_usuario_id INT AUTO_INCREMENT,
     fk_musica_id INT NOT NULL,
     PRIMARY KEY(fk_usuario_id, fk_musica_id),
     FOREIGN KEY (fk_usuario_id) REFERENCES usuario(usuario_id),
-	FOREIGN KEY (fk_musica_id) REFERENCES musica(musica_id)
+	  FOREIGN KEY (fk_musica_id) REFERENCES musica(musica_id)
 ) engine = InnoDB;
 
 INSERT INTO historico_tocadas ( fk_usuario_id , fk_musica_id)
@@ -120,13 +120,13 @@ VALUES
   ('1','6'),
   ('1','14'),
   ('1','16'),
-  ('2', '13'),
-  ('2', '17'),
-  ('2', '2'),
-  ('3', '4'),
-  ('3', '16'),
-  ('3', '6'),
-  ('4', '3'),
-  ('4', '18'),
-  ('4', '11');
+  ('2','13'),
+  ('2','17'),
+  ('2','2'),
+  ('3','4'),
+  ('3','16'),
+  ('3','6'),
+  ('4','3'),
+  ('4','18'),
+  ('4','11');
   
