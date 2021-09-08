@@ -17,8 +17,8 @@ VALUES
   ('familiar', 7.99);
 
 CREATE TABLE Artistas(
-	  artista_id INT PRIMARY KEY AUTO_INCREMENT,
-    artista VARCHAR(50) NOT NULL
+  artista_id INT PRIMARY KEY AUTO_INCREMENT,
+  artista VARCHAR(100) NOT NULL
 ) engine = InnoDB;
 
 INSERT INTO Artistas (artista)
@@ -37,7 +37,7 @@ CREATE TABLE Usuarios(
     REFERENCES SpotifyClone.Planos(plano_id)
 ) engine = InnoDB;
 
- INSERT INTO Usuarios (usuario, idade, plano_id)
+INSERT INTO Usuarios (usuario, idade, plano_id)
 VALUES
   ('Thati', 23, 1),
   ('Cintia', 35, 3),
