@@ -53,6 +53,7 @@ CONSTRAINT PRIMARY KEY(album_id, song_id)
 CREATE TABLE IF NOT EXISTS SpotifyClone.history(
 user_id INT NOT NULL,
 song_id INT NOT NULL,
+CONSTRAINT PRIMARY KEY (user_id, song_id),
 FOREIGN KEY (user_id) REFERENCES user_info(user_id),
 FOREIGN KEY (song_id) REFERENCES songs(song_id)
 );
@@ -153,8 +154,8 @@ VALUES
 (2, 2),
 (2, 15),
 (3, 4),
-(3, 6),
 (3, 16),
+(3, 6),
 (4, 3),
-(4, 11),
-(4, 18);
+(4, 18),
+(4, 11);
