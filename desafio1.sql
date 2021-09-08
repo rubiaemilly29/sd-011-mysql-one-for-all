@@ -21,14 +21,6 @@ song_id INT PRIMARY KEY AUTO_INCREMENT,
 song VARCHAR(200) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS SpotifyClone.history(
-user_id INT NOT NULL,
-song_id INT NOT NULL,
-FOREIGN KEY (user_id) REFERENCES user_info(user_id),
-FOREIGN KEY (song_id) REFERENCES songs(song_id),
-CONSTRAINT PRIMARY KEY(user_id, song_id)
-);
-
 CREATE TABLE IF NOT EXISTS SpotifyClone.artists(
 artist_id INT PRIMARY KEY AUTO_INCREMENT,
 artist VARCHAR(200) NOT NULL
@@ -55,6 +47,14 @@ song_id INT NOT NULL,
 FOREIGN KEY (album_id) REFERENCES albums(album_id),
 FOREIGN KEY (song_id) REFERENCES songs(song_id),
 CONSTRAINT PRIMARY KEY(album_id, song_id)
+);
+
+CREATE TABLE IF NOT EXISTS SpotifyClone.history(
+user_id INT NOT NULL,
+song_id INT NOT NULL,
+FOREIGN KEY (user_id) REFERENCES user_info(user_id),
+FOREIGN KEY (song_id) REFERENCES songs(song_id),
+CONSTRAINT PRIMARY KEY(user_id, song_id)
 );
 
 -- * INSERINDO VALORES AS TABELAS
