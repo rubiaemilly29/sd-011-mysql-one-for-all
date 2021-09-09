@@ -375,7 +375,7 @@ describe('Queries de seleção', () => {
   });
 });
 
-describe.only('Queries de deleção', () => {
+describe('Queries de deleção', () => {
   let importer;
   let sequelize;
 
