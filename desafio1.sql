@@ -25,7 +25,6 @@ CREATE TABLE albuns (
   artist_id INT,
   FOREIGN KEY (artist_id) REFERENCES artists(artist_id)
   ) ENGINE = InnoDB; 
-
 CREATE TABLE songs (
   song_id INT PRIMARY KEY AUTO_INCREMENT,
   song_name VARCHAR(30) NOT NULL,
@@ -57,7 +56,6 @@ VALUES
 ('Cíntia', 35),
 ('Bill', 20),
 ('Roger', 45);
-
 INSERT INTO artists(artist_name)
 VALUES
 ('Walter Phoenix'),
