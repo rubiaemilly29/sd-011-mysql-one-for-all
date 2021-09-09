@@ -7,14 +7,14 @@ USE SpotifyClone;
 CREATE TABLE plans (
 plan_id INT AUTO_INCREMENT PRIMARY KEY,
 type VARCHAR(15) NOT NULL,
-price DOUBLE NOT NULL
+price DECIMAL(5,2) NOT NULL
 ) ENGINE = InnoDB;
 
 CREATE TABLE users (
 user_id INT AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(30) NOT NULL,
+name VARCHAR(50) NOT NULL,
 age INT NOT NULL,
-plan_id INT,
+plan_id INT NOT NULL,
 FOREIGN KEY (plan_id) REFERENCES plans (plan_id)
 ) ENGINE = InnoDB;
 
@@ -26,27 +26,29 @@ name VARCHAR(100) NOT NULL
 CREATE TABLE albums (
 album_id INT AUTO_INCREMENT PRIMARY KEY,
 title VARCHAR(150) NOT NULL,
-singer_id INT,
+singer_id INT NOT NULL,
 FOREIGN KEY (singer_id) REFERENCES singers (singer_id)
 ) ENGINE = InnoDB;
 
 CREATE TABLE songs (
 song_id INT AUTO_INCREMENT PRIMARY KEY,
 title VARCHAR(150) NOT NULL,
-album_id INT,
+album_id INT NOT NULL,
 FOREIGN KEY (album_id) REFERENCES albums (album_id)
 ) ENGINE = InnoDB;
 
 CREATE TABLE following_singers (
-user_id INT,
-singer_id INT,
+user_id INT NOT NULL,
+singer_id INT NOT NULL,
+CONSTRAINT PRIMARY KEY(user_id, singer_id),
 FOREIGN KEY (user_id) REFERENCES users (user_id),
 FOREIGN KEY (singer_id) REFERENCES singers (singer_id)
 ) ENGINE = InnoDB;
 
 CREATE TABLE history (
-user_id INT,
-song_id INT,
+user_id INT NOT NULL,
+song_id INT NOT NULL,
+CONSTRAINT PRIMARY KEY(user_id, song_id),
 FOREIGN KEY (user_id) REFERENCES users (user_id),
 FOREIGN KEY (song_id) REFERENCES songs (song_id)
 ) ENGINE = InnoDB;
