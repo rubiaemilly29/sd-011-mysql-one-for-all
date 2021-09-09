@@ -5,5 +5,5 @@ FROM artists AS art
 INNER JOIN following AS fol
 ON art.ID = fol.ArtistID
 GROUP BY art.ID
-ORDER BY seguidores DESC
+ORDER BY seguidores DESC, artista
 LIMIT 3;
