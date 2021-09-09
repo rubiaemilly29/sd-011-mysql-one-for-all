@@ -6,4 +6,3 @@ INNER JOIN SpotifyClone.album AS ab
 ON c.album_id = ab.album_id
 INNER JOIN SpotifyClone.artista AS at
 ON at.artista_id = ab.artista_id;
-
