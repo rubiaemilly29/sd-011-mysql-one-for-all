@@ -4,11 +4,9 @@ RETURNS INT READS SQL DATA
 BEGIN
 DECLARE cancao_total INT;
 SELECT 
-COUNT(his.cancao_id) AS quantidade_musicas_no_historico
+COUNT(*) AS quantidade_musicas_no_historico
 FROM SpotifyClone.historico_reproducoes AS his
-INNER JOIN SpotifyClone.users AS u
-ON u.usuario_id = his.usuario_id
-WHERE usuario = u.usuario_nome
+WHERE usuario = his.usuario_id
 INTO cancao_total;
 RETURN cancao_total;
 END $$
