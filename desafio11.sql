@@ -1,7 +1,7 @@
 CREATE VIEW cancoes_premium AS
 SELECT
-C.song,
-COUNT(*)
+C.song AS 'nome',
+COUNT(*) AS 'reproducoes'
 FROM
 SpotifyClone.Usuario AS U
 INNER JOIN
