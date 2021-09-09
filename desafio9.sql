@@ -10,4 +10,3 @@ where artista.nome_artista = artist
 order by album.nome_album;
 END;  $$
 DELIMITER ;
-CALL albuns_do_artista('Walter Phoenix');
