@@ -30,7 +30,7 @@ FOREIGN KEY (artist_id) REFERENCES artists(artist_id)
 
 CREATE TABLE songs (
 song_id INT PRIMARY KEY AUTO_INCREMENT,
-`name` VARCHAR(75) NOT NULL,
+song_name VARCHAR(75) NOT NULL,
 artist_id INT NOT NULL,
 album_id INT NOT NULL,
 FOREIGN KEY (artist_id) REFERENCES artists(artist_id),
@@ -60,7 +60,7 @@ VALUES
 ('Lance Day'),
 ('Freedie Shannon');
 
-INSERT INTO plans (plan, plan_price)
+INSERT INTO plans (plan_name, plan_price)
 VALUES
 ('gratuito', 0.00),
 ('familiar', 7.99),
@@ -81,7 +81,7 @@ VALUES
 ('Incandescent', 3),
 ('Temporary Culture', 4);
 
-INSERT INTO songs (`name`, artist_id, album_id)
+INSERT INTO songs (song_name, artist_id, album_id)
 VALUES
 ('Soul For Us', 1, 1),
 ('Reflections Of Magic', 1, 1),
