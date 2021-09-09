@@ -1,0 +1,9 @@
+-- DELIMITER $$
+-- CREATE TRIGGER trigger_usuario_delete
+-- AFTER DELETE ON users
+-- FOR EACH ROW
+-- BEGIN
+-- INSERT INTO
+-- VALUES
+-- END $$
+-- DELIMITER ;
