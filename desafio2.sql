@@ -6,5 +6,4 @@ INNER JOIN SpotifyClone.album AS al
 ON c.album_id = al.album_id
 INNER JOIN SpotifyClone.artista AS at
 ON at.artista_id = ab.artista_id;
-
 -- Alternativamente poderia usar subqueries ao invés de Joins.
