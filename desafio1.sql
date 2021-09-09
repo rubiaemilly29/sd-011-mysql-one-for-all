@@ -73,6 +73,7 @@ VALUES (1, 1), (1, 4), (1, 3), (2, 1), (2, 3), (3, 2), (3, 1), (4, 4);
 CREATE TABLE historico_musical(
 usuario_id INT NOT NULL,
 cancao_id INT NOT NULL,
+CONSTRAINT PRIMARY KEY(usuario_id, cancao_id), 
 FOREIGN KEY(usuario_id) REFERENCES usuarios(usuario_id),
 FOREIGN KEY(cancao_id) REFERENCES cancoes(cancao_id)
 )ENGINE = InnoDB;
