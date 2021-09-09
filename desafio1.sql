@@ -53,7 +53,7 @@ VALUES
 INSERT INTO users(user_name, user_age)
 VALUES
 ('Thati', 23),
-('Cíntia', 35),
+('Cintia', 35),
 ('Bill', 20),
 ('Roger', 45);
 INSERT INTO artists(artist_name)
