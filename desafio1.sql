@@ -38,17 +38,17 @@ CREATE TABLE cancoes(
 ) engine = InnoDB;
 
 CREATE TABLE historico_de_reproducoes(
-    historico_de_reproducoes_id INT PRIMARY KEY AUTO_INCREMENT,
     usuario_id INT,
     cancao_id INT,
+    CONSTRAINT PRIMARY KEY(usuario_id, cancao_id),
     FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
     FOREIGN KEY (cancao_id) REFERENCES cancoes(cancao_id)
 ) engine = InnoDB;
 
 CREATE TABLE seguindo_artistas(
-    seguindo_artistas_id INT PRIMARY KEY AUTO_INCREMENT,
     usuario_id INT,
     artista_id INT,
+    CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
     FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
     FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
 ) engine = InnoDB;
