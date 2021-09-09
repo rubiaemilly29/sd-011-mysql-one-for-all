@@ -7,7 +7,7 @@ T.artist AS artista
 FROM SpotifyClone.albums A
 INNER JOIN SpotifyClone.artists T
 ON T.artist_id = A.artist_id
-WHERE T.artist = artist_name
+WHERE T.artist = 'Walter Phoenix'
 ORDER BY album;
 END $$
 
