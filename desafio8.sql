@@ -9,5 +9,4 @@ BEGIN
   DELETE FROM SpotifyClone.artistas_seguidores
   WHERE OLD.usuario_id = usuario_id;
 END $$
-
-DELIMITER ;
+DELIMITER;
