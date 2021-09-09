@@ -8,7 +8,8 @@ COUNT(his.cancao_id) AS quantidade_musicas_no_historico
 FROM SpotifyClone.historico_reproducoes AS his
 INNER JOIN SpotifyClone.users AS u
 ON u.usuario_id = his.usuario_id
-WHERE usuario = u.usuario_nome;
+WHERE usuario = u.usuario_nome
+INTO cancao_total;
 RETURN cancao_total;
 END $$
 DELIMITER ;
