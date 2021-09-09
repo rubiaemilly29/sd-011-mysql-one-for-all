@@ -5,7 +5,7 @@ BEGIN
     SELECT AR.name AS artista, AL.name AS album
     FROM SpotifyClone.artists AS AR
     INNER JOIN SpotifyClone.albuns AS AL ON A.artist_id = AR.artist_id
-    WHERE ar.name = nome
+    WHERE AR.name = nome
     ORDER BY album;
 END $$
 
