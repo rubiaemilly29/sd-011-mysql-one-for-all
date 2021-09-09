@@ -4,8 +4,8 @@ AFTER DELETE ON users
 FOR EACH ROW
 BEGIN
 DELETE FROM historic
-WHERE user_id = OLD.users.id;
+WHERE user_id = OLD.id;
 DELETE FROM followers
-WHERE user_id = OLD.users.id;
+WHERE user_id = OLD.id;
 END $$
 DELIMITER ;
