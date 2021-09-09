@@ -114,7 +114,6 @@ VALUES
   (3, 2),
   (3, 1),
   (4, 4);
-  
   INSERT INTO reproduction_history(user_id, song_id)
   value
   (1, 1),
