@@ -1,11 +1,8 @@
 DROP DATABASE IF EXISTS SpotifyClone;
-
 CREATE DATABASE SpotifyClone
 DEFAULT CHARACTER SET utf8
 DEFAULT COLLATE utf8_general_ci;
-
 USE SpotifyClone;
-
 CREATE TABLE plans (
   plan_id INT PRIMARY KEY AUTO_INCREMENT,
   plan_name VARCHAR(20) NOT NULL,
@@ -18,12 +15,10 @@ CREATE TABLE users (
   plan_id INT,
   FOREIGN KEY (plan_id) REFERENCES plans(plan_id)
 ) ENGINE = InnoDB; 
-
 CREATE TABLE artists (
   artist_id INT PRIMARY KEY AUTO_INCREMENT,
   artist_name VARCHAR(30) NOT NULL
   ) ENGINE = InnoDB; 
-
 CREATE TABLE albuns (
   album_id INT PRIMARY KEY AUTO_INCREMENT,
   album_name VARCHAR(30) NOT NULL,
@@ -37,7 +32,6 @@ CREATE TABLE songs (
   album_id INT,
   FOREIGN KEY (album_id) REFERENCES albuns(album_id)
   ) ENGINE = InnoDB; 
-
 CREATE TABLE artist_followers (
   artist_id INT,
   user_id INT,
@@ -45,8 +39,6 @@ CREATE TABLE artist_followers (
   FOREIGN KEY (user_id) REFERENCES users(user_id),
   CONSTRAINT PRIMARY KEY (artist_id, user_id)
   ) ENGINE = InnoDB;
-
-
 CREATE TABLE reproduction_history (
   user_id INT,
   song_id INT,
@@ -54,13 +46,11 @@ CREATE TABLE reproduction_history (
   FOREIGN KEY (song_id) REFERENCES songs(song_id),
   CONSTRAINT PRIMARY KEY (user_id, song_id)
   ) ENGINE = InnoDB;
-
 INSERT INTO plans(plan_name, plan_value)
 VALUES
 ('Gratuito', 0),
 ('Universitário', 5.99),
 ('Familiar', 7.99);
-
 INSERT INTO users(user_name, user_age)
 VALUES
 ('Thati', 23),
@@ -74,7 +64,6 @@ VALUES
 ('Peter Strong'),
 ('Lance Day'),
 ('Freedie Shannon');
-
 INSERT INTO albuns(album_name, artist_id)
 VALUES
 ('Envious', 1),
@@ -82,7 +71,6 @@ VALUES
 ('Hallowed Steam', 2),
 ('Incandescent', 3),
 ('Temporary Culture',4);
-
 INSERT INTO songs(song_name, album_id)
 VALUES
   ('Soul For Us', 1),
@@ -103,7 +91,6 @@ VALUES
   ('Thang Of Thunder', 5),
   ('Words Of Her Life', 5),
   ('Without My Streets', 5);
-  
   INSERT INTO artist_followers(user_id, artist_id)
   VALUES
   (1, 1),
@@ -130,5 +117,4 @@ VALUES
   (4, 3),
   (4, 18),
   (4, 11);
-  
   
