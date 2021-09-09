@@ -5,10 +5,10 @@ RETURNS INT READS SQL DATA
 BEGIN
   DECLARE amount INT;
   SELECT COUNT(*)
-  FROM history AS his
-  INNER JOIN users AS us
+  FROM SpotifyClone.history AS his
+  INNER JOIN SpotifyClone.users AS us
   ON us.ID = his.UserID
-  WHERE UserName = name_user INTO amount;
+  WHERE us.UserName = name_user INTO amount;
   RETURN amount;    
 END $$
 DELIMITER ;
