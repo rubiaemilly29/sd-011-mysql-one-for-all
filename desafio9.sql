@@ -7,6 +7,7 @@ BEGIN
   FROM artists AS art
   INNER JOIN albuns AS alb
   ON art.ID = alb.ArtistID
-  WHERE art.ArtistName = name_artist;
+  WHERE art.ArtistName = name_artist
+  ORDER BY album;
 END $$
 DELIMITER ;
