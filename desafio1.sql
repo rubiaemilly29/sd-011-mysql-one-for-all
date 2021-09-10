@@ -14,8 +14,7 @@ INSERT INTO SpotifyClone.plan(plano, valor_plano) VALUES
 ('familiar', '7.99'),
 ('universitário', '5.99');
 
-CREATE TABLE SpotifyClone.`users`(
-usuario_id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE SpotifyClone.`users`( usuario_id INT PRIMARY KEY AUTO_INCREMENT,
   `name` VARCHAR(50) NOT NULL,
   `age` INT NOT NULL,
   `plan_id` INT NOT NULL,
