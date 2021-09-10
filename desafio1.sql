@@ -96,7 +96,7 @@ INSERT INTO SpotifyClone.`follow`(`usuario_id`, `artist_id`) VALUES
 (4, 4);
 
 CREATE TABLE SpotifyClone.`history`(
-	`usuario_id` INT NOT NULL,
+`usuario_id` INT NOT NULL,
   `song_id` INT NOT NULL,
   CONSTRAINT PRIMARY KEY (`usuario_id`, `song_id`),
 FOREIGN KEY (usuario_id) REFERENCES SpotifyClone.users(usuario_id),
