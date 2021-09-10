@@ -4,10 +4,10 @@ CREATE TRIGGER trigger_usuario_delete
 AFTER DELETE ON SpotifyClone.users
 FOR EACH ROW
 BEGIN
-DELETE FROM SpotifyClone.following_singers fs
-WHERE OLD.user_id = fs.user_id;
-DELETE FROM SpotifyClone.history h
-WHERE OLD.user_id = h.user_id;
+DELETE FROM following_singers
+WHERE OLD.user_id = user_id;
+DELETE FROM history
+WHERE OLD.user_id = user_id;
 END $$
 
 DELIMITER ;
