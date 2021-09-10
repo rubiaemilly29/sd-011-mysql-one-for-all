@@ -1,16 +1,17 @@
+
 {
-  "coluna_usuario": "name",
-  "tabela_que_contem_usuario": "users",
-  "coluna_plano": "plan_id",
-  "tabela_que_contem_plano": "plan",
-  "coluna_historico_de_reproducoes": "song_id",
-  "tabela_que_contem_historico_de_reproducoes": "history",
-  "coluna_seguindo_artistas": "artist_id",
-  "tabela_que_contem_seguindo_artistas": "follow",
-  "coluna_artista": "artist_id",
-  "tabela_que_contem_artista": "artist",
-  "coluna_album": "album_id",
-  "tabela_que_contem_album": "album",
-  "coluna_cancoes": "song_id",
-  "tabela_que_contem_cancoes": "song"
+  "coluna_usuario": "nome_usuario",
+  "tabela_que_contem_usuario": "usuarios",
+  "coluna_plano": "plano_tipo",
+  "tabela_que_contem_plano": "planos",
+  "coluna_historico_de_reproducoes": "usuario_id",
+  "tabela_que_contem_historico_de_reproducoes": "historico_musical",
+  "coluna_seguindo_artistas": "artista_id",
+  "tabela_que_contem_seguindo_artistas": "artistas_seguidos",
+  "coluna_artista": "artista",
+  "tabela_que_contem_artista": "artistas",
+  "coluna_album": "album",
+  "tabela_que_contem_album": "albuns",
+  "coluna_cancoes": "cancao",
+  "tabela_que_contem_cancoes": "cancoes"
 }
