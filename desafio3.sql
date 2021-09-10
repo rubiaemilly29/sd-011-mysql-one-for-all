@@ -1,10 +1,8 @@
-create view top_3_artistas as
+create view historico_reproducao_usuarios as
 select
-a.nome_artista as 'artista',
-count(*) as 'seguidores'
-from seguindo as s
-join usuario as u on u.usuario_id = s.usuario_id
-join artista as a on a.artista_id = s.artista_id
-group by a.nome_artista
-order by seguindo desc, artista
-limit 3
+u.nome_usuario as 'usuario',
+m.nome_musica as 'nome'
+from historico as h
+join usuario as u on h.usuario_id = u.usuario_id
+join musica as m on h.musica_id = m.musica_id
+order by usuario, nome
