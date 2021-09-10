@@ -15,7 +15,7 @@ INSERT INTO SpotifyClone.plan(plano, valor_plano) VALUES
 ('universitário', '5.99');
 
 CREATE TABLE SpotifyClone.`users`(
-	usuario_id INT PRIMARY KEY AUTO_INCREMENT,
+usuario_id INT PRIMARY KEY AUTO_INCREMENT,
   `name` VARCHAR(50) NOT NULL,
   `age` INT NOT NULL,
   `plan_id` INT NOT NULL,
@@ -28,7 +28,7 @@ INSERT INTO SpotifyClone.`users`(`name`, `age`, `plan_id`) VALUES
 ('Roger', 45, 1);
 
 CREATE TABLE SpotifyClone.`artist`(
-	artist_id INT PRIMARY KEY AUTO_INCREMENT,
+artist_id INT PRIMARY KEY AUTO_INCREMENT,
   `artist_name` VARCHAR(50) NOT NULL
 ) ENGINE = InnoDB;
 INSERT INTO SpotifyClone.`artist`(`artist_name`) VALUES
@@ -38,7 +38,7 @@ INSERT INTO SpotifyClone.`artist`(`artist_name`) VALUES
 ('Freedie Shannon');
 
 CREATE TABLE SpotifyClone.`album`(
-	album_id INT PRIMARY KEY AUTO_INCREMENT,
+album_id INT PRIMARY KEY AUTO_INCREMENT,
   `album_name` VARCHAR(50),
   `artist_id` INT NOT NULL,
   FOREIGN KEY (`artist_id`) REFERENCES SpotifyClone.`artist`(`artist_id`)
@@ -51,7 +51,7 @@ INSERT INTO SpotifyClone.`album`(`album_name`, `artist_id`) VALUES
 ('Temporary Culture', 4);
 
 CREATE TABLE SpotifyClone.`song`(
-	song_id INT PRIMARY KEY AUTO_INCREMENT,
+song_id INT PRIMARY KEY AUTO_INCREMENT,
   `song_name` VARCHAR(100),
   `album_id` INT NOT NULL,
   `artist_id` INT NOT NULL,
@@ -79,7 +79,7 @@ INSERT INTO SpotifyClone.`song`(`song_name`, `album_id`, `artist_id`) VALUES
 ('Without My Streets', 5, 4);
 
 CREATE TABLE SpotifyClone.`follow`(
-  usuario_id INT NOT NULL,
+usuario_id INT NOT NULL,
   `artist_id` INT NOT NULL,
   CONSTRAINT PRIMARY KEY (`usuario_id`, `artist_id`),
   FOREIGN KEY (`usuario_id`) REFERENCES SpotifyClone.`users`(`usuario_id`),
@@ -99,7 +99,7 @@ CREATE TABLE SpotifyClone.`history`(
 	`usuario_id` INT NOT NULL,
   `song_id` INT NOT NULL,
   CONSTRAINT PRIMARY KEY (`usuario_id`, `song_id`),
-	FOREIGN KEY (usuario_id) REFERENCES SpotifyClone.users(usuario_id),
+FOREIGN KEY (usuario_id) REFERENCES SpotifyClone.users(usuario_id),
   FOREIGN KEY (`song_id`) REFERENCES SpotifyClone.`song`(`song_id`)
 )ENGINE = InnoDB;
 INSERT INTO SpotifyClone.`history`(`usuario_id`, `song_id`) VALUES
