@@ -49,8 +49,6 @@ FOREIGN KEY(usuario_id) REFERENCES usuario(usuario_id),
 FOREIGN KEY(artista_id) REFERENCES artista(artista_id)
 ) engine = InnoDB;
 
-SELECT * FROM SpotifyClone.usuario;
-
 INSERT INTO plano(plano, valor_plano) VALUES 
 ('gratuito', 0), 
 ('familiar', 7.99), 
