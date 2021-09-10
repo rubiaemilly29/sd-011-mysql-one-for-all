@@ -6,4 +6,4 @@ SELECT
   ROUND(SUM(p.valor_plano), 2) AS faturamento_total
 FROM planos AS p
 INNER JOIN usuarios AS u
-ON p.plano_id = u.usuario_id;
+ON p.plano_id = u.plano_id;
