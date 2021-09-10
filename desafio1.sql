@@ -52,7 +52,7 @@ FOREIGN KEY(cancao_id) REFERENCES cancoes(cancao_id)
 )ENGINE = InnoDB;
 
 INSERT INTO planos(plano_tipo, plano_valor)
-VALUES ("gratuito", 0), ("universitario", 5.99), ("familiar", 7.99);
+VALUES ("gratuito", 0.00), ("universitario", 5.99), ("familiar", 7.99);
 
 INSERT INTO artistas(artista)
 VALUES ("Walter Phoenix"), ("Peter Strong"), ("Lance Day"), ("Freedie Shannon");
