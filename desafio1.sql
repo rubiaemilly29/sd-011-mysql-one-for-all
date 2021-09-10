@@ -66,48 +66,48 @@ INSERT INTO artista(artista) VALUES
 ('Lance Day'), 
 ('Freedie Shannon');
 
-INSERT INTO album(artista_id, album) VALUES 
-(1, 'Envious'), 
-(1, 'Exuberant'), 
-(2, 'Hallowed Steam'), 
-(3, 'Incandescent'),
-(4, 'Temporary Culture');
+INSERT INTO album(album_id, artista_id, album) VALUES 
+(1, 1, 'Envious'), 
+(2, 1, 'Exuberant'), 
+(3, 2, 'Hallowed Steam'), 
+(4, 3, 'Incandescent'),
+(5, 4, 'Temporary Culture');
 
-INSERT INTO cancao(album_id, cancao) VALUES 
-(1, 'Soul For Us'),
-(1, 'Reflections Of Magic'),
-(1, 'Dance With Her Own'),
-(2, 'Troubles Of My Inner Fire'),
-(2, 'Time Fireworks'),
-(3, 'Magic Circus'),
-(3, 'Honey, So Do I'),
-(3, 'Sweetie, Let''s Go Wild'),
-(3, 'She Knows'),
-(4, 'Fantasy For Me'),
-(4, 'Celebration Of More'),
-(4, 'Rock His Everything'),
-(4, 'Home Forever'),
-(4, 'Diamond Power'),
-(4, 'Honey, Let''s Be Silly'),
-(5, 'Thang Of Thunder'),
-(5, 'Words Of Her Life'),
-(5, 'Without My Streets');
+INSERT INTO cancao(cancao_id, album_id, cancao) VALUES 
+(1, 1, 'Soul For Us'),
+(2, 1, 'Reflections Of Magic'),
+(3, 1, 'Dance With Her Own'),
+(4, 2, 'Troubles Of My Inner Fire'),
+(5, 2, 'Time Fireworks'),
+(6, 3, 'Magic Circus'),
+(7, 3, 'Honey, So Do I'),
+(8, 3, 'Sweetie, Let''s Go Wild'),
+(9, 3, 'She Knows'),
+(10, 4, 'Fantasy For Me'),
+(11, 4, 'Celebration Of More'),
+(12, 4, 'Rock His Everything'),
+(13, 4, 'Home Forever'),
+(14, 4, 'Diamond Power'),
+(15, 4, 'Honey, Let''s Be Silly'),
+(16, 5, 'Thang Of Thunder'),
+(17, 5, 'Words Of Her Life'),
+(18, 5, 'Without My Streets');
 
 INSERT INTO historico_de_reproducoes(usuario_id, cancao_id) VALUES
-(1,1),
-(1,6),
-(1,14),
-(1,16),
-(2,13),
-(2,17),
-(2,2),
-(2,15),
-(3,4),
-(3,16),
-(3,6),
-(4,3),
-(4,18),
-(4,11);
+(1, 1),
+(1, 6),
+(1, 14),
+(1, 16),
+(2, 13),
+(2, 17),
+(2, 2),
+(2, 15),
+(3, 4),
+(3, 16),
+(3, 6),
+(4, 3),
+(4, 18),
+(4, 11);
 
 INSERT INTO seguidores(usuario_id, artista_id) VALUES
 (1,1),
@@ -118,3 +118,4 @@ INSERT INTO seguidores(usuario_id, artista_id) VALUES
 (3,2),
 (3,1),
 (4,4);
+
