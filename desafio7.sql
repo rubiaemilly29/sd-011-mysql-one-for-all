@@ -9,5 +9,3 @@ INNER JOIN SpotifyClone.artists as art
 ON alb.artist_id = art.artist_id
 
 ORDER BY seguidores DESC, artista, album;
-
--- Cool article: https://www.w3schools.com/mysql/func_mysql_avg.asp
