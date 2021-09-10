@@ -57,7 +57,7 @@ FOREIGN KEY (musica_id) REFERENCES musica(musica_id)
 
 INSERT INTO planos (nome_plano, valor_plano)
 VALUES
-('gratuito', 0),
+('gratuito', 0.00),
 ('familiar', 7.99),
 ('universitário', 5.99);
 
