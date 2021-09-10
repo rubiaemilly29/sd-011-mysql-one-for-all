@@ -72,7 +72,7 @@ INSERT INTO album(artista_id, album) VALUES
 (1, 'Envious'), 
 (1, 'Exuberant'), 
 (2, 'Hallowed Steam'), 
-(3, 'Incandescent'), 
+(3, 'Incandescent'),
 (4, 'Temporary Culture');
 
 INSERT INTO cancao(album_id, cancao) VALUES 
