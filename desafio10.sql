@@ -10,4 +10,3 @@ INTO result;
 RETURN result;
 END $$
 DELIMITER ;
-SELECT quantidade_musica_no_historico (3);
