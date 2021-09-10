@@ -1,5 +1,5 @@
 DELIMITER $$
-create procedure albuns_do_artista(in nome_do_artista VARCHAR(50))
+create procedure albuns_do_artista(in nome_do_artista VARCHAR(50)) begin
 select
 a.nome_artista as 'artista',
 ab.nome_album as 'album'
