@@ -12,7 +12,7 @@ FOREIGN KEY (plano_id) REFERENCES plano(plano_id)
 CREATE TABLE planos(
 plano_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 plano_tipo VARCHAR(20) NOT NULL,
-valor_plano DOUBLE(4,2) NOT NULL
+valor_plano DECIMAL(4,2) NOT NULL
 )ENGINE=InnoDB;
 
 CREATE TABLE artistas(
