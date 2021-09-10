@@ -1,8 +1,8 @@
-create view faturamento_atual as
-select
-min(valor_plano)  as  "faturamento_minimo",
-max(valor_plano)  as "faturamento_maximo",
-round(avg(valor_plano), 2) as "faturamento_medio",
-sum(valor_plano)  as "faturamento_total"
-from planos as p
-inner join usuario as u on u.usuario_id = p.plano_id;
+SELECT
+ROUND(MIN(planos.valor_plano), 2) AS faturamento_minimo,
+ROUND(MAX(planos.valor_plano), 2) AS faturamento_maximo,
+cast(ROUND(AVG(planos.valor_plano), 2) as decimal(5,2)) AS faturamento_medio,
+ROUND(SUM(planos.valor_plano), 2) AS faturamento_total
+FROM planos
+INNER JOIN usuario
+ON planos.plano_id = usuario.plano_id;
