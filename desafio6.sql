@@ -1,3 +1,4 @@
+create view faturamento_atual as
 SELECT
 ROUND(MIN(planos.valor_plano), 2) AS faturamento_minimo,
 ROUND(MAX(planos.valor_plano), 2) AS faturamento_maximo,
