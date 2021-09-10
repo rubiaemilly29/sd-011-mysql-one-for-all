@@ -2,12 +2,12 @@ USE SpotifyClone;
 
 DELIMITER $$
 CREATE TRIGGER trigger_usuario_delete
-    AFTER DELETE ON users
+    BEFORE DELETE ON SpotifyClone.users
     FOR EACH ROW
 BEGIN
-    DELETE FROM following
+    DELETE FROM SpotifyClone.following
     WHERE UserID = OLD.ID;
-    DELETE FROM history
+    DELETE FROM SpotifyClone.history
     WHERE UserID = OLD.ID;
 END $$
 DELIMITER ;
