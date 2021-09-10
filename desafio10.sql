@@ -5,7 +5,7 @@ RETURNS INT READS SQL DATA
 BEGIN
 DECLARE total INT;
 SELECT COUNT(*)
-FROM SpotifyClone.historico_reproducao AS Sh
+FROM SpotifyClone.historico_de_reproducoes AS Sh
 WHERE us_id = Sh.usuario_id INTO total;
 RETURN total;
 END $$
