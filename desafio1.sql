@@ -54,7 +54,7 @@ FOREIGN KEY (song_id) REFERENCES songs (song_id)
 ) ENGINE = InnoDB;
 
 INSERT INTO plans (type, price) VALUES
-('gratuito', 0),
+('gratuito', 0.00),
 ('familiar', 7.99),
 ('universitário', 5.99);
 
