@@ -9,4 +9,3 @@ ON a.artista_id = al.artista_id
 WHERE artista_nome = a.artista
 ORDER BY al.album;
 END $$
-DELIMITER ;
