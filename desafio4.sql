@@ -5,5 +5,5 @@ count(a.artista_id) as 'seguidores'
 from artista as a
 inner join seguindo as s on s.artista_id = a.artista_id
 group by s.artista_id
-order by artista desc, s.seguindo
+order by seguidores desc, artista
 limit 3;
