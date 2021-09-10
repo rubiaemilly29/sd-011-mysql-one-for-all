@@ -1,10 +1,9 @@
 create view top_3_artistas as
 select
 a.nome_artista as 'artista',
-count(s.artista_id) as 'seguidores'
-from seguindo as s
-join usuario as u on u.usuario_id = s.usuario_id
-join artista as a on a.artista_id = s.artista_id
-group by a.nome_artista
-order by seguindo desc, artista
-limit 3
+count(a.artista_id) as 'seguidores'
+from artista as a
+inner join seguindo as s on s.artista_id = a.artista_id
+group by s.artista_id
+order by count(artista_id) desc, a.nome_artista
+limit 3;
