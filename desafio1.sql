@@ -1,46 +1,54 @@
 CREATE DATABASE IF NOT EXISTS SpotifyClone;
 CREATE TABLE IF NOT EXISTS plano (
-	plano_id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50) NOT NULL,
-	valor DECIMAL(10,2) NOT NULL
-) ENGINE=InnoDB;
+    plano_id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    valor DECIMAL(10 , 2 ) NOT NULL
+)  ENGINE=INNODB;
 CREATE TABLE IF NOT EXISTS usuário (
-	usuario_id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50) NOT NULL,
-	idade INT NOT NULL,
-	plano_id INT NOT NULL,
-	FOREIGN KEY (plano_id) REFERENCES plano(plano_id)
-) ENGINE=InnoDB;
+    usuario_id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    idade INT NOT NULL,
+    plano_id INT NOT NULL,
+    FOREIGN KEY (plano_id)
+        REFERENCES plano (plano_id)
+)  ENGINE=INNODB;
 CREATE TABLE IF NOT EXISTS artista (
-	artista_id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50) NOT NULL
-) ENGINE=InnoDB;
+    artista_id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL
+)  ENGINE=INNODB;
 CREATE TABLE IF NOT EXISTS album (
-	album_id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50) NOT NULL,
-	artista_id INT NOT NULL,
-	FOREIGN KEY (artista_id) REFERENCES artista(artista_id)
-) ENGINE=InnoDB;
+    album_id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    artista_id INT NOT NULL,
+    FOREIGN KEY (artista_id)
+        REFERENCES artista (artista_id)
+)  ENGINE=INNODB;
 CREATE TABLE IF NOT EXISTS canções (
-	cancao_id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50) NOT NULL,
-	artista_id INT NOT NULL,
+    cancao_id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    artista_id INT NOT NULL,
     album_id INT NOT NULL,
-	FOREIGN KEY (artista_id) REFERENCES artista(artista_id),
-    FOREIGN KEY (album_id) REFERENCES album(album_id)
-) ENGINE=InnoDB;
+    FOREIGN KEY (artista_id)
+        REFERENCES artista (artista_id),
+    FOREIGN KEY (album_id)
+        REFERENCES album (album_id)
+)  ENGINE=INNODB;
 CREATE TABLE IF NOT EXISTS seguindo_artistas (
-	artista_id INT NOT NULL,
-	usuario_id INT NOT NULL,
-	FOREIGN KEY (artista_id) REFERENCES artista(artista_id),
-    FOREIGN KEY (usuario_id) REFERENCES usuário(usuario_id)
-) ENGINE=InnoDB;
+    artista_id INT NOT NULL,
+    usuario_id INT NOT NULL,
+    FOREIGN KEY (artista_id)
+        REFERENCES artista (artista_id),
+    FOREIGN KEY (usuario_id)
+        REFERENCES usuário (usuario_id)
+)  ENGINE=INNODB;
 CREATE TABLE IF NOT EXISTS historico (
-	cancao_id INT NOT NULL,
-	usuario_id INT NOT NULL,
-	FOREIGN KEY (cancao_id) REFERENCES canções(cancao_id),
-    FOREIGN KEY (usuario_id) REFERENCES usuário(usuario_id)
-) ENGINE=InnoDB;
+    cancao_id INT NOT NULL,
+    usuario_id INT NOT NULL,
+    FOREIGN KEY (cancao_id)
+        REFERENCES canções (cancao_id),
+    FOREIGN KEY (usuario_id)
+        REFERENCES usuário (usuario_id)
+)  ENGINE=INNODB;
 INSERT INTO plano(nome, valor)
 VALUES('gratuito', 0), ('familiar', 7.99), ('universitário', 5.99);
 INSERT INTO usuário(nome, idade, plano_id)
