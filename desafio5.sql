@@ -5,4 +5,3 @@ INNER JOIN SpotifyClone.historico_reproducoes HR ON M.cancoes_id = HR.cancoes_id
 GROUP BY cancao
 ORDER BY reproducoes DESC, cancao
 LIMIT 2;
-SELECT * FROM SpotifyClone.top_2_hits_do_momento;
