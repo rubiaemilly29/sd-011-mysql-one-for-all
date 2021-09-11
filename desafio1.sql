@@ -4,7 +4,7 @@ USE SpotifyClone;
 CREATE TABLE subscriptions(
     subscription_id INT(10) NOT NULL AUTO_INCREMENT,
     subscription VARCHAR(20) NOT NULL,
-    price FLOAT(5, 2) NOT NULL,
+    price DECIMAL(5, 2) NOT NULL,
     PRIMARY KEY(subscription_id)
 ) ENGINE = InnoDB;
 
