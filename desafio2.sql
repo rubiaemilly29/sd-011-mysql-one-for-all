@@ -9,4 +9,3 @@ SELECT COUNT(*) FROM artistas
 (
 SELECT COUNT(*) FROM albuns
 ) AS albuns;
-SELECT * FROM estatisticas_musicais;
