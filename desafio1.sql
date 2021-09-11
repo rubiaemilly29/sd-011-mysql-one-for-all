@@ -15,7 +15,7 @@ VALUES (1, 'Thati', 23), (2, 'Cintia', 35), (3, 'Bill', 20), (1, 'Roger', 45);
 CREATE TABLE planos(
 plano_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 plano_tipo VARCHAR(20) NOT NULL,
-valor_plano DOUBLE(4,2) NOT NULL
+valor_plano DECIMAL(4,2) NOT NULL
 )ENGINE=InnoDB;
 
 INSERT INTO planos(plano_tipo, valor_plano)
@@ -38,7 +38,7 @@ FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
 )ENGINE=InnoDB;
 
 INSERT INTO artistas_seguidos(usuario_id, artista_id)
-VALUES (1, 1), (1, 4), (1, 2), (2, 1), (2, 2), (3, 3), (3, 1), (4, 3);
+VALUES (1, 1), (1, 4), (1, 3), (2, 1), (2, 3), (3, 2), (3, 1), (4, 4);
 
 CREATE TABLE albuns(
 album_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
