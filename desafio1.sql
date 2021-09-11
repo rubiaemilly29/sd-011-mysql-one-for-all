@@ -1,6 +1,15 @@
 CREATE DATABASE IF NOT EXISTS SpotifyClone;
 USE SpotifyClone;
 
+CREATE TABLE plano(
+plano_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+tipo_plano VARCHAR(20) NOT NULL,
+valor_plano DECIMAL(4,2) NOT NULL
+)ENGINE=InnoDB;
+
+INSERT INTO plano (tipo_plano, valor_plano) VALUES
+('gratuito', 0.00), ('familiar', 7.99), ('universitário', 5.99);
+
 CREATE TABLE usuario(
 usuario_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome_usuario VARCHAR(50) NOT NULL,
@@ -12,15 +21,6 @@ FOREIGN KEY (plano_id) REFERENCES plano(plano_id)
 INSERT INTO usuario(nome_usuario, idade, plano_id)
 VALUES ('Thati', 23, 1), ('Cintia', 35, 2), ('Bill', 20, 3), ('Roger', 45, 1);
 
-CREATE TABLE plano(
-plano_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-tipo_plano VARCHAR(20) NOT NULL,
-valor_plano DECIMAL(4,2) NOT NULL
-)ENGINE=InnoDB;
-
-INSERT INTO plano (tipo_plano, valor_plano) VALUES
-('gratuito', 0.00), ('familiar', 7.99), ('universitário', 5.99);
-
 CREATE TABLE artistas(
 artista_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome_artista VARCHAR(100) NOT NULL
@@ -28,17 +28,6 @@ nome_artista VARCHAR(100) NOT NULL
 
 INSERT INTO artistas(nome_artista)
 VALUES ('Walter Phoenix'), ('Peter Strong'), ('Lance Day'), ('Freedie Shannon');
-
-CREATE TABLE seguindo_artistas(
-usuario_id INT NOT NULL,
-artista_id INT NOT NULL,
-CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
-FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id),
-FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
-)ENGINE=InnoDB;
-
-INSERT INTO seguindo_artistas(usuario_id, artista_id)
-VALUES (1, 1), (1, 4), (1, 3), (2, 1), (2, 3), (3, 2), (3, 1), (4, 4);
 
 CREATE TABLE album(
 album_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -73,3 +62,14 @@ FOREIGN KEY (cancao_id) REFERENCES cancoes(cancao_id)
 
 INSERT INTO historico(usuario_id, cancao_id)
 VALUES (1, 1), (1, 6), (1, 14), (1, 16), (2, 13), (2, 17), (2, 2), (2, 15), (3, 4), (3, 16), (3, 6), (4, 3), (4, 18), (4, 11);
+
+CREATE TABLE seguindo_artistas(
+usuario_id INT NOT NULL,
+artista_id INT NOT NULL,
+CONSTRAINT PRIMARY KEY(usuario_id, artista_id),
+FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id),
+FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
+)ENGINE=InnoDB;
+
+INSERT INTO seguindo_artistas(usuario_id, artista_id)
+VALUES (1, 1), (1, 4), (1, 3), (2, 1), (2, 3), (3, 2), (3, 1), (4, 4);
