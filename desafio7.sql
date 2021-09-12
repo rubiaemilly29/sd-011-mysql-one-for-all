@@ -1,3 +1,4 @@
+CREATE VIEW perfil_artistas AS
 SELECT ar.artista AS artista,
 al.album AS album,
 (
