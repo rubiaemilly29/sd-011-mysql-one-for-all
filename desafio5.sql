@@ -8,4 +8,3 @@ FROM
 GROUP BY cancao
 ORDER BY reproducoes DESC , cancao
 LIMIT 2;
-    
