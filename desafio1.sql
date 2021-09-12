@@ -55,7 +55,8 @@ INSERT INTO ALBUNS (album_nome, artista) VALUES
 CREATE TABLE MUSICAS (
 musica_id INT PRIMARY KEY AUTO_INCREMENT,
 musica_nome VARCHAR(50) NOT NULL,
-album INT
+album INT,
+FOREIGN KEY (album) REFERENCES ALBUNS(album_id)
 ) ENGINE = InnoDB;
 
 INSERT INTO MUSICAS (musica_nome, album) VALUES
