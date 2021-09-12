@@ -13,7 +13,7 @@ VALUES
 (DEFAULT, 'gratuito', 0.00),
 (DEFAULT, 'familiar', 7.99),
 (DEFAULT, 'universitário', 5.99);
-	
+
 CREATE TABLE usuarios(
 usuario_id INT PRIMARY KEY AUTO_INCREMENT,
 usuario VARCHAR(50) NOT NULL,
@@ -122,5 +122,3 @@ INSERT INTO historico VALUES
 (4, 3),
 (4, 18),
 (4, 11);
-
-    
