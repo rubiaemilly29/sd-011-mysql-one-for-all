@@ -2,59 +2,59 @@ DROP DATABASE IF EXISTS SpotifyClone;
 CREATE DATABASE SpotifyClone;
 USE SpotifyClone;
 CREATE TABLE artistas(
-    id INT NOT NULL AUTO_INCREMENT,
+    id_artistas INT NOT NULL AUTO_INCREMENT,
     nome_artista VARCHAR(200) NOT NULL,
-    PRIMARY KEY(id)
+    PRIMARY KEY (id_artistas)
 ) engine = InnoDB;
 
 CREATE TABLE planos(
-    id INT NOT NULL AUTO_INCREMENT,
+    id_planos INT NOT NULL AUTO_INCREMENT,
     nome_plano VARCHAR(200) NOT NULL,
     valor DECIMAL(5,2) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id_planos)
 ) engine = InnoDB;
 
 CREATE TABLE usuarios(
-    id INT NOT NULL AUTO_INCREMENT,
+    id_usuarios INT NOT NULL AUTO_INCREMENT,
     nome_usuario VARCHAR(200) NOT NULL,
     idade INT NOT NULL,
-    id_plano INT NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (id_plano) REFERENCES planos(id)
+    id_planos INT NOT NULL,
+    PRIMARY KEY (id_usuarios),
+    FOREIGN KEY (id_planos) REFERENCES planos(id_planos)
 ) engine = InnoDB;
 
 CREATE TABLE albuns(
-    id INT NOT NULL AUTO_INCREMENT,
+    id_albuns INT NOT NULL AUTO_INCREMENT,
     nome_album VARCHAR(200) NOT NULL,
-    id_artista INT NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (id_artista) REFERENCES artistas(id)
+    id_artistas INT NOT NULL,
+    PRIMARY KEY (id_albuns),
+    FOREIGN KEY (id_artistas) REFERENCES artistas(id_artistas)
 ) engine = InnoDB;
 
 CREATE TABLE cancoes(
-    id INT NOT NULL AUTO_INCREMENT,
+    id_cancoes INT NOT NULL AUTO_INCREMENT,
     nome_cancao VARCHAR(200) NOT NULL,
-    id_album INT NOT NULL,
-    id_artista INT NOT NULL,
-    PRIMARY KEY(id),
-    FOREIGN KEY (id_artista) REFERENCES artistas(id),
-    FOREIGN KEY (id_album) REFERENCES albuns(id)
+    id_albuns INT NOT NULL,
+    id_artistas INT NOT NULL,
+    PRIMARY KEY(id_cancoes),
+    FOREIGN KEY (id_artistas) REFERENCES artistas(id_artistas),
+    FOREIGN KEY (id_albuns) REFERENCES albuns(id_albuns)
 ) engine = InnoDB;
 
 CREATE TABLE historico_reproducoes(
-    id_usuario INT NOT NULL,
-    id_cancao INT NOT NULL,
-    PRIMARY KEY(id_usuario, id_cancao),
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
-    FOREIGN KEY (id_cancao) REFERENCES cancoes(id)
+    id_usuarios INT NOT NULL,
+    id_cancoes INT NOT NULL,
+    PRIMARY KEY(id_usuarios, id_cancoes),
+    FOREIGN KEY (id_usuarios) REFERENCES usuarios(id_usuarios),
+    FOREIGN KEY (id_cancoes) REFERENCES cancoes(id_cancoes)
 ) engine = InnoDB;
 
 CREATE TABLE seguindo_artistas(
-    id_usuario INT NOT NULL,
-    id_artista INT NOT NULL,
-    PRIMARY KEY (id_usuario, id_artista),
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
-    FOREIGN KEY (id_artista) REFERENCES artistas(id)
+    id_usuarios INT NOT NULL,
+    id_artistas INT NOT NULL,
+    PRIMARY KEY (id_usuarios, id_artistas),
+    FOREIGN KEY (id_usuarios) REFERENCES usuarios(id_usuarios),
+    FOREIGN KEY (id_artistas) REFERENCES artistas(id_artistas)
 ) engine = InnoDB;
 INSERT INTO artistas (nome_artista)
 VALUES
@@ -69,14 +69,14 @@ VALUES
     ('universitário', 5.99),
     ('familiar', 7.99);
     
-INSERT INTO usuarios (id_plano, nome_usuario, idade)
+INSERT INTO usuarios (id_planos, nome_usuario, idade)
 VALUES
     ('Thati', 23, 1 ) ,
     ('Cintia', 35, 3),
     ('Bill', 20, 2 ),
     ('Roger', 45, 1 );
 
-INSERT INTO albuns (nome_album, id_artista)
+INSERT INTO albuns (nome_album, id_artistas)
 VALUES
     ('Envious', 1),
     ('Exuberant', 1),
@@ -84,7 +84,7 @@ VALUES
     ('Incandescent', 3),
     ('Temporary Culture', 4);
 
-INSERT INTO cancoes (nome_cancao, id_artista, id_album)
+INSERT INTO cancoes (nome_cancao, id_artistas, id_albuns)
 VALUES
     ('Soul For Us', 1, 1),
     ('Reflections Of Magic', 1, 1),
@@ -105,7 +105,7 @@ VALUES
     ('Words Of Her Life', 4, 5),
     ('Without My Streets', 4, 5);
 
-INSERT INTO historico_reproducoes (id_usuario, id_cancao)
+INSERT INTO historico_reproducoes (id_usuarios, id_cancoes)
 VALUES
     (1, 1),
     (1, 6),
@@ -122,7 +122,7 @@ VALUES
     (4, 11),
     (4, 18);
 
-INSERT INTO seguindo_artistas (id_usuario, id_artista)
+INSERT INTO seguindo_artistas (id_usuarios, id_artistas)
 VALUES
     (1, 1),
     (1, 4),
