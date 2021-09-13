@@ -2,8 +2,6 @@ DROP DATABASE IF EXISTS SpotifyClone;
 
 CREATE DATABASE SpotifyClone;
 
-USE SpotifyClone;
-
 CREATE TABLE usuarios(
     id INT NOT NULL AUTO_INCREMENT,
     nome_usuario VARCHAR(200) NOT NULL,
