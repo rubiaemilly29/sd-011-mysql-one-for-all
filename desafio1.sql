@@ -72,7 +72,7 @@ VALUES
     ('universitário', 5.99),
     ('familiar', 7.99);
     
-  INSERT INTO albuns (nome_album, id_artista)
+INSERT INTO albuns (nome_album, id_artista)
 VALUES
     ('Envious', 1),
     ('Exuberant', 1),
@@ -80,14 +80,14 @@ VALUES
     ('Incandescent', 3),
     ('Temporary Culture', 4);
   
-  INSERT INTO artistas (nome_artista)
+INSERT INTO artistas (nome_artista)
 VALUES
     ('Walter Phoenix'),
     ('Peter Strong'),
     ('Lance Day'),
     ('Freedie Shannon');
   
-    INSERT INTO cancoes (nome_cancao, id_artista, id_album)
+INSERT INTO cancoes (nome_cancao, id_artista, id_album)
 VALUES
     ('Soul For Us', 1, 1),
     ('Reflections Of Magic', 1, 1),
@@ -107,7 +107,7 @@ VALUES
     ('Thang Of Thunder', 4, 5),
     ('Words Of Her Life', 4, 5),
     ('Without My Streets', 4, 5);
-  INSERT INTO historico_reproducoes (id_usuario, id_cancao)
+INSERT INTO historico_reproducoes (id_usuario, id_cancao)
 VALUES
     (1, 1),
     (1, 6),
@@ -123,8 +123,8 @@ VALUES
     (4, 3),
     (4, 11),
     (4, 18);
-   
-  INSERT INTO seguindo_artistas (id_usuario, id_artista)
+
+INSERT INTO seguindo_artistas (id_usuario, id_artista)
 VALUES
     (1, 1),
     (1, 4),
