@@ -2,6 +2,8 @@ DROP DATABASE IF EXISTS SpotifyClone;
 
 CREATE DATABASE SpotifyClone;
 
+USE SpotifyClone;
+
 CREATE TABLE usuarios(
     id INT NOT NULL AUTO_INCREMENT,
     nome_usuario VARCHAR(200) NOT NULL,
@@ -57,19 +59,19 @@ CREATE TABLE seguindo_artistas(
     FOREIGN KEY usuario_f (id_usuario) REFERENCES usuarios(id),
     FOREIGN KEY artista_f (id_artista) REFERENCES artistas(id)
 ) engine = InnoDB;
-INSERT INTO usuarios (id_plano,nome_usuario, idade)
+INSERT INTO usuarios (id_plano, nome_usuario, idade)
 VALUES
-    (1,'Thati', 23 ) ,
-    (2,'Cintia', 35),
-    (3,'Bill', 20 ),
-    (1,'Roger', 45 );
+    ('Thati', 23, 1 ) ,
+    ('Cintia', 35, 2),
+    ('Bill', 20, 3 ),
+    ('Roger', 45, 1 );
 
 INSERT INTO planos (nome_plano, valor)
 VALUES
     ('gratuito', 0.00),
-    ('familiar', 7.99),
-    ('universitário', 5.99);
-  
+    ('universitário', 5.99),
+    ('familiar', 7.99);
+    
   INSERT INTO albuns (nome_album)
 VALUES
     ('Envious'),
@@ -80,11 +82,11 @@ VALUES
   
   INSERT INTO artistas (nome_artista, id_album)
 VALUES
-    ('Walter Phoenix',1),
-    ('Walter Phoenix',2),
-    ('Peter Strong',3),
-    ('Lance Day',4),
-    ('Freedie Shannon',5);
+    ('Walter Phoenix', 1),
+    ('Walter Phoenix', 2),
+    ('Peter Strong', 3),
+    ('Lance Day', 4),
+    ('Freedie Shannon', 5);
   
     INSERT INTO cancoes (nome_cancao, id_album)
 VALUES
@@ -95,14 +97,14 @@ VALUES
     ('Time Fireworks', 2),
     ('Magic Circus', 3),
     ('Honey, So Do I', 3),
-    ('Sweetie, Let\'s Go Wild', 3),
+    ("Sweetie, Let's Go Wild", 3),
     ('She Knows', 3),
     ('Fantasy For Me', 4),
     ('Celebration Of More', 4),
     ('Rock His Everything', 4),
     ('Home Forever', 4),
     ('Diamond Power', 4),
-    ('Honey, Let\'s Be Silly', 4),
+    ("Honey, Let's Be Silly", 4),
     ('Thang Of Thunder', 5),
     ('Words Of Her Life', 5),
     ('Without My Streets', 5);
