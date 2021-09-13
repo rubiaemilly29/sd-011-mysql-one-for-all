@@ -86,7 +86,7 @@ VALUES
     ('Lance Day',4),
     ('Freedie Shannon',5);
   
-  INSERT INTO cancoes (nome_cancoes)
+  INSERT INTO cancoes (nome_cancao)
 VALUES
     ('Soul For Us'),
     ('Reflections Of Magic'),
