@@ -3,52 +3,52 @@ CREATE DATABASE  SpotifyClone;
 USE SpotifyClone; 
 
 CREATE TABLE plans(
-    plan_id INT PRIMARY KEY AUTO_INCREMENT,
-    plan_name VARCHAR(20) NOT NULL,
-    plan_price DECIMAL(4,2) NOT NULL 
+plan_id INT PRIMARY KEY AUTO_INCREMENT,
+plan_name VARCHAR(20) NOT NULL,
+plan_price DECIMAL(4,2) NOT NULL 
 );
 
 CREATE TABLE users(
-	user_id INT PRIMARY KEY AUTO_INCREMENT,
-    user_name VARCHAR(30) NOT NULL,
-    user_age INT NOT NULL, 
-    plan_id INT NOT NULL,
-    FOREIGN KEY (plan_id) REFERENCES plans(plan_id)
+user_id INT PRIMARY KEY AUTO_INCREMENT,
+user_name VARCHAR(30) NOT NULL,
+user_age INT NOT NULL, 
+plan_id INT NOT NULL,
+FOREIGN KEY (plan_id) REFERENCES plans(plan_id)
 );
 
 CREATE TABLE artists(
-	artist_id INT PRIMARY KEY AUTO_INCREMENT,
-    artist_name VARCHAR(30) NOT NULL
+artist_id INT PRIMARY KEY AUTO_INCREMENT,
+artist_name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE albums(
-	album_id INT PRIMARY KEY AUTO_INCREMENT,
-    album_name VARCHAR(30) NOT NULL,
-    artist_id INT NOT NULL,
-    FOREIGN KEY (artist_id) REFERENCES artists(artist_id)
+album_id INT PRIMARY KEY AUTO_INCREMENT,
+album_name VARCHAR(30) NOT NULL,
+artist_id INT NOT NULL,
+FOREIGN KEY (artist_id) REFERENCES artists(artist_id)
 );
 
 CREATE TABLE musics(
-	music_id INT PRIMARY KEY AUTO_INCREMENT,
-    music_name VARCHAR(30) NOT NULL,
-    album_id INT NOT NULL,
-    FOREIGN KEY (album_id) REFERENCES albums(album_id)
+music_id INT PRIMARY KEY AUTO_INCREMENT,
+music_name VARCHAR(30) NOT NULL,
+album_id INT NOT NULL,
+FOREIGN KEY (album_id) REFERENCES albums(album_id)
 );
 
 CREATE TABLE following(
-	user_id INT NOT NULL,
-    artist_id INT NOT NULL, 
-    CONSTRAINT PRIMARY KEY(user_id, artist_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
-    FOREIGN KEY (artist_id) REFERENCES artists(artist_id)
+user_id INT NOT NULL,
+artist_id INT NOT NULL, 
+CONSTRAINT PRIMARY KEY(user_id, artist_id),
+FOREIGN KEY (user_id) REFERENCES users(user_id),
+FOREIGN KEY (artist_id) REFERENCES artists(artist_id)
 );
 
 CREATE TABLE history(
-	user_id INT NOT NULL, 
-    music_id INT NOT NULL,
-    CONSTRAINT PRIMARY KEY(user_id, music_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
-    FOREIGN KEY (music_id) REFERENCES musics(music_id)
+user_id INT NOT NULL, 
+music_id INT NOT NULL,
+CONSTRAINT PRIMARY KEY(user_id, music_id),
+FOREIGN KEY (user_id) REFERENCES users(user_id),
+FOREIGN KEY (music_id) REFERENCES musics(music_id)
 );
 
 INSERT INTO plans(plan_name, plan_price)
