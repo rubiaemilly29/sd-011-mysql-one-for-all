@@ -46,7 +46,9 @@ CREATE TABLE historico_reproducoes(
 CREATE TABLE cancoes(
     id INT NOT NULL AUTO_INCREMENT,
     nome_cancao VARCHAR(200) NOT NULL,
-    PRIMARY KEY(id)
+    id_album INT NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY album_f (id_album) REFERENCES albuns(id)
 ) engine = InnoDB;
 
 CREATE TABLE seguindo_artistas(
