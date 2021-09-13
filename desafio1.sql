@@ -21,7 +21,7 @@ CREATE TABLE planos(
 ) engine = InnoDB;
 
 CREATE TABLE artistas(
-   id INT NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL AUTO_INCREMENT,
     nome_artista VARCHAR(200) NOT NULL,
     id_album INT NOT NULL,
     PRIMARY KEY(id),
@@ -134,4 +134,3 @@ VALUES
     (3, 2),
     (3, 1),
     (4, 4);
-
