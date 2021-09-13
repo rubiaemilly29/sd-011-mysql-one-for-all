@@ -7,7 +7,7 @@ FOR EACH ROW
 BEGIN
 DELETE FROM seguidores
 WHERE usuario_id = OLD.usuario_id;
-DELETE FROM hitorico
+DELETE FROM historico
 WHERE usuario_id = OLD.usuario_id;
 END $$
 
