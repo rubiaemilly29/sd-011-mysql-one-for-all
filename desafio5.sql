@@ -7,4 +7,3 @@ GROUP BY hs.id_cancoes
 ORDER BY reproducoes DESC,
   cancao ASC
 LIMIT 2;
-
