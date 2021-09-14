@@ -45,7 +45,7 @@ CREATE TABLE users(
 ) engine = InnoDB;
 
 CREATE TABLE followers(
-	artist_id INT,
+    artist_id INT,
     user_id INT,
     CONSTRAINT PRIMARY KEY (artist_id, user_id),
     FOREIGN KEY (artist_id) REFERENCES artists(artist_id),
@@ -53,8 +53,8 @@ CREATE TABLE followers(
 ) engine = InnoDB;
 
 CREATE TABLE history(
-	user_id INT,
-	song_id INT,
+    user_id INT,
+    song_id INT,
     CONSTRAINT PRIMARY KEY (user_id, song_id),
     FOREIGN KEY (song_id) REFERENCES songs(song_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
@@ -104,14 +104,14 @@ VALUES
   
 INSERT INTO `users` (user_name, user_age, plan_id) 
 VALUES
-	('Thati',23,1),
-	('Cintia',35,2),
+    ('Thati',23,1),
+    ('Cintia',35,2),
     ('Bill',20,3),
     ('Roger',45,1);
 
 INSERT INTO `history`
 VALUES
-	(1,1),
+    (1,1),
     (2,2),
     (4,3),
     (3,4),
@@ -128,7 +128,7 @@ VALUES
     
 INSERT INTO `followers`
 VALUES
-	(1,1),
+    (1,1),
     (2,1),
     (3,1),
     (3,2),
