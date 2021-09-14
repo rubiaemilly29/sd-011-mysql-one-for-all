@@ -5,5 +5,5 @@ FROM SpotifyClone.seguindo_artistas AS se
 INNER JOIN SpotifyClone.historico_reproducoes AS hs ON us.artista_id = us.artista_id 
 GROUP BY fl.id_artistas
 ORDER BY seguidores DESC,
- artista ASC
+  artista ASC
 LIMIT 3; 
