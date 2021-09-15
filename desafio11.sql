@@ -1,10 +1,13 @@
 USE SpotifyClone;
 CREATE VIEW cancoes_premium AS
-SELECT music.nome_musica AS nome,
-    COUNT(*) AS reproducoes FROM musicas AS music
+    SELECT music.nome_musica AS nome, COUNT(*) AS reproducoes
+    FROM usuarios AS user
+        INNER JOIN 
+            historico_de_reproducoes AS hr ON user.usuario_id = hr.usuario_id
         INNER JOIN
-            historico_de_reproducoes AS hr ON music.musica_id = hr.musica_id
+            musicas AS music ON music.musica_id = hr.musica_id
         INNER JOIN
-        usuarios AS user ON u.usuario_id = hr.usuario_id AND user.usuario_id IN (2, 3)
-GROUP BY nome
-ORDER BY nome;
+        planos AS plans ON u.plano_id = plans.plano_id
+        WHERE plans.plano IN ('Familiar', 'Universitário')
+    GROUP BY `nome`
+    ORDER BY `nome`;
